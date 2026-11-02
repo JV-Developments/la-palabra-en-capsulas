@@ -1,4 +1,4 @@
-
+```html
 <!doctype html>
 <html lang="es" dir="ltr">
 <head>
@@ -14,9 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -61,9 +59,7 @@ body {
     color: #0F4C81;
 }
 
-.lang-link.active {
-    font-weight: 700;
-}
+.lang-link.active { font-weight: 700; }
 
 .lang-divider {
     color: #aaa;
@@ -98,9 +94,7 @@ h1 {
     text-align: center;
 }
 
-.article-list {
-    margin-top: 20px;
-}
+.article-list { margin-top: 20px; }
 
 .article-card {
     margin-bottom: 30px;
@@ -112,9 +106,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.article-card:hover {
-    background: #E6F0FA;
-}
+.article-card:hover { background: #E6F0FA; }
 
 .article-card h2 {
     margin: 0 0 20px;
@@ -145,9 +137,7 @@ h1 {
     text-decoration: none;
 }
 
-.read-link:hover {
-    text-decoration: underline;
-}
+.read-link:hover { text-decoration: underline; }
 
 .footer-nav {
     margin-top: 40px;
@@ -178,13 +168,8 @@ h1 {
 }
 
 /* Hebreo y árabe */
-html[dir="rtl"] body {
-    direction: rtl;
-}
-
-html[dir="rtl"] .language-bar {
-    direction: rtl;
-}
+html[dir="rtl"] body { direction: rtl; }
+html[dir="rtl"] .language-bar { direction: rtl; }
 
 html[dir="rtl"] .article-card {
     border-left: 0;
@@ -206,14 +191,10 @@ html[dir="rtl"] .footer-nav a {
     font-family: Tahoma, Arial, sans-serif;
 }
 
-html[dir="rtl"] .footer-nav a {
-    letter-spacing: 0;
-}
+html[dir="rtl"] .footer-nav a { letter-spacing: 0; }
 
 @media (max-width: 700px) {
-    body {
-        padding: 25px 16px;
-    }
+    body { padding: 25px 16px; }
 
     .language-bar {
         gap: 7px;
@@ -237,18 +218,14 @@ html[dir="rtl"] .footer-nav a {
         padding: 25px 22px;
     }
 
-    .article-card h2 {
-        font-size: 21px;
-    }
+    .article-card h2 { font-size: 21px; }
 
     .article-card p {
         font-size: 16px;
         line-height: 1.8;
     }
 
-    .read-link {
-        font-size: 15px;
-    }
+    .read-link { font-size: 15px; }
 
     .footer-nav a {
         max-width: 100%;
@@ -258,9 +235,7 @@ html[dir="rtl"] .footer-nav a {
 }
 
 @media (hover: none) {
-    .article-card {
-        transition: none;
-    }
+    .article-card { transition: none; }
 }
 </style>
 </head>
@@ -301,20 +276,20 @@ html[dir="rtl"] .footer-nav a {
 
     <section class="article-list" id="article-list" aria-label="Lista de artículos">
 
-        <!-- ARTÍCULO EXISTENTE -->
+        <!-- PRIMERO: NUEVO ARTÍCULO -->
+        <article class="article-card">
+            <h2 id="darkness-title">Cuando el hombre busca respuestas en las tinieblas</h2>
+            <p id="darkness-description">Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.</p>
+            <a class="read-link" id="darkness-link" href="cuando-el-hombre-busca-respuestas-en-las-tinieblas.html">Leer artículo →</a>
+        </article>
+
+        <!-- SEGUNDO: ÉL SABE NUESTRA CONDICIÓN, PARTE 1 Y 2 -->
         <article class="article-card">
             <h2 id="article-title">Él sabe nuestra condición</h2>
             <p id="article-description">Dios conoce nuestras circunstancias, necesidades y aquello que muchas veces enfrentamos en silencio.</p>
             <a class="read-link" id="part-1-link" href="el-esta-al-tanto-parte-1.html">Leer Parte 1 →</a>
             <br>
             <a class="read-link" id="part-2-link" href="el-esta-al-tanto-parte-2.html">Leer Parte 2 →</a>
-        </article>
-
-        <!-- NUEVO ARTÍCULO -->
-        <article class="article-card">
-            <h2 id="darkness-title">Cuando el hombre busca respuestas en las tinieblas</h2>
-            <p id="darkness-description">Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.</p>
-            <a class="read-link" id="darkness-link" href="cuando-el-hombre-busca-respuestas-en-las-tinieblas.html">Leer artículo →</a>
         </article>
 
     </section>
@@ -548,6 +523,7 @@ html[dir="rtl"] .footer-nav a {
 
         document.getElementById("page-title").textContent = t.title;
         document.getElementById("page-intro").textContent = t.intro;
+
         document.getElementById("article-title").textContent = t.articleTitle;
         document.getElementById("article-description").textContent = t.description;
         document.getElementById("part-1-link").textContent = t.part1;
@@ -606,3 +582,4 @@ html[dir="rtl"] .footer-nav a {
 
 </body>
 </html>
+```
