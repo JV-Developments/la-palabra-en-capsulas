@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" class="notranslate">
 <head>
@@ -34,24 +35,22 @@ body {
     margin: 0 auto;
 }
 
-/* Imagen principal: más compacta en PC */
+/* Imagen principal: ocupa todo el ancho disponible */
 .article-image {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
     max-width: 100%;
-    max-height: 280px;
-    object-fit: contain;
     margin: 0 auto 20px;
     border-radius: 4px;
 }
 
-/* Título */
+/* Título: reducido un punto para PC */
 h1 {
     margin: 0 0 22px;
     color: #0F3661;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 35px;
+    font-size: 34px;
     line-height: 1.3;
     text-align: center;
 }
@@ -116,13 +115,12 @@ p:last-child {
 
     .article-image {
         width: 100%;
-        max-height: none;
         height: auto;
         margin-bottom: 24px;
     }
 
     h1 {
-        font-size: 29px;
+        font-size: 28px;
         line-height: 1.3;
     }
 
@@ -130,7 +128,6 @@ p:last-child {
         padding: 24px 20px;
     }
 
-    /* Párrafo destacado: mayor tamaño para facilitar la lectura */
     .verse {
         font-size: 19px;
         line-height: 1.8;
@@ -263,4 +260,4 @@ html[dir="rtl"] .numbered-points li {
 
 </body>
 </html>
-
+```
