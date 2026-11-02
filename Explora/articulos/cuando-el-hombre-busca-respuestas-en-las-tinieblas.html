@@ -35,20 +35,24 @@ body {
     margin: 0 auto;
 }
 
+/* Imagen principal: reducida para PC */
 .article-image {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    max-width: 800px;
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
     margin: 0 auto 30px;
     border-radius: 4px;
 }
 
+/* Título reducido un punto */
 h1 {
     margin: 0 0 30px;
     color: #0F3661;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 36px;
+    font-size: 35px;
     line-height: 1.3;
     text-align: center;
 }
@@ -63,7 +67,7 @@ h1 {
 }
 
 p {
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     color: #333;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 16px;
@@ -76,7 +80,7 @@ p:last-child {
 }
 
 .numbered-points {
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     padding-left: 25px;
     line-height: 1.8;
 }
@@ -105,21 +109,31 @@ p:last-child {
     background: #17365D;
 }
 
+/* Celular */
 @media (max-width: 700px) {
     body {
         padding: 25px 16px;
     }
 
     .article-image {
+        width: 100%;
+        max-height: none;
+        height: auto;
         margin-bottom: 24px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 29px;
+        line-height: 1.3;
     }
 
     .card {
         padding: 24px 20px;
+    }
+
+    /* Versículo: un punto más grande */
+    .verse {
+        font-size: 17px;
     }
 
     p,
@@ -175,20 +189,31 @@ html[dir="rtl"] .numbered-points li {
             365 tienen una connotación negativa como el de la imagen arriba expuesta
             y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se
             debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot
-            popular: “hay que dejarlos descansar”. Si en vida estos hicieron cuentas
-            con Dios y recibieron al Mesías en su corazón, claro que están descansando,
-            están dormidos, en reposo. Si por el contrario, no se arrepintieron de sus
-            pecados y murieron siendo agnósticos, no la están pasando nada bien.
+            popular: “hay que dejarlos descansar”.
+        </p>
+
+        <p>
+            Si en vida estos hicieron cuentas con Dios y recibieron al Mesías en su
+            corazón, claro que están descansando, están dormidos, en reposo. Si por
+            el contrario, no se arrepintieron de sus pecados y murieron siendo
+            agnósticos, no la están pasando nada bien.
         </p>
 
         <p>
             Por eso, aquellas personas que llevan calaveritas de azúcar al cementerio,
             o las cosas que le gustaban a sus difuntos, tienen la tendencia a
-            <em>invocarlos</em> y es allí donde empieza el problema. En realidad, cada
-            uno tendrá que tomar una decisión si atender o no una celebración que
-            contraríe los designios de Dios (su Palabra). El día de los muertos
-            infantes (noviembre 1) y adultos (noviembre 2) es una conmemoración errónea
-            y no es necesario que se celebre. Nunca fue auspiciada por Dios, nunca lo será.
+            <em>invocarlos</em> y es allí donde empieza el problema.
+        </p>
+
+        <p>
+            En realidad, cada uno tendrá que tomar una decisión si atender o no una
+            celebración que contraríe los designios de Dios (su Palabra).
+        </p>
+
+        <p>
+            El día de los muertos infantes (noviembre 1) y adultos (noviembre 2) es
+            una conmemoración errónea y no es necesario que se celebre. Nunca fue
+            auspiciada por Dios, nunca lo será.
         </p>
 
         <p>
@@ -206,9 +231,13 @@ html[dir="rtl"] .numbered-points li {
             Y no se trata que todo el domingo te des golpes de pecho simulando
             religiosidad, sino que simplemente ores: “Padre, gracias por haber creado
             todas las cosas y por habernos dado reposo con la venida del Mesías, quien
-            vive en mí”. ¿Te atreverás a hacer esto cada domingo, invocando al
-            Todopoderoso? Si lo haces con convicción, tu entendimiento del evangelio
-            se incrementará sustancialmente. Lo creo.
+            vive en mí”.
+        </p>
+
+        <p class="verse">
+            ¿Te atreverás a hacer esto cada domingo, invocando al Todopoderoso?
+            Si lo haces con convicción, tu entendimiento del evangelio se
+            incrementará sustancialmente. Lo creo.
         </p>
 
     </main>
