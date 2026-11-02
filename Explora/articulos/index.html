@@ -3,6 +3,7 @@
 <html lang="es" dir="ltr">
 <head>
 <meta charset="UTF-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Artículos de La Palabra en Cápsulas para reflexionar y crecer en la fe.">
 <meta name="theme-color" content="#FAF6F0">
@@ -176,7 +177,7 @@ h1 {
     transform: translateY(-1px);
 }
 
-/* Hebreo y árabe: escritura de derecha a izquierda */
+/* Hebreo y árabe */
 html[dir="rtl"] body {
     direction: rtl;
 }
@@ -270,37 +271,26 @@ html[dir="rtl"] .footer-nav a {
     <nav class="language-bar" id="language-bar" aria-label="Selección de idioma">
         <button type="button" class="lang-link active" id="link-es" onclick="changeLanguage('es')" aria-pressed="true" lang="es">Español</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-en" onclick="changeLanguage('en')" aria-pressed="false" lang="en">English</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-zh" onclick="changeLanguage('zh')" aria-pressed="false" lang="zh-CN">简体中文</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-fr" onclick="changeLanguage('fr')" aria-pressed="false" lang="fr">Français</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-it" onclick="changeLanguage('it')" aria-pressed="false" lang="it">Italiano</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-pt" onclick="changeLanguage('pt')" aria-pressed="false" lang="pt">Português</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-he" onclick="changeLanguage('he')" aria-pressed="false" lang="he">עברית</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-ar" onclick="changeLanguage('ar')" aria-pressed="false" lang="ar">العربية</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-hi" onclick="changeLanguage('hi')" aria-pressed="false" lang="hi">हिन्दी</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-ru" onclick="changeLanguage('ru')" aria-pressed="false" lang="ru">Русский</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-de" onclick="changeLanguage('de')" aria-pressed="false" lang="de">Deutsch</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-
         <button type="button" class="lang-link" id="link-ja" onclick="changeLanguage('ja')" aria-pressed="false" lang="ja">日本語</button>
     </nav>
 
@@ -310,15 +300,23 @@ html[dir="rtl"] .footer-nav a {
     </header>
 
     <section class="article-list" id="article-list" aria-label="Lista de artículos">
+
+        <!-- ARTÍCULO EXISTENTE -->
         <article class="article-card">
             <h2 id="article-title">Él sabe nuestra condición</h2>
-
             <p id="article-description">Dios conoce nuestras circunstancias, necesidades y aquello que muchas veces enfrentamos en silencio.</p>
-
             <a class="read-link" id="part-1-link" href="el-esta-al-tanto-parte-1.html">Leer Parte 1 →</a>
             <br>
             <a class="read-link" id="part-2-link" href="el-esta-al-tanto-parte-2.html">Leer Parte 2 →</a>
         </article>
+
+        <!-- NUEVO ARTÍCULO -->
+        <article class="article-card">
+            <h2 id="darkness-title">Cuando el hombre busca respuestas en las tinieblas</h2>
+            <p id="darkness-description">Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.</p>
+            <a class="read-link" id="darkness-link" href="cuando-el-hombre-busca-respuestas-en-las-tinieblas.html">Leer artículo →</a>
+        </article>
+
     </section>
 
     <nav class="footer-nav" id="footer-nav" aria-label="Navegación inferior">
@@ -340,6 +338,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Dios conoce nuestras circunstancias, necesidades y aquello que muchas veces enfrentamos en silencio.",
             part1: "Leer Parte 1 →",
             part2: "Leer Parte 2 →",
+            darknessTitle: "Cuando el hombre busca respuestas en las tinieblas",
+            darknessDescription: "Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.",
+            darknessLink: "Leer artículo →",
             back: "← Volver al Menú",
             articleListLabel: "Lista de artículos",
             footerLabel: "Navegación inferior",
@@ -354,6 +355,9 @@ html[dir="rtl"] .footer-nav a {
             description: "God knows our circumstances, our needs, and the things we often face in silence.",
             part1: "Read Part 1 →",
             part2: "Read Part 2 →",
+            darknessTitle: "When Man Seeks Answers in Darkness",
+            darknessDescription: "A biblical reflection on occult practices, consulting the dead, and the decisions we must make in light of God's Word.",
+            darknessLink: "Read article →",
             back: "← Back to Menu",
             articleListLabel: "List of articles",
             footerLabel: "Footer navigation",
@@ -368,6 +372,9 @@ html[dir="rtl"] .footer-nav a {
             description: "上帝知道我们的处境和需要，也知道那些我们常常默默承受的事情。",
             part1: "阅读第一部分 →",
             part2: "阅读第二部分 →",
+            darknessTitle: "当人在人生的黑暗中寻找答案",
+            darknessDescription: "一篇关于 occult 实践、求问死者以及我们应当如何按照上帝话语作出决定的圣经反思。",
+            darknessLink: "阅读文章 →",
             back: "← 返回菜单",
             articleListLabel: "文章列表",
             footerLabel: "页脚导航",
@@ -382,6 +389,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Dieu connaît nos circonstances, nos besoins et les épreuves que nous traversons souvent en silence.",
             part1: "Lire la partie 1 →",
             part2: "Lire la partie 2 →",
+            darknessTitle: "Quand l’homme cherche des réponses dans les ténèbres",
+            darknessDescription: "Une réflexion biblique sur les pratiques occultes, la consultation des morts et les décisions à prendre à la lumière de la Parole de Dieu.",
+            darknessLink: "Lire l’article →",
             back: "← Retour au menu",
             articleListLabel: "Liste des articles",
             footerLabel: "Navigation de bas de page",
@@ -396,6 +406,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Dio conosce le nostre circostanze, i nostri bisogni e ciò che spesso affrontiamo in silenzio.",
             part1: "Leggi la Parte 1 →",
             part2: "Leggi la Parte 2 →",
+            darknessTitle: "Quando l’uomo cerca risposte nelle tenebre",
+            darknessDescription: "Una riflessione biblica sulle pratiche occulte, la consultazione dei morti e le decisioni da prendere alla luce della Parola di Dio.",
+            darknessLink: "Leggi l’articolo →",
             back: "← Torna al menu",
             articleListLabel: "Elenco degli articoli",
             footerLabel: "Navigazione a piè di pagina",
@@ -410,6 +423,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Deus conhece as nossas circunstâncias, as nossas necessidades e aquilo que muitas vezes enfrentamos em silêncio.",
             part1: "Ler a Parte 1 →",
             part2: "Ler a Parte 2 →",
+            darknessTitle: "Quando o homem busca respostas nas trevas",
+            darknessDescription: "Uma reflexão bíblica sobre práticas ocultas, a consulta aos mortos e as decisões que devemos tomar à luz da Palavra de Deus.",
+            darknessLink: "Ler artigo →",
             back: "← Voltar ao menu",
             articleListLabel: "Lista de artigos",
             footerLabel: "Navegação do rodapé",
@@ -424,6 +440,9 @@ html[dir="rtl"] .footer-nav a {
             description: "אלוהים מכיר את נסיבות חיינו ואת צורכינו, ויודע מה אנו נאלצים לעיתים קרובות להתמודד איתו בשקט.",
             part1: "לקריאת חלק 1 ←",
             part2: "לקריאת חלק 2 ←",
+            darknessTitle: "כאשר האדם מחפש תשובות בחשכה",
+            darknessDescription: "עיון מקראי במנהגים הנסתרים, בפנייה אל המתים ובהחלטות שעלינו לקבל לאור דבר אלוהים.",
+            darknessLink: "לקריאת המאמר ←",
             back: "חזרה לתפריט ←",
             articleListLabel: "רשימת מאמרים",
             footerLabel: "ניווט תחתון",
@@ -438,6 +457,9 @@ html[dir="rtl"] .footer-nav a {
             description: "يعرف الله ظروفنا واحتياجاتنا وما نواجهه كثيرًا في صمت.",
             part1: "اقرأ الجزء الأول ←",
             part2: "اقرأ الجزء الثاني ←",
+            darknessTitle: "عندما يبحث الإنسان عن إجابات في الظلام",
+            darknessDescription: "تأمل كتابي حول الممارسات الخفية واستشارة الموتى والقرارات التي ينبغي أن نتخذها في ضوء كلمة الله.",
+            darknessLink: "اقرأ المقال ←",
             back: "العودة إلى القائمة ←",
             articleListLabel: "قائمة المقالات",
             footerLabel: "التنقل السفلي",
@@ -452,6 +474,9 @@ html[dir="rtl"] .footer-nav a {
             description: "परमेश्वर हमारी परिस्थितियों, हमारी ज़रूरतों और उन बातों को जानता है जिनका सामना हम अक्सर चुपचाप करते हैं।",
             part1: "भाग 1 पढ़ें →",
             part2: "भाग 2 पढ़ें →",
+            darknessTitle: "जब मनुष्य अंधकार में उत्तर खोजता है",
+            darknessDescription: "गुप्त प्रथाओं, मृतकों से परामर्श और परमेश्वर के वचन के प्रकाश में लिए जाने वाले निर्णयों पर बाइबिल आधारित चिंतन।",
+            darknessLink: "लेख पढ़ें →",
             back: "← मेनू पर वापस जाएँ",
             articleListLabel: "लेखों की सूची",
             footerLabel: "निचला नेविगेशन",
@@ -466,6 +491,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Бог знает наши обстоятельства, наши нужды и то, с чем нам часто приходится сталкиваться молча.",
             part1: "Читать часть 1 →",
             part2: "Читать часть 2 →",
+            darknessTitle: "Когда человек ищет ответы во тьме",
+            darknessDescription: "Библейское размышление об оккультных практиках, обращении к умершим и решениях, которые следует принимать в свете Слова Божьего.",
+            darknessLink: "Читать статью →",
             back: "← Вернуться в меню",
             articleListLabel: "Список статей",
             footerLabel: "Нижняя навигация",
@@ -480,6 +508,9 @@ html[dir="rtl"] .footer-nav a {
             description: "Gott kennt unsere Umstände, unsere Bedürfnisse und das, womit wir oft still für uns allein kämpfen.",
             part1: "Teil 1 lesen →",
             part2: "Teil 2 lesen →",
+            darknessTitle: "Wenn der Mensch Antworten in der Finsternis sucht",
+            darknessDescription: "Eine biblische Betrachtung über okkulte Praktiken, die Befragung der Toten und Entscheidungen im Licht des Wortes Gottes.",
+            darknessLink: "Artikel lesen →",
             back: "← Zurück zum Menü",
             articleListLabel: "Artikelliste",
             footerLabel: "Fußnavigation",
@@ -494,6 +525,9 @@ html[dir="rtl"] .footer-nav a {
             description: "神は私たちの置かれた状況や必要、そして私たちがしばしば人知れず直面していることをご存じです。",
             part1: "第1部を読む →",
             part2: "第2部を読む →",
+            darknessTitle: "人が闇の中に答えを求めるとき",
+            darknessDescription: "オカルト的な慣習、死者への問いかけ、そして神の御言葉に照らして下すべき決断についての聖書的考察。",
+            darknessLink: "記事を読む →",
             back: "← メニューに戻る",
             articleListLabel: "記事一覧",
             footerLabel: "フッターナビゲーション",
@@ -518,19 +552,16 @@ html[dir="rtl"] .footer-nav a {
         document.getElementById("article-description").textContent = t.description;
         document.getElementById("part-1-link").textContent = t.part1;
         document.getElementById("part-2-link").textContent = t.part2;
+
+        document.getElementById("darkness-title").textContent = t.darknessTitle;
+        document.getElementById("darkness-description").textContent = t.darknessDescription;
+        document.getElementById("darkness-link").textContent = t.darknessLink;
+
         document.getElementById("back-link").textContent = t.back;
 
-        document.getElementById("article-list").setAttribute(
-            "aria-label", t.articleListLabel
-        );
-
-        document.getElementById("footer-nav").setAttribute(
-            "aria-label", t.footerLabel
-        );
-
-        document.getElementById("language-bar").setAttribute(
-            "aria-label", t.languageLabel
-        );
+        document.getElementById("article-list").setAttribute("aria-label", t.articleListLabel);
+        document.getElementById("footer-nav").setAttribute("aria-label", t.footerLabel);
+        document.getElementById("language-bar").setAttribute("aria-label", t.languageLabel);
 
         document.querySelectorAll(".lang-link").forEach(function (button) {
             const selected = button.id === "link-" + lang;
