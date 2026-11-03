@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" class="notranslate">
 <head>
@@ -34,17 +35,17 @@ body {
     margin: 0 auto;
 }
 
-/* Imagen principal: ocupa todo el ancho disponible */
+/* Imagen principal: reducida 25% en PC */
 .article-image {
     display: block;
-    width: 100%;
+    width: 75%;
     height: auto;
     max-width: 100%;
     margin: 0 auto 20px;
     border-radius: 4px;
 }
 
-/* Título: reducido un punto para PC */
+/* Título */
 h1 {
     margin: 0 0 22px;
     color: #0F3661;
@@ -74,6 +75,15 @@ p {
 
 p:last-child {
     margin-bottom: 0;
+}
+
+/* Frases centradas en el texto */
+.centered-phrase {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    margin-bottom: 8px;
 }
 
 .numbered-points {
@@ -176,16 +186,21 @@ html[dir="rtl"] .numbered-points li {
         alt="Imagen ilustrativa sobre la nigromancia"
     >
 
-    <h1>Cuando el hombre busca respuestas en las tinieblas</h1>
+    <h1>Cuando el hombre busca respuestas<br>en las tinieblas</h1>
 
     <main class="card">
+
         <p>
-            <span style="display:block; text-align:center; font-weight:bold; font-size:1.1em;">
-  Se equivocó la Unesco en el 2008?
-</span>    
-                
-            Sin duda y fue desafortunado. <br> Veamos. De los 613 mandamientos de la Torá judía,
-            365 tienen una connotación negativa como el de la imagen expuesta arriba 
+            <span class="centered-phrase">
+                Se equivocó la Unesco en el 2008?
+            </span>
+
+            <span class="centered-phrase">
+                Sin duda y fue desafortunado.
+            </span>
+
+            Veamos. De los 613 mandamientos de la Torá judía,
+            365 tienen una connotación negativa como el de la imagen expuesta arriba
             y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se
             debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot
             popular: “hay que dejarlos descansar”.
@@ -262,4 +277,4 @@ html[dir="rtl"] .numbered-points li {
 
 </body>
 </html>
-
+```
