@@ -68,7 +68,7 @@ body {
 /* Imagen principal */
 .article-image {
     display: block;
-    width: 100%;
+    width: 75%; /* 25% más pequeña en PC */
     height: auto;
     max-width: 100%;
     margin: 0 auto 20px;
@@ -704,7 +704,10 @@ html[dir="rtl"] .veamos {
 
         setText("article-title", t.title);
         const image = document.getElementById("article-image");
-        if (image) image.alt = t.imageAlt;
+        if (image) {
+            image.src = lang === "es" ? "nigromancia.png" : "nigromancia-" + lang + ".png";
+            image.alt = t.imageAlt;
+        }
         setText("unesco-question", t.question);
         setText("opening-answer", t.opening);
         setText("let-us-see", t.see);
