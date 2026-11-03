@@ -34,6 +34,37 @@ body {
     margin: 0 auto;
 }
 
+/* Selector de los 12 idiomas */
+.language-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 25px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.lang-link {
+    padding: 2px 0;
+    border: 0;
+    background: transparent;
+    color: #666;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+.lang-link:hover,
+.lang-link.active { color: #0F4C81; }
+.lang-link.active { font-weight: 700; }
+.lang-divider { color: #aaa; user-select: none; }
+.lang-link:focus-visible,
+.btn-back:focus-visible {
+    outline: 2px solid #0F4C81;
+    outline-offset: 4px;
+}
+
 /* Imagen principal */
 .article-image {
     display: block;
@@ -195,6 +226,12 @@ p:last-child {
         padding: 25px 16px;
     }
 
+    .language-bar {
+        gap: 7px;
+        margin-bottom: 22px;
+        font-size: 12px;
+    }
+
     .article-image {
         width: 100%;
         height: auto;
@@ -243,6 +280,7 @@ html[dir="rtl"] body {
     direction: rtl;
 }
 
+html[dir="rtl"] .language-bar { direction: rtl; }
 html[dir="rtl"] .card {
     border-left: none;
     border-right: 5px solid #0F3661;
@@ -275,123 +313,461 @@ html[dir="rtl"] .veamos {
 <body>
 <div class="container">
 
+    <nav class="language-bar" id="language-bar" aria-label="Selección de idioma">
+        <button type="button" class="lang-link active" id="link-es" onclick="changeLanguage('es')" aria-pressed="true" lang="es">Español</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-en" onclick="changeLanguage('en')" aria-pressed="false" lang="en">English</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-zh" onclick="changeLanguage('zh')" aria-pressed="false" lang="zh-CN">简体中文</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-fr" onclick="changeLanguage('fr')" aria-pressed="false" lang="fr">Français</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-it" onclick="changeLanguage('it')" aria-pressed="false" lang="it">Italiano</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-pt" onclick="changeLanguage('pt')" aria-pressed="false" lang="pt">Português</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-he" onclick="changeLanguage('he')" aria-pressed="false" lang="he">עברית</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-ar" onclick="changeLanguage('ar')" aria-pressed="false" lang="ar">العربية</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-hi" onclick="changeLanguage('hi')" aria-pressed="false" lang="hi">हिन्दी</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-ru" onclick="changeLanguage('ru')" aria-pressed="false" lang="ru">Русский</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-de" onclick="changeLanguage('de')" aria-pressed="false" lang="de">Deutsch</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-ja" onclick="changeLanguage('ja')" aria-pressed="false" lang="ja">日本語</button>
+    </nav>
+
     <img
         class="article-image"
+        id="article-image"
         src="nigromancia.png"
         alt="Imagen ilustrativa sobre la nigromancia"
     >
 
-    <h1>Cuando el hombre busca respuestas en las tinieblas</h1>
+    <h1 id="article-title">Cuando el hombre busca respuestas en las tinieblas</h1>
 
     <main class="card">
 
         <p>
             <span class="opening-phrase">
-                <strong class="unesco-phrase">Se equivocó la Unesco en el 2008?</strong>
+                <strong class="unesco-phrase" id="unesco-question">Se equivocó la Unesco en el 2008?</strong>
             </span>
 
             <span class="opening-phrase">
-                Sin duda y fue desafortunado.
+                <span id="opening-answer">Sin duda y fue desafortunado.</span>
             </span>
 
-            <span class="veamos">
+            <span class="veamos" id="let-us-see">
                 Veamos.
             </span>
 
             De los 613 mandamientos de la
             <span class="tooltip-container" tabindex="0" role="button" aria-label="Torá. Toca para ver una explicación.">
-                <strong>Torá</strong>
+                <strong id="torah-word">Torá</strong>
                 <span class="tooltip-text">
-                    O Pentateuco de Moisés, los 5 primeros libros de la Biblia:
-                    Génesis, Éxodo, Levítico, Números y Deuteronomio.
+                    <span id="torah-explanation">O Pentateuco de Moisés, los 5 primeros libros de la Biblia:
+                    Génesis, Éxodo, Levítico, Números y Deuteronomio.</span>
                 </span>
             </span>
-            judía, 365 tienen una connotación negativa como el de la imagen expuesta arriba
-            y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se
-            debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot
-            popular: “hay que dejarlos descansar”.
+            <span id="paragraph-1-rest">judía, 365 tienen una connotación negativa como el de la imagen expuesta arriba y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot popular: “hay que dejarlos descansar”.</span>
         </p>
 
         <p>
-            Si en vida estos hicieron cuentas con Dios y recibieron al Mesías en su
+            <span id="paragraph-2">Si en vida estos hicieron cuentas con Dios y recibieron al Mesías en su
             corazón, claro que están descansando, dormidos y en reposo. Si por
             el contrario, no se arrepintieron de sus pecados y murieron siendo
-            agnósticos, no la están pasando nada bien.
+            agnósticos, no la están pasando nada bien.</span>
         </p>
 
         <p>
-            Por eso, aquellas personas que llevan calaveritas de azúcar al cementerio,
+            <span id="paragraph-3">Por eso, aquellas personas que llevan calaveritas de azúcar al cementerio,
             o las cosas que le gustaban a sus difuntos, tienen la tendencia a
-            <em>invocarlos</em> y es allí donde empieza el problema.
+            <em>invocarlos</em> y es allí donde empieza el problema.</span>
         </p>
 
         <p>
-            En realidad, cada uno tendrá que tomar una decisión si atender o no una
-            celebración que contraríe los designios de Dios (su Palabra).
+            <span id="paragraph-4">En realidad, cada uno tendrá que tomar una decisión si atender o no una
+            celebración que contraríe los designios de Dios (su Palabra).</span>
         </p>
 
         <p>
-            El día de los muertos infantes (noviembre 1) y adultos (noviembre 2) es
+            <span id="paragraph-5">El día de los muertos infantes (noviembre 1) y adultos (noviembre 2) es
             una conmemoración errónea y no es necesario que se celebre. Nunca fue
-            auspiciada por Dios, nunca lo será.
+            auspiciada por Dios, nunca lo será.</span>
         </p>
 
         <p>
-            En este 2026, cayó en domingo. ¿Qué se debe recordar los domingos?
-            Dos cosas:
+            <span id="paragraph-6">En este 2026, cayó en domingo. ¿Qué se debe recordar los domingos?
+            Dos cosas:</span>
         </p>
 
         <ol class="numbered-points">
-            <li>Que Dios creó todas las cosas en 6 días y descansó en el séptimo.</li>
-            <li>Que el único Padre Santo, que está en el cielo, nos dio reposo cuando
+            <li id="list-item-1">Que Dios creó todas las cosas en 6 días y descansó en el séptimo.</li>
+            <li id="list-item-2">Que el único Padre Santo, que está en el cielo, nos dio reposo cuando
             vinimos al Mesías, el Cristo, con el nuevo nacimiento.</li>
         </ol>
 
         <p>
-            Y no se trata que todo el domingo te des golpes de pecho simulando
+            <span id="paragraph-7">Y no se trata que todo el domingo te des golpes de pecho simulando
             religiosidad, sino que simplemente ores: “Padre, gracias por haber creado
             todas las cosas y por habernos dado reposo con la venida del Mesías, quien
-            vive en mí”.
+            vive en mí”.</span>
         </p>
 
         <p class="verse">
-            ¿Te atreverás a hacer esto cada domingo, invocando al Todopoderoso?
+            <span id="paragraph-8">¿Te atreverás a hacer esto cada domingo, invocando al Todopoderoso?
             Si lo haces con convicción, tu entendimiento del evangelio de seguro se
-            incrementará sustancialmente. Lo creo.
+            incrementará sustancialmente. Lo creo.</span>
         </p>
 
     </main>
 
     <a class="btn-back" href="/Explora/articulos/index.html">
-        Volver a Artículos
+        <span id="back-label">Volver a Artículos</span>
     </a>
 
 </div>
 
 <script>
 (function () {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang");
+    "use strict";
 
-    if (lang) {
-        document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
-        document.documentElement.dir =
-            ["he", "ar"].includes(lang) ? "rtl" : "ltr";
+    const translations = {
+        es: {
+            title: "Cuando el hombre busca respuestas en las tinieblas",
+            imageAlt: "Imagen ilustrativa sobre la nigromancia",
+            question: "¿Se equivocó la Unesco en el 2008?",
+            opening: "Sin duda y fue desafortunado.",
+            see: "Veamos.",
+            torah: "Torá",
+            torahExplanation: "O Pentateuco de Moisés, los 5 primeros libros de la Biblia: Génesis, Éxodo, Levítico, Números y Deuteronomio.",
+            p1: "judía, 365 tienen una connotación negativa como el de la imagen expuesta arriba y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se debe invocar espíritus de fallecidos. Como se diría en el argot popular: “hay que dejarlos descansar”.",
+            p2: "Si en vida estos hicieron cuentas con Dios y recibieron al Mesías en su corazón, claro que están descansando, dormidos y en reposo. Si por el contrario, no se arrepintieron de sus pecados y murieron siendo agnósticos, no la están pasando nada bien.",
+            p3: "Por eso, aquellas personas que llevan calaveritas de azúcar al cementerio, o las cosas que le gustaban a sus difuntos, tienen la tendencia a invocarlos y es allí donde empieza el problema.",
+            p4: "En realidad, cada uno tendrá que tomar una decisión si atender o no una celebración que contraríe los designios de Dios (su Palabra).",
+            p5: "El día de los muertos infantes (noviembre 1) y adultos (noviembre 2) es una conmemoración errónea y no es necesario que se celebre. Nunca fue auspiciada por Dios, nunca lo será.",
+            p6: "En este 2026, cayó en domingo. ¿Qué se debe recordar los domingos? Dos cosas:",
+            li1: "Que Dios creó todas las cosas en 6 días y descansó en el séptimo.",
+            li2: "Que el único Padre Santo, que está en el cielo, nos dio reposo cuando vinimos al Mesías, el Cristo, con el nuevo nacimiento.",
+            p7: "Y no se trata que todo el domingo te des golpes de pecho simulando religiosidad, sino que simplemente ores: “Padre, gracias por haber creado todas las cosas y por habernos dado reposo con la venida del Mesías, quien vive en mí”.",
+            p8: "¿Te atreverás a hacer esto cada domingo, invocando al Todopoderoso? Si lo haces con convicción, tu entendimiento del evangelio de seguro se incrementará sustancialmente. Lo creo.",
+            back: "Volver a Artículos",
+            languageLabel: "Selección de idioma"
+        },
+        en: {
+            title: "When Man Seeks Answers in Darkness",
+            imageAlt: "Illustrative image about necromancy",
+            question: "Was UNESCO mistaken in 2008?",
+            opening: "Without a doubt, and it was unfortunate.",
+            see: "Let us see.",
+            torah: "Torah",
+            torahExplanation: "Also called the Pentateuch of Moses, the first five books of the Bible: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy.",
+            p1: "In Jewish tradition, 365 of the 613 commandments have a negative connotation, as does the practice shown in the image above, leaving 248 with a positive meaning. According to the Bible, it is clear that we must not summon the spirits of the dead. As the popular saying goes: “let them rest in peace.”",
+            p2: "If during their lifetime they made peace with God and received the Messiah into their hearts, then they are indeed resting, asleep and at peace. If, on the other hand, they did not repent of their sins and died as agnostics, they are not having a good time.",
+            p3: "That is why people who take sugar skulls to the cemetery, or bring things their deceased loved ones enjoyed, tend to summon them—and that is where the problem begins.",
+            p4: "In reality, each person must decide whether or not to take part in a celebration that goes against God's design (His Word).",
+            p5: "The Day of the Dead for children (November 1) and adults (November 2) is a mistaken commemoration and does not need to be celebrated. It was never endorsed by God, and never will be.",
+            p6: "In 2026, it fell on a Sunday. What should we remember on Sundays? Two things:",
+            li1: "That God created all things in six days and rested on the seventh.",
+            li2: "That the only Holy Father, who is in heaven, gave us rest when we came to the Messiah, the Christ, through the new birth.",
+            p7: "This does not mean spending the entire Sunday beating your chest and pretending to be religious. Simply pray: “Father, thank You for creating all things and for giving us rest through the coming of the Messiah, who lives in me.”",
+            p8: "Will you dare to do this every Sunday, calling upon the Almighty? If you do it with conviction, your understanding of the gospel will surely grow substantially. I believe it.",
+            back: "Back to Articles",
+            languageLabel: "Language selection"
+        },
+        zh: {
+            title: "当人在人生的黑暗中寻找答案",
+            imageAlt: "关于招魂术的示意图片",
+            question: "联合国教科文组织在2008年是否判断错误？",
+            opening: "毫无疑问，这是令人遗憾的。",
+            see: "让我们来看看。",
+            torah: "妥拉",
+            torahExplanation: "也称摩西五经，是圣经的前五卷：创世记、出埃及记、利未记、民数记和申命记。",
+            p1: "在犹太传统的613条诫命中，有365条带有负面的含义，例如上图所展示的做法；其余248条则具有积极意义。按照圣经，我们显然不应召唤亡者的灵。正如俗话所说：“让逝者安息吧。”",
+            p2: "如果他们生前与上帝和好，并在心里接受了弥赛亚，那么他们确实是在安息、睡了并得享平安。相反，如果他们没有悔改自己的罪，且以不可知论者的身份离世，那么他们的处境就并不好。",
+            p3: "因此，那些把糖制骷髅带到墓地，或带去逝者生前喜爱之物的人，往往倾向于召唤他们的问题也正是从这里开始。",
+            p4: "事实上，每个人都必须作出决定：是否参加违背上帝旨意（祂的话语）的庆典。",
+            p5: "儿童亡灵节（11月1日）和成人亡灵节（11月2日）是一种错误的纪念活动，没有必要庆祝。这从来不是上帝所认可的，也永远不会是。",
+            p6: "2026年，这一天恰逢星期日。星期日我们应当记念什么？两件事：",
+            li1: "上帝在六日内创造万物，并在第七日安息。",
+            li2: "那位在天上的独一圣父，在我们借着新生来到弥赛亚基督面前时，赐给了我们安息。",
+            p7: "这并不是说你整个星期日都要捶胸顿足、假装虔诚，而是只需祷告：“父啊，感谢祢创造万物，并借着弥赛亚的降临赐给我们安息；祂活在我里面。”",
+            p8: "你敢不敢每个星期日都这样做，呼求全能者？如果你带着信心去做，你对福音的理解必将大大增长。我相信如此。",
+            back: "返回文章",
+            languageLabel: "语言选择"
+        },
+        fr: {
+            title: "Quand l’homme cherche des réponses dans les ténèbres",
+            imageAlt: "Image illustrative sur la nécromancie",
+            question: "L’Unesco s’est-elle trompée en 2008 ?",
+            opening: "Sans aucun doute, et cela fut regrettable.",
+            see: "Voyons cela.",
+            torah: "Torah",
+            torahExplanation: "Aussi appelé Pentateuque de Moïse, il comprend les cinq premiers livres de la Bible : Genèse, Exode, Lévitique, Nombres et Deutéronome.",
+            p1: "Dans la tradition juive, 365 des 613 commandements ont une connotation négative, comme la pratique illustrée ci-dessus ; il en reste 248 à connotation positive. Selon la Bible, il est clair qu’il ne faut pas invoquer les esprits des défunts. Comme le dit l’expression populaire : « laissons-les reposer en paix ».",
+            p2: "Si, de leur vivant, ils se sont réconciliés avec Dieu et ont reçu le Messie dans leur cœur, alors ils sont bien au repos, endormis et en paix. En revanche, s’ils ne se sont pas repentis de leurs péchés et sont morts agnostiques, leur situation n’est pas heureuse.",
+            p3: "C’est pourquoi les personnes qui apportent des crânes en sucre au cimetière, ou des objets que leurs défunts appréciaient, ont tendance à les invoquer ; c’est là que le problème commence.",
+            p4: "En réalité, chacun devra décider s’il participe ou non à une célébration qui va à l’encontre des desseins de Dieu (sa Parole).",
+            p5: "La célébration des morts enfants (1er novembre) et adultes (2 novembre) est une commémoration erronée qu’il n’est pas nécessaire de célébrer. Elle n’a jamais été approuvée par Dieu et ne le sera jamais.",
+            p6: "En 2026, cette date est tombée un dimanche. Que devons-nous nous rappeler le dimanche ? Deux choses :",
+            li1: "Que Dieu a créé toutes choses en six jours et s’est reposé le septième.",
+            li2: "Que le seul Père saint, qui est au ciel, nous a donné le repos lorsque nous sommes venus au Messie, le Christ, par la nouvelle naissance.",
+            p7: "Il ne s’agit pas de passer tout le dimanche à se frapper la poitrine en simulant la piété, mais simplement de prier : « Père, merci d’avoir créé toutes choses et de nous avoir donné le repos par la venue du Messie, qui vit en moi. »",
+            p8: "Oseras-tu faire cela chaque dimanche, en invoquant le Tout-Puissant ? Si tu le fais avec conviction, ta compréhension de l’Évangile augmentera considérablement. Je le crois.",
+            back: "Retour aux articles",
+            languageLabel: "Sélection de la langue"
+        },
+        it: {
+            title: "Quando l’uomo cerca risposte nelle tenebre",
+            imageAlt: "Immagine illustrativa sulla negromanzia",
+            question: "L’Unesco si è sbagliata nel 2008?",
+            opening: "Senza dubbio, ed è stato deplorevole.",
+            see: "Vediamo.",
+            torah: "Torah",
+            torahExplanation: "Conosciuto anche come Pentateuco di Mosè, comprende i primi cinque libri della Bibbia: Genesi, Esodo, Levitico, Numeri e Deuteronomio.",
+            p1: "Nella tradizione ebraica, 365 dei 613 comandamenti hanno una connotazione negativa, come la pratica mostrata nell’immagine sopra; ne restano 248 con un significato positivo. Secondo la Bibbia, è chiaro che non si devono invocare gli spiriti dei defunti. Come dice il linguaggio popolare: “lasciamoli riposare in pace”.",
+            p2: "Se durante la loro vita hanno fatto pace con Dio e hanno ricevuto il Messia nel cuore, allora stanno davvero riposando, dormendo e in pace. Se invece non si sono pentiti dei loro peccati e sono morti da agnostici, la loro condizione non è affatto buona.",
+            p3: "Per questo, le persone che portano teschi di zucchero al cimitero, o oggetti che piacevano ai loro defunti, tendono a invocarli: è proprio qui che comincia il problema.",
+            p4: "In realtà, ognuno dovrà decidere se partecipare o meno a una celebrazione che contraddice i propositi di Dio (la Sua Parola).",
+            p5: "La commemorazione dei defunti bambini (1° novembre) e adulti (2 novembre) è una celebrazione errata e non è necessario celebrarla. Non è mai stata approvata da Dio e mai lo sarà.",
+            p6: "Nel 2026, questa data è caduta di domenica. Che cosa dobbiamo ricordare la domenica? Due cose:",
+            li1: "Che Dio ha creato ogni cosa in sei giorni e si è riposato il settimo.",
+            li2: "Che l’unico Padre Santo, che è nei cieli, ci ha dato riposo quando siamo venuti al Messia, il Cristo, attraverso la nuova nascita.",
+            p7: "Non si tratta di passare tutta la domenica a battersi il petto fingendo religiosità, ma semplicemente di pregare: “Padre, grazie per aver creato ogni cosa e per averci dato riposo con la venuta del Messia, che vive in me”.",
+            p8: "Oserai farlo ogni domenica, invocando l’Onnipotente? Se lo farai con convinzione, la tua comprensione del Vangelo crescerà notevolmente. Lo credo.",
+            back: "Torna agli articoli",
+            languageLabel: "Selezione della lingua"
+        },
+        pt: {
+            title: "Quando o homem busca respostas nas trevas",
+            imageAlt: "Imagem ilustrativa sobre a necromancia",
+            question: "A Unesco se equivocou em 2008?",
+            opening: "Sem dúvida, e isso foi lamentável.",
+            see: "Vejamos.",
+            torah: "Torá",
+            torahExplanation: "Também chamado de Pentateuco de Moisés, reúne os cinco primeiros livros da Bíblia: Gênesis, Êxodo, Levítico, Números e Deuteronômio.",
+            p1: "Na tradição judaica, 365 dos 613 mandamentos têm uma conotação negativa, como a prática mostrada na imagem acima; restam 248 com sentido positivo. Segundo a Bíblia, é claro que não se deve invocar espíritos de falecidos. Como diz a expressão popular: “é preciso deixá-los descansar”.",
+            p2: "Se durante a vida essas pessoas se reconciliaram com Deus e receberam o Messias no coração, então estão descansando, dormindo e em paz. Se, pelo contrário, não se arrependeram de seus pecados e morreram como agnósticas, não estão em uma situação nada boa.",
+            p3: "Por isso, as pessoas que levam caveiras de açúcar ao cemitério, ou objetos de que seus falecidos gostavam, tendem a invocá-los — e é aí que o problema começa.",
+            p4: "Na realidade, cada um terá de decidir se participa ou não de uma celebração que contrarie os desígnios de Deus (Sua Palavra).",
+            p5: "A comemoração dos mortos infantis (1º de novembro) e adultos (2 de novembro) é uma celebração equivocada e não precisa ser realizada. Nunca foi aprovada por Deus e nunca será.",
+            p6: "Em 2026, essa data caiu em um domingo. O que devemos lembrar aos domingos? Duas coisas:",
+            li1: "Que Deus criou todas as coisas em seis dias e descansou no sétimo.",
+            li2: "Que o único Pai Santo, que está nos céus, nos deu descanso quando viemos ao Messias, o Cristo, por meio do novo nascimento.",
+            p7: "Não se trata de passar todo o domingo batendo no peito e fingindo religiosidade, mas simplesmente de orar: “Pai, obrigado por ter criado todas as coisas e por nos ter dado descanso com a vinda do Messias, que vive em mim”.",
+            p8: "Você terá coragem de fazer isso todos os domingos, invocando o Todo-Poderoso? Se fizer isso com convicção, seu entendimento do evangelho certamente crescerá muito. Eu creio.",
+            back: "Voltar aos artigos",
+            languageLabel: "Seleção de idioma"
+        },
+        he: {
+            title: "כאשר האדם מחפש תשובות בחשכה",
+            imageAlt: "תמונה להמחשה בנושא העלאת רוחות",
+            question: "האם אונסק״ו טעתה בשנת 2008?",
+            opening: "ללא ספק, וזה היה מצער.",
+            see: "הבה נראה.",
+            torah: "תורה",
+            torahExplanation: "נקרא גם חומש משה, והוא כולל את חמשת ספרי המקרא הראשונים: בראשית, שמות, ויקרא, במדבר ודברים.",
+            p1: "במסורת היהודית, ל־365 מתוך 613 המצוות יש משמעות שלילית, כמו המעשה המוצג בתמונה שלמעלה; נותרות 248 בעלות משמעות חיובית. על פי המקרא ברור שאין לזמן רוחות של נפטרים. כפי שאומרים בשפה העממית: ״צריך להניח להם לנוח״.",
+            p2: "אם בחייהם השלימו עם אלוהים וקיבלו את המשיח בלבם, הרי שהם אכן נחים, ישנים ושלווים. לעומת זאת, אם לא התחרטו על חטאיהם ומתו כאגנוסטים, מצבם אינו טוב כלל.",
+            p3: "לכן, אנשים המביאים גולגולות סוכר לבית הקברות, או חפצים שהנפטרים אהבו, נוטים לזמן אותם — וכאן מתחילה הבעיה.",
+            p4: "למעשה, כל אחד יצטרך להחליט אם להשתתף בחגיגה הסותרת את רצון אלוהים (דברו).",
+            p5: "יום המתים של הילדים (1 בנובמבר) ושל המבוגרים (2 בנובמבר) הוא ציון זיכרון מוטעה ואין צורך לחגוג אותו. אלוהים מעולם לא תמך בו, ולעולם לא יתמוך בו.",
+            p6: "בשנת 2026 חל היום הזה ביום ראשון. מה עלינו לזכור בימי ראשון? שני דברים:",
+            li1: "שאלוהים ברא את כל הדברים בשישה ימים ונח ביום השביעי.",
+            li2: "שהאב הקדוש היחיד, אשר בשמים, העניק לנו מנוחה כאשר באנו אל המשיח, כריסטוס, באמצעות הלידה החדשה.",
+            p7: "אין פירוש הדבר שעליך לבלות את כל יום ראשון בהכאה על החזה ובהעמדת פנים של דתיות, אלא פשוט להתפלל: ״אבי, תודה שבראת את כל הדברים ושנתת לנו מנוחה עם בואו של המשיח, החי בתוכי״.",
+            p8: "האם תעז לעשות זאת בכל יום ראשון ולקרוא אל הכול־יכול? אם תעשה זאת מתוך אמונה, הבנתך את הבשורה תעמיק במידה ניכרת. כך אני מאמין.",
+            back: "חזרה למאמרים",
+            languageLabel: "בחירת שפה"
+        },
+        ar: {
+            title: "عندما يبحث الإنسان عن إجابات في الظلام",
+            imageAlt: "صورة توضيحية عن استحضار الأرواح",
+            question: "هل أخطأت اليونسكو في عام 2008؟",
+            opening: "بلا شك، وكان ذلك مؤسفًا.",
+            see: "لنرَ.",
+            torah: "التوراة",
+            torahExplanation: "وتُسمّى أيضًا أسفار موسى الخمسة، وهي الأسفار الخمسة الأولى من الكتاب المقدس: التكوين والخروج واللاويين والعدد والتثنية.",
+            p1: "في التقليد اليهودي، تحمل 365 وصية من أصل 613 دلالة سلبية، مثل الممارسة الموضحة في الصورة أعلاه، وتبقى 248 وصية ذات دلالة إيجابية. ومن الواضح بحسب الكتاب المقدس أنه لا ينبغي استحضار أرواح الموتى. وكما يقول المثل الشعبي: «دعوا الموتى يرقدون بسلام».",
+            p2: "إذا كانوا في حياتهم قد تصالحوا مع الله وقبلوا المسيح في قلوبهم، فهم بالفعل في راحة ونوم وسلام. أما إذا لم يتوبوا عن خطاياهم وماتوا وهم لا أدريون، فحالهم ليس جيدًا على الإطلاق.",
+            p3: "لذلك فإن الأشخاص الذين يحملون جماجم السكر إلى المقبرة، أو الأشياء التي كان أحباؤهم المتوفون يحبونها، يميلون إلى استحضارهم؛ وهنا تبدأ المشكلة.",
+            p4: "في الواقع، على كل شخص أن يقرر ما إذا كان سيشارك في احتفال يخالف مقاصد الله (كلمته) أم لا.",
+            p5: "إن إحياء ذكرى موتى الأطفال (الأول من نوفمبر) والبالغين (الثاني من نوفمبر) هو احتفال خاطئ ولا حاجة إلى إقامته. لم يؤيده الله قط، ولن يؤيده أبدًا.",
+            p6: "في عام 2026، صادف هذا اليوم يوم الأحد. ما الذي ينبغي أن نتذكره أيام الأحد؟ أمران:",
+            li1: "أن الله خلق كل الأشياء في ستة أيام واستراح في اليوم السابع.",
+            li2: "أن الآب القدوس الوحيد، الذي في السماء، منحنا الراحة عندما جئنا إلى المسيح، أي المسيا، بالولادة الجديدة.",
+            p7: "ليس المقصود أن تقضي يوم الأحد كله تضرب على صدرك متظاهرًا بالتقوى، بل أن تصلي ببساطة: «أيها الآب، أشكرك لأنك خلقت كل الأشياء ومنحتنا الراحة بمجيء المسيح الذي يحيا في داخلي».",
+            p8: "هل تجرؤ على فعل ذلك كل يوم أحد، داعيًا القدير؟ إذا فعلت ذلك بإيمان واقتناع، فسوف يزداد فهمك للإنجيل زيادة كبيرة. هذا ما أؤمن به.",
+            back: "العودة إلى المقالات",
+            languageLabel: "اختيار اللغة"
+        },
+        hi: {
+            title: "जब मनुष्य अंधकार में उत्तर खोजता है",
+            imageAlt: "मृतात्माओं को बुलाने की प्रथा पर एक उदाहरणात्मक चित्र",
+            question: "क्या 2008 में यूनेस्को से गलती हुई?",
+            opening: "निस्संदेह, और यह दुर्भाग्यपूर्ण था।",
+            see: "आइए देखें।",
+            torah: "तोराह",
+            torahExplanation: "इसे मूसा की पंचग्रंथी भी कहा जाता है। इसमें बाइबल की पहली पाँच पुस्तकें हैं: उत्पत्ति, निर्गमन, लैव्यव्यवस्था, गिनती और व्यवस्थाविवरण।",
+            p1: "यहूदी परंपरा की 613 आज्ञाओं में से 365 का नकारात्मक अर्थ है, जैसा कि ऊपर चित्र में दिखाई गई प्रथा का है; शेष 248 का सकारात्मक अर्थ है। बाइबल के अनुसार यह स्पष्ट है कि मृतकों की आत्माओं को बुलाना उचित नहीं है। जैसा कि आम बोलचाल में कहा जाता है: “उन्हें आराम करने देना चाहिए।”",
+            p2: "यदि उन्होंने अपने जीवनकाल में परमेश्वर के साथ मेल किया और मसीहा को अपने हृदय में स्वीकार किया, तो वे वास्तव में विश्राम में हैं, सो रहे हैं और शांति में हैं। इसके विपरीत, यदि उन्होंने अपने पापों से मन नहीं फिराया और अज्ञेयवादी रहते हुए मृत्यु को प्राप्त हुए, तो उनकी दशा अच्छी नहीं है।",
+            p3: "इसीलिए जो लोग कब्रिस्तान में चीनी से बनी खोपड़ियाँ या अपने दिवंगत प्रियजनों की पसंद की वस्तुएँ ले जाते हैं, वे उन्हें बुलाने की ओर प्रवृत्त होते हैं—और समस्या यहीं से शुरू होती है।",
+            p4: "वास्तव में, प्रत्येक व्यक्ति को यह निर्णय लेना होगा कि वह परमेश्वर की इच्छा (उसके वचन) के विरुद्ध होने वाले उत्सव में भाग लेगा या नहीं।",
+            p5: "बाल मृतकों (1 नवंबर) और वयस्क मृतकों (2 नवंबर) का स्मरण एक गलत परंपरा है और इसे मनाना आवश्यक नहीं है। परमेश्वर ने कभी इसका समर्थन नहीं किया और न कभी करेगा।",
+            p6: "2026 में यह दिन रविवार को पड़ा। रविवार को हमें किन दो बातों को याद रखना चाहिए?",
+            li1: "कि परमेश्वर ने छह दिनों में सब कुछ बनाया और सातवें दिन विश्राम किया।",
+            li2: "कि स्वर्ग में रहने वाले एकमात्र पवित्र पिता ने हमें विश्राम दिया, जब हम नए जन्म के द्वारा मसीहा, अर्थात् मसीह, के पास आए।",
+            p7: "इसका अर्थ यह नहीं कि पूरा रविवार छाती पीटते हुए धार्मिक होने का दिखावा किया जाए, बल्कि बस यह प्रार्थना करें: “पिता, सब कुछ बनाने और मसीहा के आगमन के द्वारा हमें विश्राम देने के लिए धन्यवाद; वह मुझमें जीवित है।”",
+            p8: "क्या तुम हर रविवार सर्वशक्तिमान को पुकारते हुए ऐसा करने का साहस करोगे? यदि तुम विश्वास और दृढ़ निश्चय से ऐसा करोगे, तो सुसमाचार की तुम्हारी समझ निश्चित रूप से बहुत बढ़ेगी। मेरा ऐसा विश्वास है।",
+            back: "लेखों पर वापस जाएँ",
+            languageLabel: "भाषा चुनें"
+        },
+        ru: {
+            title: "Когда человек ищет ответы во тьме",
+            imageAlt: "Иллюстрация на тему некромантии",
+            question: "Ошиблась ли ЮНЕСКО в 2008 году?",
+            opening: "Несомненно, и это было прискорбно.",
+            see: "Давайте посмотрим.",
+            torah: "Тора",
+            torahExplanation: "Также называется Пятикнижием Моисея и включает первые пять книг Библии: Бытие, Исход, Левит, Числа и Второзаконие.",
+            p1: "В иудейской традиции 365 из 613 заповедей имеют отрицательный смысл, как и практика, показанная на изображении выше; остальные 248 имеют положительное значение. Согласно Библии, очевидно, что нельзя призывать духов умерших. Как говорят в народе: «нужно дать им покой».",
+            p2: "Если при жизни они примирились с Богом и приняли Мессию в своё сердце, значит, они действительно пребывают в покое, спят и находятся в мире. Если же они не раскаялись в своих грехах и умерли агностиками, их положение совсем не благополучно.",
+            p3: "Поэтому люди, которые приносят на кладбище сахарные черепа или вещи, которые нравились их умершим близким, склонны призывать их — и именно здесь начинается проблема.",
+            p4: "На самом деле каждый должен решить, участвовать ли в празднике, который противоречит замыслу Бога (Его Слову).",
+            p5: "Поминание умерших детей (1 ноября) и взрослых (2 ноября) — ошибочное мероприятие, и отмечать его необязательно. Бог никогда не одобрял его и никогда не одобрит.",
+            p6: "В 2026 году этот день пришёлся на воскресенье. Что следует помнить по воскресеньям? Две вещи:",
+            li1: "Бог сотворил всё за шесть дней и почил в седьмой день.",
+            li2: "Единственный Святой Отец, пребывающий на небесах, даровал нам покой, когда через новое рождение мы пришли к Мессии, Христу.",
+            p7: "Речь не о том, чтобы всё воскресенье бить себя в грудь, изображая религиозность, а о простой молитве: «Отец, благодарю Тебя за то, что Ты сотворил всё и даровал нам покой с приходом Мессии, Который живёт во мне».",
+            p8: "Осмелишься ли ты делать это каждое воскресенье, призывая Всемогущего? Если будешь делать это с убеждённостью, твоё понимание Евангелия значительно возрастёт. Я в это верю.",
+            back: "Вернуться к статьям",
+            languageLabel: "Выбор языка"
+        },
+        de: {
+            title: "Wenn der Mensch Antworten in der Finsternis sucht",
+            imageAlt: "Illustratives Bild zum Thema Totenbeschwörung",
+            question: "Hat sich die UNESCO 2008 geirrt?",
+            opening: "Zweifellos, und das war bedauerlich.",
+            see: "Sehen wir uns das an.",
+            torah: "Tora",
+            torahExplanation: "Auch Pentateuch des Mose genannt; er umfasst die fünf ersten Bücher der Bibel: Genesis, Exodus, Levitikus, Numeri und Deuteronomium.",
+            p1: "In der jüdischen Tradition haben 365 der 613 Gebote eine negative Bedeutung, ebenso wie die oben abgebildete Praxis; 248 haben eine positive Bedeutung. Laut der Bibel ist eindeutig, dass man die Geister Verstorbener nicht beschwören soll. Wie man im Volksmund sagt: „Man sollte sie ruhen lassen.“",
+            p2: "Wenn sie sich zu Lebzeiten mit Gott versöhnt und den Messias in ihr Herz aufgenommen haben, dann ruhen sie tatsächlich, schlafen und sind in Frieden. Wenn sie dagegen ihre Sünden nicht bereut haben und als Agnostiker gestorben sind, geht es ihnen keineswegs gut.",
+            p3: "Deshalb neigen Menschen, die Zuckerschädel oder Dinge, die ihre Verstorbenen gern mochten, auf den Friedhof bringen, dazu, sie zu beschwören – und genau dort beginnt das Problem.",
+            p4: "Letztlich muss jeder selbst entscheiden, ob er an einer Feier teilnimmt, die Gottes Willen (Seinem Wort) widerspricht.",
+            p5: "Das Gedenken an verstorbene Kinder (1. November) und Erwachsene (2. November) ist ein irrtümliches Gedenken und muss nicht gefeiert werden. Gott hat es nie gutgeheißen und wird es niemals tun.",
+            p6: "Im Jahr 2026 fiel dieser Tag auf einen Sonntag. Woran sollten wir uns sonntags erinnern? An zwei Dinge:",
+            li1: "Dass Gott alle Dinge in sechs Tagen erschuf und am siebten Tag ruhte.",
+            li2: "Dass der einzige Heilige Vater im Himmel uns Ruhe schenkte, als wir durch die neue Geburt zum Messias, dem Christus, kamen.",
+            p7: "Es geht nicht darum, den ganzen Sonntag an die Brust zu schlagen und Frömmigkeit vorzutäuschen, sondern einfach zu beten: „Vater, danke, dass Du alles erschaffen und uns durch das Kommen des Messias Ruhe geschenkt hast, der in mir lebt.“",
+            p8: "Wirst du es wagen, dies jeden Sonntag zu tun und den Allmächtigen anzurufen? Wenn du es aus Überzeugung tust, wird dein Verständnis des Evangeliums erheblich wachsen. Das glaube ich.",
+            back: "Zurück zu den Artikeln",
+            languageLabel: "Sprachauswahl"
+        },
+        ja: {
+            title: "人が闇の中に答えを求めるとき",
+            imageAlt: "降霊術についての説明用画像",
+            question: "2008年、ユネスコの判断は間違っていたのでしょうか。",
+            opening: "間違いなく、残念なことでした。",
+            see: "考えてみましょう。",
+            torah: "トーラー",
+            torahExplanation: "モーセ五書とも呼ばれ、聖書の最初の五つの書、創世記、出エジプト記、レビ記、民数記、申命記を指します。",
+            p1: "ユダヤ教の伝統における613の戒めのうち、365は否定的な意味を持ち、上の画像に示された行為もその一例です。残る248は肯定的な意味を持ちます。聖書によれば、亡くなった人々の霊を呼び出してはならないことは明らかです。よく言われるように、「亡くなった人々は安らかに眠らせておくべきです」。",
+            p2: "生前に神と和解し、心にメシアを受け入れた人々は、確かに休み、眠り、平安のうちにあります。反対に、自分の罪を悔い改めず、不可知論者として亡くなった人々の状態は決して良いものではありません。",
+            p3: "そのため、砂糖で作った頭蓋骨や、亡くなった人が好きだった品物を墓地に持って行く人々は、故人を呼び出す傾向があります。そこから問題が始まるのです。",
+            p4: "実際、神のご計画（御言葉）に反する祝祭に参加するかどうかは、一人ひとりが決めなければなりません。",
+            p5: "子どもの死者の日（11月1日）と大人の死者の日（11月2日）は、誤った追悼行事であり、祝う必要はありません。神がこれを認めたことは一度もなく、これからもありません。",
+            p6: "2026年、この日は日曜日に当たりました。日曜日には何を思い起こすべきでしょうか。二つあります。",
+            li1: "神は六日間ですべてのものを創造し、七日目に休まれたこと。",
+            li2: "天におられる唯一の聖なる父は、私たちが新しく生まれてメシア、すなわちキリストのもとに来たとき、私たちに安息を与えてくださったこと。",
+            p7: "日曜日の一日中、胸を打って敬虔さを装うということではありません。ただ、「父よ、すべてのものを創造し、私のうちに生きておられるメシアの到来によって私たちに安息を与えてくださったことを感謝します」と祈ればよいのです。",
+            p8: "毎週日曜日に全能者を呼び求め、このことを行う勇気がありますか。確信をもって行うなら、福音への理解は大きく深まるでしょう。私はそう信じています。",
+            back: "記事一覧に戻る",
+            languageLabel: "言語の選択"
+        }
+    };
+
+    function setText(id, value) {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value;
     }
 
-    /* Abrir y cerrar el comentario tocando Torá */
-    const tooltip = document.querySelector(".tooltip-container");
+    function changeLanguage(lang) {
+        if (!Object.prototype.hasOwnProperty.call(translations, lang)) lang = "es";
+        const t = translations[lang];
 
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+        document.documentElement.dir = ["he", "ar"].includes(lang) ? "rtl" : "ltr";
+        document.title = t.title + " — LPC";
+
+        setText("article-title", t.title);
+        const image = document.getElementById("article-image");
+        if (image) image.alt = t.imageAlt;
+        setText("unesco-question", t.question);
+        setText("opening-answer", t.opening);
+        setText("let-us-see", t.see);
+        setText("torah-word", t.torah);
+        setText("torah-explanation", t.torahExplanation);
+        setText("paragraph-1-rest", t.p1);
+        setText("paragraph-2", t.p2);
+        setText("paragraph-3", t.p3);
+        setText("paragraph-4", t.p4);
+        setText("paragraph-5", t.p5);
+        setText("paragraph-6", t.p6);
+        setText("list-item-1", t.li1);
+        setText("list-item-2", t.li2);
+        setText("paragraph-7", t.p7);
+        setText("paragraph-8", t.p8);
+        setText("back-label", t.back);
+        document.getElementById("language-bar").setAttribute("aria-label", t.languageLabel);
+
+        document.querySelectorAll(".lang-link").forEach(function (button) {
+            const selected = button.id === "link-" + lang;
+            button.classList.toggle("active", selected);
+            button.setAttribute("aria-pressed", String(selected));
+        });
+
+        try {
+            localStorage.setItem("lpc-language", lang);
+            localStorage.setItem("user_language", lang);
+        } catch (error) {
+            /* La página sigue funcionando si el almacenamiento está desactivado. */
+        }
+    }
+
+    window.changeLanguage = changeLanguage;
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedLanguage = params.get("lang");
+    let initialLanguage = "es";
+
+    try {
+        const savedLanguage = localStorage.getItem("lpc-language") || localStorage.getItem("user_language");
+        if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) {
+            initialLanguage = requestedLanguage;
+        } else if (savedLanguage && Object.prototype.hasOwnProperty.call(translations, savedLanguage)) {
+            initialLanguage = savedLanguage;
+        }
+    } catch (error) {
+        if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) {
+            initialLanguage = requestedLanguage;
+        }
+    }
+
+    changeLanguage(initialLanguage);
+
+    /* Abrir y cerrar la explicación al tocar «Torá». */
+    const tooltip = document.querySelector(".tooltip-container");
     if (tooltip) {
         tooltip.addEventListener("click", function (event) {
             event.stopPropagation();
             tooltip.classList.toggle("active");
         });
-
         document.addEventListener("click", function () {
             tooltip.classList.remove("active");
         });
-
         tooltip.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 tooltip.classList.remove("active");
@@ -404,4 +780,3 @@ html[dir="rtl"] .veamos {
 
 </body>
 </html>
-
