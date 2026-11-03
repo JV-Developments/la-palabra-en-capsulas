@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" class="notranslate">
 <head>
@@ -99,18 +100,21 @@ p:last-child {
     margin-bottom: 4px;
 }
 
-/* Comentario emergente sobre Torá */
+/* Palabra interactiva: Torá */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .tooltip-container strong {
     color: #0F4C81;
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 3px;
 }
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
 
+/* Comentario emergente */
 .tooltip-text {
     visibility: hidden;
     opacity: 0;
@@ -146,6 +150,7 @@ p:last-child {
     border-color: #0F3661 transparent transparent transparent;
 }
 
+/* Mostrar al pasar el ratón, enfocar o tocar */
 .tooltip-container:hover .tooltip-text,
 .tooltip-container:focus .tooltip-text,
 .tooltip-container:focus-within .tooltip-text,
@@ -369,7 +374,7 @@ html[dir="rtl"] .veamos {
             ["he", "ar"].includes(lang) ? "rtl" : "ltr";
     }
 
-    /* Permite abrir y cerrar el comentario tocando Torá en celular */
+    /* Abrir y cerrar el comentario tocando Torá */
     const tooltip = document.querySelector(".tooltip-container");
 
     if (tooltip) {
@@ -381,10 +386,17 @@ html[dir="rtl"] .veamos {
         document.addEventListener("click", function () {
             tooltip.classList.remove("active");
         });
+
+        tooltip.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                tooltip.classList.remove("active");
+                tooltip.blur();
+            }
+        });
     }
 })();
 </script>
 
 </body>
 </html>
-
+```
