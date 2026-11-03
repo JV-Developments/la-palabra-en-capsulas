@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" class="notranslate">
 <head>
@@ -99,6 +100,56 @@ p:last-child {
     margin-bottom: 4px;
 }
 
+/* Comentario emergente sobre Torá */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 290px;
+    max-width: 80vw;
+    padding: 12px 15px;
+    background: #0F3661;
+    color: #FFFFFF;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 7px;
+    border-style: solid;
+    border-color: #0F3661 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text,
+.tooltip-container:focus .tooltip-text,
+.tooltip-container:focus-within .tooltip-text,
+.tooltip-container.active .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Lista numerada */
 .numbered-points {
     margin: 0 0 24px;
@@ -165,6 +216,12 @@ p:last-child {
     .veamos {
         text-align: center;
     }
+
+    .tooltip-text {
+        width: 270px;
+        max-width: 78vw;
+        font-size: 12px;
+    }
 }
 
 /* Hebreo y árabe */
@@ -227,8 +284,15 @@ html[dir="rtl"] .veamos {
                 Veamos.
             </span>
 
-            De los 613 mandamientos de la <span class="tooltip-container"><strong>Torá</strong><span class="tooltip-text">«o Pentateuco de Moisés, los 5 primeros libros de la Biblia: Génesis, Éxodo, Levítico, Números y Deuteronomio».</span></span> judía,
-            365 tienen una connotación negativa como el de la imagen expuesta arriba
+            De los 613 mandamientos de la
+            <span class="tooltip-container" tabindex="0" role="button" aria-label="Torá. Toca para ver una explicación.">
+                <strong>Torá</strong>
+                <span class="tooltip-text">
+                    O Pentateuco de Moisés, los 5 primeros libros de la Biblia:
+                    Génesis, Éxodo, Levítico, Números y Deuteronomio.
+                </span>
+            </span>
+            judía, 365 tienen una connotación negativa como el de la imagen expuesta arriba
             y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se
             debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot
             popular: “hay que dejarlos descansar”.
@@ -300,9 +364,23 @@ html[dir="rtl"] .veamos {
         document.documentElement.dir =
             ["he", "ar"].includes(lang) ? "rtl" : "ltr";
     }
+
+    /* Permite abrir y cerrar el comentario tocando Torá en celular */
+    const tooltip = document.querySelector(".tooltip-container");
+
+    if (tooltip) {
+        tooltip.addEventListener("click", function (event) {
+            event.stopPropagation();
+            tooltip.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function () {
+            tooltip.classList.remove("active");
+        });
+    }
 })();
 </script>
 
 </body>
 </html>
-
+```
