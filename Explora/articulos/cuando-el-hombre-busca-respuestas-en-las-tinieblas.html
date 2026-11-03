@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" class="notranslate">
 <head>
@@ -34,7 +35,7 @@ body {
     margin: 0 auto;
 }
 
-/* Imagen principal: ocupa todo el ancho disponible */
+/* Imagen principal: PC conserva el ancho y reduce el alto 20% */
 .article-image {
     display: block;
     width: 100%;
@@ -44,7 +45,7 @@ body {
     border-radius: 4px;
 }
 
-/* Título: reducido un punto para PC */
+/* Título */
 h1 {
     margin: 0 0 22px;
     color: #0F3661;
@@ -74,6 +75,25 @@ p {
 
 p:last-child {
     margin-bottom: 0;
+}
+
+/* Frases iniciales */
+.opening-phrase {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.veamos {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 .numbered-points {
@@ -112,6 +132,7 @@ p:last-child {
         padding: 25px 16px;
     }
 
+    /* Imagen del celular: sin cambios */
     .article-image {
         width: 100%;
         height: auto;
@@ -135,6 +156,11 @@ p:last-child {
     p,
     .numbered-points li {
         text-align: justify;
+    }
+
+    .opening-phrase,
+    .veamos {
+        text-align: center;
     }
 }
 
@@ -164,6 +190,11 @@ html[dir="rtl"] .numbered-points li {
     text-align: right;
     line-height: 2;
 }
+
+html[dir="rtl"] .opening-phrase,
+html[dir="rtl"] .veamos {
+    text-align: center;
+}
 </style>
 </head>
 
@@ -180,12 +211,20 @@ html[dir="rtl"] .numbered-points li {
 
     <main class="card">
         <p>
-            <span style="display:block; text-align:center; font-weight:bold; font-size:1.1em;">
-  Se equivocó la Unesco en el 2008?
-</span>    
-                
-            Sin duda y fue desafortunado. <br> Veamos. De los 613 mandamientos de la Torá judía,
-            365 tienen una connotación negativa como el de la imagen expuesta arriba 
+            <span class="opening-phrase">
+                Se equivocó la Unesco en el 2008?
+            </span>
+
+            <span class="opening-phrase">
+                Sin duda y fue desafortunado.
+            </span>
+
+            <span class="veamos">
+                Veamos.
+            </span>
+
+            De los 613 mandamientos de la Torá judía,
+            365 tienen una connotación negativa como el de la imagen expuesta arriba
             y nos quedan 248 con tinte positivo. Es claro según la Biblia, que no se
             debe invocar <em>espíritus de fallecidos</em>. Como se diría en el argot
             popular: “hay que dejarlos descansar”.
@@ -262,3 +301,4 @@ html[dir="rtl"] .numbered-points li {
 
 </body>
 </html>
+```
