@@ -11,7 +11,8 @@
   <title>
    La Palabra en C&aacute;psulas &mdash; Portada Oficial
   </title>
-    <!-- ETIQUETAS DE PREVISUALIZACIÓN DE IMAGEN PARA X Y FACEBOOK -->
+  
+  <!-- ETIQUETAS DE PREVISUALIZACIÓN DE IMAGEN PARA X Y FACEBOOK -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="La Palabra en C&aacute;psulas &mdash; Portada Oficial" />
   <meta property="og:description" content="Bienvenido a este espacio. Un lugar dedicado a compartir ideas prácticas, profundas y accesibles." />
@@ -129,37 +130,37 @@
      const translations = {
        he: {
          lang: "he",
-         dir: "rtl",
-         image: "/Explora/portada-he.png",
-         title: "La Palabra en Cápsulas — דף הבית הרשਮੀ",
-         welcome: [
-           "ברוכים הבאים למרחב הזה",
-           "מקום המוקדש לשידור",
-           "רעיונות מעשיים, עמוקים ונגиשים",
-           "להליכה בטוחה",
-           "עם אלוהים"
-         ],
-         explore: "חקור"
-       },
-       en: {
-         lang: "en",
-         dir: "ltr",
-         image: "/Explora/portada-en.png",
-         title: "La Palabra en Cápsulas — Official Cover",
-         welcome: [
-           "Welcome to this space",
-           "A place dedicated to",
-           "sharing practical, profound,",
-           "and accessible ideas",
-           "for a secure walk",
-           "with God"
-         ],
-         explore: "Explore"
-       },
-       es: {
-         lang: "es",
-         dir: "ltr",
-         image: spanishImage,
+dir: "rtl",
+image: "/Explora/portada-he.png",
+title: "La Palabra en Cápsulas — דף הבית הרשਮੀ",
+welcome: [
+"ברוכים הבאים למרחב הזה",
+"מקום המוקדש לשידור",
+"רעיונות מעשיים, עמוקים ונגиשים",
+"להליכה בטוחה",
+"עם אלוهים"
+],
+explore: "חקור"
+},
+en: {
+lang: "en",
+dir: "ltr",
+image: "/Explora/portada-en.png",
+title: "La Palabra en Cápsulas — Official Cover",
+welcome: [
+"Welcome to this space",
+"A place dedicated to",
+"sharing practical, profound,",
+"and accessible ideas",
+"for a secure walk",
+"with God"
+],
+explore: "Explore"
+},
+es: {
+lang: "es",
+dir: "ltr",
+image: spanishImage,
 title: "La Palabra en Cápsulas — Portada Oficial",
 welcome: [
 "Bienvenido a este espacio",
@@ -222,7 +223,7 @@ image: "/Explora/portada-it.png",
 title: "La Palabra en Cápsulas — Copertina Ufficiale",
 welcome: [
 "Benvenuto in questo spazio",
-"Un luogo dedicato alla condivisione",
+"Un luogo dedicado alla condivisione",
 "di idee pratiche, profonde e accessibili",
 "per un cammino",
 "sicuro con",
@@ -344,7 +345,7 @@ if (!translations[initialLang]) {
 initialLang = "es";
 }
 updateContent(initialLang);
-   })();
-  </script>
+})();
+</script>
  </body>
 </html>
