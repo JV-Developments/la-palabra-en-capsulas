@@ -133,6 +133,50 @@ h1 {
 
 .item a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
+
+/* INVITACIÓN A RECIBIR NUEVAS PUBLICACIONES */
+.subscribe-panel {
+  width: min(700px, 100%);
+  margin: 38px auto 0;
+  padding: 22px 28px 24px;
+  background: #F3F7FB;
+  border: 1px solid #C9D9E8;
+  border-radius: 6px;
+  color: #2B2B2B;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.10);
+}
+.subscribe-panel h2 {
+  margin: 0 0 9px;
+  color: #0F3661;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.35;
+}
+.subscribe-panel p {
+  margin: 0 0 17px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.subscribe-button {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #0F4C81;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+.subscribe-button:hover { background: #17365D; }
+.subscribe-button:focus-visible {
+  outline: 2px solid #0F4C81;
+  outline-offset: 4px;
+}
+
 /* VOLVER A INICIO */
 .back { margin-top: 42px; text-align: center; }
 
@@ -160,6 +204,10 @@ h1 {
   .column + .column { margin-top: 9px; }
   .item { text-align: left; }
   .item a { font-size: 21px; line-height: 1.5; padding: 3px 0; }
+  .subscribe-panel { margin-top: 30px; padding: 20px 17px 22px; }
+  .subscribe-panel h2 { font-size: 21px; }
+  .subscribe-panel p { font-size: 15px; }
+  .subscribe-button { font-size: 13px; padding: 11px 15px; }
   .back { width: 100%; margin-top: 32px; text-align: center; }
   .back a { font-size: 17px; }
 }
@@ -168,6 +216,10 @@ h1 {
 html[dir="rtl"] .page { direction: rtl; }
 html[dir="rtl"] .language-bar { justify-content: flex-start; }
 html[dir="rtl"] .menu { direction: rtl; }
+html[dir="rtl"] .subscribe-panel { direction: rtl; border-right: 5px solid #0F4C81; }
+html[dir="rtl"] .subscribe-panel h2,
+html[dir="rtl"] .subscribe-panel p { font-family: Tahoma, Arial, sans-serif; }
+
 html[dir="rtl"] .menu::after { left: 50%; }
 @media (max-width: 600px) {
   html[dir="rtl"] .column { align-items: flex-start; }
@@ -221,6 +273,50 @@ html[dir="rtl"] .menu::after { left: 50%; }
       <div class="item"><a href="./apoya/index.html" data-es="Apoya" data-en="Support" data-zh="支持 LPC" data-fr="Soutenir" data-it="Sostieni" data-pt="Apoie" data-he="תמיכה" data-ar="ادعم" data-hi="सहयोग करें" data-ru="Поддержать" data-de="Unterstützen" data-ja="支援する">Apoya</a></div>
     </div>
   </nav>
+
+
+  <section class="subscribe-panel" id="subscribe-panel" aria-labelledby="subscribe-title">
+    <h2 id="subscribe-title"
+        data-es="¿Te gustaría seguir recibiendo nuestras publicaciones?"
+        data-en="Would you like to keep receiving our publications?"
+        data-zh="您愿意继续接收我们的新文章吗？"
+        data-fr="Souhaitez-vous continuer à recevoir nos publications ?"
+        data-it="Desideri continuare a ricevere le nostre pubblicazioni?"
+        data-pt="Gostaria de continuar recebendo nossas publicações?"
+        data-he="האם תרצה להמשיך לקבל את הפרסומים שלנו?"
+        data-ar="هل ترغب في مواصلة تلقي منشوراتنا؟"
+        data-hi="क्या आप हमारी नई प्रकाशित सामग्री प्राप्त करते रहना चाहेंगे?"
+        data-ru="Хотите и дальше получать наши публикации?"
+        data-de="Möchten Sie weiterhin unsere Veröffentlichungen erhalten?"
+        data-ja="これからも新しい記事を受け取りませんか。">¿Te gustaría seguir recibiendo nuestras publicaciones?</h2>
+    <p id="subscribe-description"
+       data-es="Recibe nuevas cápsulas, reflexiones bíblicas y enseñanzas de La Palabra en Cápsulas directamente en tu correo electrónico."
+       data-en="Receive new capsules, Bible reflections, and teachings from The Word in Capsules directly in your email."
+       data-zh="通过电子邮件直接接收《胶囊中的圣言》的新短文、圣经默想和教导。"
+       data-fr="Recevez directement par courriel les nouvelles capsules, réflexions bibliques et enseignements de La Parole en Capsules."
+       data-it="Ricevi direttamente via e-mail nuove capsule, riflessioni bibliche e insegnamenti de La Parola en Cápsulas."
+       data-pt="Receba diretamente no seu e-mail novas cápsulas, reflexões bíblicas e ensinamentos de La Palabra en Cápsulas."
+       data-he="קבל ישירות לדוא״ל שלך קפסולות חדשות, הרהורים מקראיים ולימודים של ״דבר אלוהים בכמוסות״."
+       data-ar="استقبل عبر بريدك الإلكتروني كبسولات جديدة وتأملات كتابية وتعاليم من «كلمة الله في كبسولات»."
+       data-hi="La Palabra en Cápsulas की नई सामग्री, बाइबल पर मनन और शिक्षाएँ सीधे अपने ईमेल पर पाएँ।"
+       data-ru="Получайте новые материалы, библейские размышления и наставления проекта «Слово в капсулах» прямо на свою электронную почту."
+       data-de="Erhalten Sie neue Beiträge, biblische Impulse und Lehren von „Das Wort in Kapseln“ direkt per E-Mail."
+       data-ja="「カプセルに込めた神の言葉」の新しい記事、聖書の黙想、教えをメールで受け取れます。">Recibe nuevas cápsulas, reflexiones bíblicas y enseñanzas de La Palabra en Cápsulas directamente en tu correo electrónico.</p>
+    <a class="subscribe-button" id="subscribe-button"
+       href="https://forms.gle/dfmQRiDqYqT8Fwt26" target="_blank" rel="noopener noreferrer"
+       data-es="QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES"
+       data-en="I WANT TO RECEIVE FUTURE PUBLICATIONS"
+       data-zh="我想接收后续文章"
+       data-fr="JE SOUHAITE RECEVOIR LES PROCHAINES PUBLICATIONS"
+       data-it="VOGLIO RICEVERE LE PROSSIME PUBBLICAZIONI"
+       data-pt="QUERO RECEBER AS PRÓXIMAS PUBLICAÇÕES"
+       data-he="אני רוצה לקבל פרסומים נוספים"
+       data-ar="أرغب في تلقي المنشورات القادمة"
+       data-hi="मैं नई प्रकाशित सामग्री प्राप्त करना चाहता/चाहती हूँ"
+       data-ru="ХОЧУ ПОЛУЧАТЬ НОВЫЕ ПУБЛИКАЦИИ"
+       data-de="ICH MÖCHTE KÜNFTIGE VERÖFFENTLICHUNGEN ERHALTEN"
+       data-ja="新しい記事を受け取る">QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES</a>
+  </section>
 
   <div class="back">
     <a href="../index.html" id="back-link"
@@ -306,6 +402,10 @@ html[dir="rtl"] .menu::after { left: 50%; }
 
     document.querySelectorAll("#main-menu a[data-es]").forEach(function (link) {
       link.textContent = link.getAttribute("data-" + lang) || link.getAttribute("data-es");
+    });
+
+    document.querySelectorAll("#subscribe-panel [data-es]").forEach(function (element) {
+      element.textContent = element.getAttribute("data-" + lang) || element.getAttribute("data-es");
     });
 
     const backLink = document.getElementById("back-link");
