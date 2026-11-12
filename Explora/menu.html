@@ -57,7 +57,7 @@ body {
 .language-bar {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 9px;
@@ -154,9 +154,10 @@ h1 {
 .subscribe-button {
   display: inline-block;
   padding: 11px 20px;
-  background: #17365D;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.45);
+  background: var(--blue);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 700;
@@ -164,7 +165,7 @@ h1 {
   text-decoration: none;
   transition: background .2s ease;
 }
-.subscribe-button:hover { background: #0B294A; }
+.subscribe-button:hover { background: rgba(255,255,255,.08); }
 .subscribe-button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
@@ -188,7 +189,7 @@ h1 {
 /* CELULAR */
 @media (max-width: 600px) {
   .page { align-items: flex-start; padding: 18px 24px 28px; }
-  .language-bar { margin-bottom: 8px; justify-content: flex-start; gap: 6px; }
+  .language-bar { margin-bottom: 8px; justify-content: center; gap: 6px; }
   header { width: 100%; margin-top: 16px; margin-bottom: 28px; text-align: center; }
   h1 { font-size: 36px; line-height: 1.2; }
   .menu { display: block; width: 100%; margin-top: 0; }
@@ -206,7 +207,7 @@ h1 {
 
 /* RTL: Hebrew and Arabic */
 html[dir="rtl"] .page { direction: rtl; }
-html[dir="rtl"] .language-bar { justify-content: flex-start; }
+html[dir="rtl"] .language-bar { justify-content: center; }
 html[dir="rtl"] .menu { direction: rtl; }
 html[dir="rtl"] .subscribe-panel { direction: rtl; }
 html[dir="rtl"] .subscribe-panel p { font-family: Tahoma, Arial, sans-serif; }
