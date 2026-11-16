@@ -234,7 +234,166 @@ html[lang^="ja"] .scripture {
     padding-right:16px;
   }
 }
+
+/* LPC — Patrón tipográfico y visual solicitado */
+:root{
+  --text:#252525;
+  --muted:#666666;
+  --accent:#0F3661;
+  --paper:#E6F0FA;
+  --bg:#FAF6F0;
+  --line:#c8d8e8;
+}
+html,body{background:var(--bg)}
+body{
+  color:var(--text);
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+}
+.page{
+  width:100%;
+  max-width:800px;
+  margin:32px auto;
+  padding:0 0 32px;
+  background:transparent;
+  border-radius:0;
+  box-shadow:none;
+}
+header{margin-bottom:24px}
+.site-name{
+  color:var(--accent);
+  font-family:"Inter",Arial,sans-serif;
+  font-size:13px;
+}
+.author{
+  font-family:"Inter",Arial,sans-serif;
+  font-size:15px;
+}
+h1{
+  color:var(--accent);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  line-height:1.25;
+}
+.part-label{
+  font-family:"Inter",Arial,sans-serif;
+  font-size:15px;
+}
+.language-selector{margin-bottom:22px}
+.language-selector button{
+  font-family:"Inter",Arial,sans-serif;
+}
+.article{
+  background:#E6F0FA;
+  border-left:4px solid #0F3661;
+  border-radius:7px;
+  padding:30px 34px;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+}
+.article p{
+  margin:0 0 20px;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.8;
+  text-align:justify;
+}
+.article p:last-child{margin-bottom:0}
+.article .topic-list{
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.8;
+}
+.article .scripture{
+  margin:22px 0;
+  padding:12px 18px;
+  border-left:3px solid #0F3661;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.8;
+}
+.article .scripture cite{font-family:"Inter",Arial,sans-serif}
+.footnote-popup{
+  font-family:"Inter",Arial,sans-serif;
+}
+.footer-nav a{
+  color:#0F3661;
+  font-family:"Inter",Arial,sans-serif;
+}
+[dir="rtl"] .article{
+  border-left:0;
+  border-right:4px solid #0F3661;
+  text-align:right;
+  direction:rtl;
+}
+[dir="rtl"] .article p,
+[dir="rtl"] .article .scripture,
+[dir="rtl"] .article .topic-list{
+  text-align:right;
+  direction:rtl;
+}
+[dir="rtl"] .article .scripture{
+  border-left:0;
+  border-right:3px solid #0F3661;
+}
+html[lang="he"] body,
+html[lang="ar"] body{
+  font-family:"Noto Sans Hebrew","Noto Naskh Arabic","Arial",sans-serif;
+}
+html[lang="he"] .article,
+html[lang="ar"] .article,
+html[lang="he"] .article p,
+html[lang="ar"] .article p{
+  font-family:"Noto Sans Hebrew","Noto Naskh Arabic","Arial",sans-serif;
+}
+html[lang^="zh"] body,
+html[lang^="zh"] .article,
+html[lang^="zh"] .article p{font-family:"Noto Sans SC","Microsoft YaHei",sans-serif}
+html[lang="ja"] body,
+html[lang="ja"] .article,
+html[lang="ja"] .article p{font-family:"Noto Sans JP","Yu Gothic","Meiryo",sans-serif}
+html[lang="hi"] body,
+html[lang="hi"] .article,
+html[lang="hi"] .article p{font-family:"Noto Sans Devanagari","Mangal",sans-serif}
+@media(max-width:700px){
+  .page{
+    max-width:800px;
+    margin:0 auto;
+    padding:24px 16px 28px;
+  }
+  header{margin-bottom:20px}
+  h1{font-size:24px;line-height:1.3}
+  .article{
+    padding:22px 18px;
+    border-radius:6px;
+    font-size:17px;
+  }
+  .article p{
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:19px;
+  }
+  .article .topic-list{
+    padding-left:24px;
+    font-size:17px;
+    line-height:1.8;
+  }
+  .article .scripture{
+    padding:12px 15px;
+    font-size:17px;
+    line-height:1.8;
+  }
+  [dir="rtl"] .article .topic-list{
+    padding-left:0;
+    padding-right:24px;
+  }
+  .footer-nav a{display:block;margin:12px 0}
+}
+
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
