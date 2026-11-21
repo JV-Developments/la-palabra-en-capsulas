@@ -875,10 +875,28 @@ html[dir="rtl"] .veamos {
 
         setText("article-title", t.title);
         const image = document.getElementById("article-image");
-        if (image) {
-            image.src = ["es", "tr", "el", "fa"].includes(lang) ? "nigromancia.png" : "nigromancia-" + lang + ".png";
-            image.alt = t.imageAlt;
-        }
+if (image) {
+    const imageFiles = {
+        es: "nigromancia.png",
+        en: "nigromancia-en.png",
+        zh: "nigromancia-zh.png",
+        fr: "nigromancia-fr.png",
+        it: "nigromancia-it.png",
+        pt: "nigromancia-pt.png",
+        he: "nigromancia-he.png",
+        ar: "nigromancia-ar.png",
+        hi: "nigromancia-hi.png",
+        ru: "nigromancia-ru.png",
+        de: "nigromancia-de.png",
+        ja: "nigromancia-ja.png",
+        tr: "nigromancia-tr.png",
+        el: "nigromancia-el.png",
+        fa: "nigromancia-fa.png"
+    };
+
+    image.src = imageFiles[lang] || imageFiles.es;
+    image.alt = t.imageAlt;
+}
         setText("unesco-question", t.question);
         setText("opening-answer", t.opening);
         setText("let-us-see", t.see);
