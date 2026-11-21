@@ -231,6 +231,14 @@ p:last-child {
 }
 
 
+/* Invitación para recibir nuevas publicaciones */
+.subscribe-box{margin:34px 0 28px;padding:24px 26px;background:#F3F7FB;border:1px solid #C9D9E8;border-left:5px solid #0F4C81;border-radius:6px;text-align:center}
+.subscribe-box h2{margin:0 0 10px;color:#0F3661;font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1.35}
+.subscribe-box p{margin:0 0 17px;text-align:center;font-size:15px;line-height:1.65}
+.btn-subscribe{display:inline-block;padding:12px 20px;background:#0F4C81;color:#fff;border-radius:4px;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:700;text-decoration:none}
+.btn-subscribe:hover{background:#17365D}
+.subscribe-note{display:block;margin-top:12px;color:#555;font-size:12px;line-height:1.5}
+.btn-subscribe:focus-visible{outline:2px solid #0F4C81;outline-offset:4px}
 
 /* Celular */
 @media (max-width: 700px) {
@@ -284,6 +292,10 @@ p:last-child {
     }
 
 
+    .subscribe-box{margin:30px 0 25px;padding:22px 17px}
+    .subscribe-box h2{font-size:21px}
+    .subscribe-box p{font-size:16px}
+    .btn-subscribe{font-size:13px;padding:12px 16px}
 
     .tooltip-text {
         width: 270px;
@@ -299,6 +311,8 @@ html[dir="rtl"] body {
 
 html[dir="rtl"] .language-bar { direction: rtl; }
 
+html[dir="rtl"] .subscribe-box{border-left:1px solid #C9D9E8;border-right:5px solid #0F4C81}
+html[dir="rtl"] .subscribe-box h2,html[dir="rtl"] .subscribe-box p{font-family:Tahoma,Arial,sans-serif}
 
 html[dir="rtl"] .card {
     border-left: none;
@@ -356,6 +370,12 @@ html[dir="rtl"] .veamos {
         <button type="button" class="lang-link" id="link-de" onclick="changeLanguage('de')" aria-pressed="false" lang="de">Deutsch</button>
         <span class="lang-divider" aria-hidden="true">|</span>
         <button type="button" class="lang-link" id="link-ja" onclick="changeLanguage('ja')" aria-pressed="false" lang="ja">日本語</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-tr" onclick="changeLanguage('tr')" aria-pressed="false" lang="tr">Türkçe</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-el" onclick="changeLanguage('el')" aria-pressed="false" lang="el">Ελληνικά</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-link" id="link-fa" onclick="changeLanguage('fa')" aria-pressed="false" lang="fa">فارسی</button>
     </nav>
 
     <img
@@ -440,6 +460,14 @@ html[dir="rtl"] .veamos {
         </p>
 
     </main>
+
+
+    <section class="subscribe-box" aria-labelledby="subscribe-title">
+      <h2 id="subscribe-title">¿Te gustaría seguir recibiendo nuestras publicaciones?</h2>
+      <p id="subscribe-description">Suscríbete gratuitamente y recibe nuevas cápsulas, reflexiones bíblicas y enseñanzas de La Palabra en Cápsulas directamente en tu correo electrónico.</p>
+      <a class="btn-subscribe" id="subscribe-button" href="https://forms.gle/dfmQRiDqYqT8Fwt26" target="_blank" rel="noopener noreferrer">QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES</a>
+      <span class="subscribe-note" id="subscribe-note">Solo necesitamos tu correo electrónico. Es gratuito.</span>
+    </section>
 
     <a class="btn-back" href="/Explora/articulos/index.html">
         <span id="back-label">Volver a Artículos</span>
@@ -739,7 +767,97 @@ html[dir="rtl"] .veamos {
             p8: "毎週日曜日に全能者を呼び求め、このことを行う勇気がありますか。確信をもって行うなら、福音への理解は大きく深まるでしょう。私はそう信じています。",
             back: "記事一覧に戻る",
             languageLabel: "言語の選択"
+        },
+        tr: {
+            title: "İnsan Karanlıkta Yanıt Aradığında",
+            imageAlt: "Nekromansi hakkında açıklayıcı görsel",
+            question: "UNESCO 2008 yılında yanıldı mı?",
+            opening: "Kesinlikle; bu talihsiz bir durumdu.",
+            see: "Bir bakalım.",
+            torah: "Tora",
+            p1Prefix: "Yahudi geleneğindeki 613 buyruğun ",
+            torahExplanation: "Musa'nın Pentatökü ya da Tora, Kutsal Kitap'ın ilk beş kitabıdır: Yaratılış, Mısır'dan Çıkış, Levililer, Çölde Sayım ve Yasa'nın Tekrarı.",
+            p1Before: "365'i olumsuz bir anlam taşır; yukarıdaki görseldeki uygulama da bunlardan biridir. Geriye olumlu anlam taşıyan 248 buyruk kalır. Kutsal Kitap'a göre, ölmüş kişilerin ",
+            spiritsWord: "ruhlarını",
+            p1After: " çağırmamak gerektiği açıktır. Halk arasında söylendiği gibi: “Bırakın huzur içinde yatsınlar.”",
+            p2: "Yaşamları boyunca Tanrı'yla barışıp Mesih'i yüreklerine kabul ettilerse, elbette dinleniyor, uyuyor ve huzur içinde bulunuyorlar. Buna karşılık günahlarından tövbe etmeden ve gerçeği kabul etmeden öldülerse, durumları hiç de iyi değildir.",
+            p3: "Bu nedenle mezarlığa şekerden kafatasları ya da ölen yakınlarının sevdiği eşyaları götüren kişiler, onları çağırma eğilimindedir. Sorun da tam bu noktada başlar.",
+            p4: "Aslında herkes, Tanrı'nın isteğine (Sözü'ne) aykırı bir kutlamaya katılıp katılmayacağına kendisi karar vermelidir.",
+            p5: "Çocukların (1 Kasım) ve yetişkinlerin (2 Kasım) anıldığı Ölüler Günü, yanlış bir anma geleneğidir ve kutlanması gerekmez. Tanrı bunu hiçbir zaman desteklemedi ve hiçbir zaman desteklemeyecektir.",
+            p6: "2026 yılında bu gün pazara denk geldi. Pazar günleri neyi hatırlamalıyız? İki şeyi:",
+            li1: "Tanrı'nın her şeyi altı günde yarattığını ve yedinci gün dinlendiğini.",
+            li2: "Gökteki tek Kutsal Baba'nın, yeniden doğuşla Mesih'e, yani İsa'ya geldiğimizde bize huzur verdiğini.",
+            p7: "Mesele, bütün pazar günü dindar görünmek için göğsünü dövmek değil; yalnızca şöyle dua etmektir: “Baba, her şeyi yarattığın ve içimde yaşayan Mesih'in gelişiyle bize huzur verdiğin için teşekkür ederim.”",
+            p8: "Her pazar günü Her Şeye Gücü Yeten'e yakararak bunu yapmaya cesaret edecek misin? Bunu içten bir inançla yaparsan, Müjde'yi anlayışın kuşkusuz önemli ölçüde derinleşecektir. Ben buna inanıyorum.",
+            back: "Makalelere Dön",
+            languageLabel: "Dil seçimi"
+        },
+        el: {
+            title: "Όταν ο άνθρωπος αναζητά απαντήσεις στο σκοτάδι",
+            imageAlt: "Ενδεικτική εικόνα σχετικά με τη νεκρομαντεία",
+            question: "Έκανε λάθος η UNESCO το 2008;",
+            opening: "Αναμφίβολα, και αυτό ήταν λυπηρό.",
+            see: "Ας δούμε.",
+            torah: "Τορά",
+            p1Prefix: "Από τις 613 εντολές της εβραϊκής ",
+            torahExplanation: "Η Πεντάτευχος του Μωυσή, ή Τορά, είναι τα πέντε πρώτα βιβλία της Βίβλου: Γένεση, Έξοδος, Λευιτικό, Αριθμοί και Δευτερονόμιο.",
+            p1Before: ", οι 365 έχουν αρνητική σημασία, όπως και η πρακτική που απεικονίζεται παραπάνω, ενώ οι υπόλοιπες 248 έχουν θετική σημασία. Σύμφωνα με τη Βίβλο, είναι σαφές ότι δεν πρέπει να επικαλούμαστε τα ",
+            spiritsWord: "πνεύματα",
+            p1After: " των νεκρών. Όπως λέει και η λαϊκή έκφραση: «Ας τους αφήσουμε να αναπαυθούν».",
+            p2: "Αν όσο ζούσαν συμφιλιώθηκαν με τον Θεό και δέχτηκαν τον Μεσσία στην καρδιά τους, τότε πράγματι αναπαύονται, κοιμούνται και βρίσκονται σε ειρήνη. Αντίθετα, αν δεν μετανόησαν για τις αμαρτίες τους και πέθαναν χωρίς να δεχτούν την αλήθεια, η κατάστασή τους δεν είναι καθόλου καλή.",
+            p3: "Γι’ αυτό, όσοι πηγαίνουν στο νεκροταφείο ζαχαρωτά κρανία ή αντικείμενα που άρεσαν στους νεκρούς τους, έχουν την τάση να τους επικαλούνται· και εκεί αρχίζει το πρόβλημα.",
+            p4: "Στην πραγματικότητα, ο καθένας πρέπει να αποφασίσει αν θα συμμετάσχει ή όχι σε μια γιορτή που αντιβαίνει στο θέλημα του Θεού (στον Λόγο Του).",
+            p5: "Η Ημέρα των Νεκρών παιδιών (1 Νοεμβρίου) και ενηλίκων (2 Νοεμβρίου) είναι μια λανθασμένη τελετή μνήμης και δεν είναι απαραίτητο να γιορτάζεται. Ο Θεός δεν την ενέκρινε ποτέ και ούτε πρόκειται να την εγκρίνει.",
+            p6: "Το 2026, αυτή η ημέρα έπεσε Κυριακή. Τι πρέπει να θυμόμαστε τις Κυριακές; Δύο πράγματα:",
+            li1: "Ότι ο Θεός δημιούργησε τα πάντα σε έξι ημέρες και αναπαύθηκε την έβδομη.",
+            li2: "Ότι ο μοναδικός Άγιος Πατέρας, που βρίσκεται στους ουρανούς, μας χάρισε ανάπαυση όταν ήρθαμε στον Μεσσία, τον Χριστό, μέσω της νέας γέννησης.",
+            p7: "Δεν πρόκειται να περνάς όλη την Κυριακή χτυπώντας το στήθος σου και προσποιούμενος ευσέβεια, αλλά απλώς να προσεύχεσαι: «Πατέρα, σε ευχαριστώ που δημιούργησες τα πάντα και μας χάρισες ανάπαυση με τον ερχομό του Μεσσία, ο οποίος ζει μέσα μου».",
+            p8: "Θα τολμήσεις να το κάνεις αυτό κάθε Κυριακή, επικαλούμενος τον Παντοδύναμο; Αν το κάνεις με πεποίθηση, η κατανόησή σου για το Ευαγγέλιο σίγουρα θα βαθύνει σημαντικά. Αυτό πιστεύω.",
+            back: "Επιστροφή στα Άρθρα",
+            languageLabel: "Επιλογή γλώσσας"
+        },
+        fa: {
+            title: "وقتی انسان در تاریکی به دنبال پاسخ می‌گردد",
+            imageAlt: "تصویر توضیحی درباره احضار ارواح",
+            question: "آیا یونسکو در سال ۲۰۰۸ اشتباه کرد؟",
+            opening: "بی‌تردید، و این تأسف‌بار بود.",
+            see: "بیایید ببینیم.",
+            torah: "تورات",
+            p1Prefix: "از میان ۶۱۳ فرمانِ تورات یهودی، ",
+            torahExplanation: "اسفار پنج‌گانه موسی یا تورات، پنج کتاب نخست کتاب مقدس هستند: پیدایش، خروج، لاویان، اعداد و تثنیه.",
+            p1Before: "، تعداد ۳۶۵ فرمان معنایی منفی دارند؛ مانند عملی که در تصویر بالا نشان داده شده است، و ۲۴۸ فرمان باقی‌مانده معنایی مثبت دارند. بر اساس کتاب مقدس روشن است که نباید ",
+            spiritsWord: "ارواح",
+            p1After: " مردگان را احضار کرد. همان‌طور که در زبان عامیانه می‌گویند: «بگذارید در آرامش بیارامند».",
+            p2: "اگر آنان در زمان زندگی با خدا آشتی کردند و مسیح را به قلب خود پذیرفتند، بی‌گمان در آرامش‌اند، خوابیده و آسوده هستند. اما اگر از گناهان خود توبه نکردند و بدون پذیرفتن حقیقت از دنیا رفتند، وضعیت خوبی ندارند.",
+            p3: "به همین دلیل، کسانی که جمجمه‌های قندی یا چیزهایی را که عزیزان درگذشته‌شان دوست داشتند به گورستان می‌برند، گرایش دارند آنان را احضار کنند؛ و مشکل از همین‌جا آغاز می‌شود.",
+            p4: "در واقع، هرکس باید تصمیم بگیرد که آیا در جشنی شرکت کند یا نه؛ جشنی که با خواست خدا (کلام او) در تضاد است.",
+            p5: "روز مردگانِ کودکان (اول نوامبر) و بزرگسالان (دوم نوامبر) یادبودی نادرست است و ضرورتی برای برگزاری آن وجود ندارد. خدا هرگز آن را تأیید نکرده و هرگز نیز تأیید نخواهد کرد.",
+            p6: "در سال ۲۰۲۶، این روز با یکشنبه مصادف شد. در روزهای یکشنبه چه چیزهایی را باید به یاد آوریم؟ دو چیز:",
+            li1: "اینکه خدا همه چیز را در شش روز آفرید و در روز هفتم آرام گرفت.",
+            li2: "اینکه تنها پدر مقدس که در آسمان است، هنگامی که از راه تولد تازه به سوی مسیح، یعنی مسیحا، آمدیم به ما آرامش بخشید.",
+            p7: "موضوع این نیست که تمام یکشنبه به سینه خود بکوبی و تظاهر به دینداری کنی؛ بلکه کافی است دعا کنی: «ای پدر، سپاسگزارم که همه چیز را آفریدی و با آمدن مسیح، که در من زندگی می‌کند، به ما آرامش بخشیدی».",
+            p8: "آیا جرئت می‌کنی هر یکشنبه با خواندن نام قادر مطلق این کار را انجام دهی؟ اگر با ایمان و اطمینان چنین کنی، درکت از انجیل بی‌تردید بسیار عمیق‌تر خواهد شد. من چنین باور دارم.",
+            back: "بازگشت به مقاله‌ها",
+            languageLabel: "انتخاب زبان"
         }
+    };
+
+    const subscribeTranslations = {
+      es:["¿Te gustaría seguir recibiendo nuestras publicaciones?","Suscríbete gratuitamente y recibe nuevas cápsulas, reflexiones bíblicas y enseñanzas de La Palabra en Cápsulas directamente en tu correo electrónico.","QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES","Solo necesitamos tu correo electrónico. Es gratuito."],
+      en:["Would you like to keep receiving our publications?","Subscribe for free and receive new capsules, Bible reflections, and teachings from The Word in Capsules directly in your email.","I WANT TO RECEIVE FUTURE PUBLICATIONS","We only need your email address. It is free."],
+      zh:["您愿意继续接收我们的新文章吗？","免费订阅，即可通过电子邮件接收《胶囊中的圣言》的新短文、圣经默想和教导。","我想接收后续文章","我们只需要您的电子邮箱地址。完全免费。"],
+      fr:["Souhaitez-vous continuer à recevoir nos publications ?","Abonnez-vous gratuitement pour recevoir directement par courriel les nouvelles capsules, réflexions bibliques et enseignements de La Parole en Capsules.","JE SOUHAITE RECEVOIR LES PROCHAINES PUBLICATIONS","Nous avons seulement besoin de votre adresse e-mail. C’est gratuit."],
+      it:["Desideri continuare a ricevere le nostre pubblicazioni?","Iscriviti gratuitamente per ricevere direttamente via e-mail nuove capsule, riflessioni bibliche e insegnamenti de La Parola en Cápsulas.","VOGLIO RICEVERE LE PROSSIME PUBBLICAZIONI","Abbiamo bisogno soltanto del tuo indirizzo e-mail. È gratuito."],
+      pt:["Gostaria de continuar recebendo nossas publicações?","Inscreva-se gratuitamente e receba diretamente no seu e-mail novas cápsulas, reflexões bíblicas e ensinamentos de La Palabra en Cápsulas.","QUERO RECEBER AS PRÓXIMAS PUBLICAÇÕES","Precisamos apenas do seu endereço de e-mail. É gratuito."],
+      he:["האם תרצה להמשיך לקבל את הפרסומים שלנו?","הירשם בחינם וקבל ישירות לדוא״ל שלך קפסולות חדשות, הרהורים מקראיים ולימודים של ״דבר אלוהים בכמוסות״.","אני רוצה לקבל פרסומים נוספים","אנו זקוקים לכתובת הדוא״ל שלך בלבד. השירות בחינם."],
+      ar:["هل ترغب في مواصلة تلقي منشوراتنا؟","اشترك مجانًا لتصلك عبر بريدك الإلكتروني كبسولات جديدة وتأملات كتابية وتعاليم من «كلمة الله في كبسولات».","أرغب في تلقي المنشورات القادمة","نحتاج فقط إلى عنوان بريدك الإلكتروني. الاشتراك مجاني."],
+      hi:["क्या आप हमारी नई प्रकाशित सामग्री प्राप्त करते रहना चाहेंगे?","निःशुल्क सदस्यता लें और La Palabra en Cápsulas की नई सामग्री, बाइबल पर मनन और शिक्षाएँ सीधे अपने ईमेल पर पाएँ।","मैं नई प्रकाशित सामग्री प्राप्त करना चाहता/चाहती हूँ","हमें केवल आपका ईमेल पता चाहिए। यह निःशुल्क है।"],
+      ru:["Хотите и дальше получать наши публикации?","Подпишитесь бесплатно и получайте новые материалы, библейские размышления и наставления проекта «Слово в капсулах» прямо на свою электронную почту.","ХОЧУ ПОЛУЧАТЬ НОВЫЕ ПУБЛИКАЦИИ","Нам нужен только ваш адрес электронной почты. Это бесплатно."],
+      de:["Möchten Sie weiterhin unsere Veröffentlichungen erhalten?","Abonnieren Sie kostenlos und erhalten Sie neue Beiträge, biblische Impulse und Lehren von „Das Wort in Kapseln“ direkt per E-Mail.","ICH MÖCHTE KÜNFTIGE VERÖFFENTLICHUNGEN ERHALTEN","Wir benötigen nur Ihre E-Mail-Adresse. Das Abonnement ist kostenlos."],
+      ja:["これからも新しい記事を受け取りませんか。","無料で登録すると、「カプセルに込めた神の言葉」の新しい記事、聖書の黙想、教えがメールで届きます。","新しい記事を受け取る","必要なのはメールアドレスだけです。登録は無料です。"],
+      tr:["Yayınlarımızı almaya devam etmek ister misiniz?","Ücretsiz abone olun; La Palabra en Cápsulas'ın yeni yazılarını, Kutsal Kitap üzerine düşünceleri ve öğretilerini doğrudan e-postanızdan alın.","YENİ YAYINLARI ALMAK İSTİYORUM","Yalnızca e-posta adresinize ihtiyacımız var. Ücretsizdir."],
+      el:["Θα θέλατε να συνεχίσετε να λαμβάνετε τις δημοσιεύσεις μας;","Εγγραφείτε δωρεάν και λαμβάνετε απευθείας στο ηλεκτρονικό σας ταχυδρομείο νέα άρθρα, βιβλικούς στοχασμούς και διδασκαλίες από το La Palabra en Cápsulas.","ΘΕΛΩ ΝΑ ΛΑΜΒΑΝΩ ΤΙΣ ΝΕΕΣ ΔΗΜΟΣΙΕΥΣΕΙΣ","Χρειαζόμαστε μόνο τη διεύθυνση του email σας. Είναι δωρεάν."],
+      fa:["آیا مایلید همچنان مطالب تازه ما را دریافت کنید؟","به‌صورت رایگان مشترک شوید و نوشته‌های تازه، تأملات کتاب‌مقدسی و آموزش‌های «کلام خدا در کپسول‌ها» را مستقیماً در ایمیل خود دریافت کنید.","مایلم مطالب بعدی را دریافت کنم","فقط به نشانی ایمیل شما نیاز داریم. این اشتراک رایگان است."]
     };
 
     function setText(id, value) {
@@ -752,13 +870,13 @@ html[dir="rtl"] .veamos {
         const t = translations[lang];
 
         document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
-        document.documentElement.dir = ["he", "ar"].includes(lang) ? "rtl" : "ltr";
+        document.documentElement.dir = ["he", "ar", "fa"].includes(lang) ? "rtl" : "ltr";
         document.title = t.title + " — LPC";
 
         setText("article-title", t.title);
         const image = document.getElementById("article-image");
         if (image) {
-            image.src = lang === "es" ? "nigromancia.png" : "nigromancia-" + lang + ".png";
+            image.src = ["es", "tr", "el", "fa"].includes(lang) ? "nigromancia.png" : "nigromancia-" + lang + ".png";
             image.alt = t.imageAlt;
         }
         setText("unesco-question", t.question);
@@ -780,6 +898,11 @@ html[dir="rtl"] .veamos {
         setText("paragraph-7", t.p7);
         setText("paragraph-8", t.p8);
         setText("back-label", t.back);
+        const sub = subscribeTranslations[lang] || subscribeTranslations.es;
+        setText("subscribe-title", sub[0]);
+        setText("subscribe-description", sub[1]);
+        setText("subscribe-button", sub[2]);
+        setText("subscribe-note", sub[3]);
         document.getElementById("language-bar").setAttribute("aria-label", t.languageLabel);
 
         document.querySelectorAll(".lang-link").forEach(function (button) {
