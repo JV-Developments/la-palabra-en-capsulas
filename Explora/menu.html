@@ -226,7 +226,7 @@ h1 {
   .back a { font-size: 17px; }
 }
 
-/* RTL: Hebrew and Arabic */
+/* RTL: Hebrew, Arabic and Persian */
 html[dir="rtl"] .page { direction: rtl; }
 html[dir="rtl"] .language-bar { justify-content: center; }
 html[dir="rtl"] .menu { direction: rtl; }
@@ -268,22 +268,28 @@ html[dir="rtl"] .menu::after { left: 50%; }
     <button type="button" class="lang-link" id="link-de" onclick="changeLanguage('de')" aria-pressed="false">Deutsch</button>
     <span class="lang-divider">|</span>
     <button type="button" class="lang-link" id="link-ja" onclick="changeLanguage('ja')" aria-pressed="false">日本語</button>
+    <span class="lang-divider">|</span>
+    <button type="button" class="lang-link" id="link-tr" onclick="changeLanguage('tr')" aria-pressed="false">Türkçe</button>
+    <span class="lang-divider">|</span>
+    <button type="button" class="lang-link" id="link-el" onclick="changeLanguage('el')" aria-pressed="false">Ελληνικά</button>
+    <span class="lang-divider">|</span>
+    <button type="button" class="lang-link" id="link-fa" onclick="changeLanguage('fa')" aria-pressed="false">فارسی</button>
   </nav>
 
   <header><h1 id="page-title">Mira, Crece y Comparte</h1></header>
 
   <nav class="menu" id="main-menu" aria-label="Menú principal">
     <div class="column">
-      <div class="item"><a href="./LPC/index.html" data-es="Acerca de LPC" data-en="About LPC" data-zh="关于 LPC" data-fr="À propos de LPC" data-it="Informazioni su LPC" data-pt="Sobre a LPC" data-he="אודות LPC" data-ar="حول LPC" data-hi="LPC के बारे में" data-ru="О проекте LPC" data-de="Über LPC" data-ja="LPCについて">Acerca de LPC</a></div>
-      <div class="item"><a href="./articulos/index.html" data-es="Artículos" data-en="Articles" data-zh="文章" data-fr="Articles" data-it="Articoli" data-pt="Artigos" data-he="מאמרים" data-ar="مقالات" data-hi="लेख" data-ru="Статьи" data-de="Artikel" data-ja="記事">Artículos</a></div>
-      <div class="item"><a href="./ensenanzas/index.html" data-es="Enseñanzas" data-en="Teachings" data-zh="教导" data-fr="Enseignements" data-it="Insegnamenti" data-pt="Ensinamentos" data-he="לימוד" data-ar="تعاليم" data-hi="शिक्षाएँ" data-ru="Учения" data-de="Lehren" data-ja="教え">Enseñanzas</a></div>
-      <div class="item"><a href="./oracion/index.html" data-es="Oración" data-en="Prayer" data-zh="祷告" data-fr="Prière" data-it="Preghiera" data-pt="Oração" data-he="תפילה" data-ar="الصلاة" data-hi="प्रार्थना" data-ru="Молитва" data-de="Gebet" data-ja="祈り">Oración</a></div>
+      <div class="item"><a href="./LPC/index.html" data-es="Acerca de LPC" data-en="About LPC" data-zh="关于 LPC" data-fr="À propos de LPC" data-it="Informazioni su LPC" data-pt="Sobre a LPC" data-he="אודות LPC" data-ar="حول LPC" data-hi="LPC के बारे में" data-ru="О проекте LPC" data-de="Über LPC" data-ja="LPCについて" data-tr="LPC Hakkında" data-el="Σχετικά με το LPC" data-fa="دربارهٔ LPC">Acerca de LPC</a></div>
+      <div class="item"><a href="./articulos/index.html" data-es="Artículos" data-en="Articles" data-zh="文章" data-fr="Articles" data-it="Articoli" data-pt="Artigos" data-he="מאמרים" data-ar="مقالات" data-hi="लेख" data-ru="Статьи" data-de="Artikel" data-ja="記事" data-tr="Makaleler" data-el="Άρθρα" data-fa="مقالات">Artículos</a></div>
+      <div class="item"><a href="./ensenanzas/index.html" data-es="Enseñanzas" data-en="Teachings" data-zh="教导" data-fr="Enseignements" data-it="Insegnamenti" data-pt="Ensinamentos" data-he="לימוד" data-ar="تعاليم" data-hi="शिक्षाएँ" data-ru="Учения" data-de="Lehren" data-ja="教え" data-tr="Öğretiler" data-el="Διδασκαλίες" data-fa="آموزه‌ها">Enseñanzas</a></div>
+      <div class="item"><a href="./oracion/index.html" data-es="Oración" data-en="Prayer" data-zh="祷告" data-fr="Prière" data-it="Preghiera" data-pt="Oração" data-he="תפילה" data-ar="الصلاة" data-hi="प्रार्थना" data-ru="Молитва" data-de="Gebet" data-ja="祈り" data-tr="Dua" data-el="Προσευχή" data-fa="دعا">Oración</a></div>
     </div>
     <div class="column">
-      <div class="item"><a href="./descargas/index.html" data-es="Descargas" data-en="Downloads" data-zh="下载资源" data-fr="Téléchargements" data-it="Download" data-pt="Downloads" data-he="הורדות" data-ar="التنزيلات" data-hi="डाउनलोड" data-ru="Материалы" data-de="Downloads" data-ja="ダウンロード">Descargas</a></div>
-      <div class="item"><a href="./testimonios/index.html" data-es="Testimonios" data-en="Testimonials" data-zh="见证" data-fr="Témoignages" data-it="Testimonianze" data-pt="Testemunhos" data-he="עדויות" data-ar="شهادات" data-hi="गवाहियाँ" data-ru="Свидетельства" data-de="Zeugnisse" data-ja="証し">Testimonios</a></div>
-      <div class="item"><a href="./proyectos/index.html" data-es="Proyectos" data-en="Projects" data-zh="项目" data-fr="Projets" data-it="Progetti" data-pt="Projetos" data-he="פרויקטים" data-ar="مشاريع" data-hi="परियोजनाएँ" data-ru="Проекты" data-de="Projekte" data-ja="プロジェクト">Proyectos</a></div>
-      <div class="item"><a href="./apoya/index.html" data-es="Apoya" data-en="Support" data-zh="支持 LPC" data-fr="Soutenir" data-it="Sostieni" data-pt="Apoie" data-he="תמיכה" data-ar="ادعم" data-hi="सहयोग करें" data-ru="Поддержать" data-de="Unterstützen" data-ja="支援する">Apoya</a></div>
+      <div class="item"><a href="./descargas/index.html" data-es="Descargas" data-en="Downloads" data-zh="下载资源" data-fr="Téléchargements" data-it="Download" data-pt="Downloads" data-he="הורדות" data-ar="التنزيلات" data-hi="डाउनलोड" data-ru="Материалы" data-de="Downloads" data-ja="ダウンロード" data-tr="İndirmeler" data-el="Λήψεις" data-fa="دانلودها">Descargas</a></div>
+      <div class="item"><a href="./testimonios/index.html" data-es="Testimonios" data-en="Testimonials" data-zh="见证" data-fr="Témoignages" data-it="Testimonianze" data-pt="Testemunhos" data-he="עדויות" data-ar="شهادات" data-hi="गवाहियाँ" data-ru="Свидетельства" data-de="Zeugnisse" data-ja="証し" data-tr="Tanıklıklar" data-el="Μαρτυρίες" data-fa="شهادت‌ها">Testimonios</a></div>
+      <div class="item"><a href="./proyectos/index.html" data-es="Proyectos" data-en="Projects" data-zh="项目" data-fr="Projets" data-it="Progetti" data-pt="Projetos" data-he="פרויקטים" data-ar="مشاريع" data-hi="परियोजनाएँ" data-ru="Проекты" data-de="Projekte" data-ja="プロジェクト" data-tr="Projeler" data-el="Έργα" data-fa="پروژه‌ها">Proyectos</a></div>
+      <div class="item"><a href="./apoya/index.html" data-es="Apoya" data-en="Support" data-zh="支持 LPC" data-fr="Soutenir" data-it="Sostieni" data-pt="Apoie" data-he="תמיכה" data-ar="ادعم" data-hi="सहयोग करें" data-ru="Поддержать" data-de="Unterstützen" data-ja="支援する" data-tr="Destek Ol" data-el="Υποστήριξη" data-fa="حمایξη">Apoya</a></div>
     </div>
   </nav>
 
@@ -301,7 +307,10 @@ html[dir="rtl"] .menu::after { left: 50%; }
        data-hi="मैं अगले प्रकाशन प्राप्त करना चाहता/चाहती हूँ"
        data-ru="ХОЧУ ПОЛУЧАТЬ СЛЕДУЮЩИЕ ПУБЛИКАЦИИ"
        data-de="ICH MÖCHTE DIE NÄCHSTEN VERÖFFENTLICHUNGEN ERHALTEN"
-       data-ja="次回の投稿を受け取りたいです">QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES</a>
+       data-ja="次回の投稿を受け取りたいです"
+       data-tr="SONRAKİ YAYINLARI ALMAK İSTİYORUM"
+       data-el="ΘΕΛΩ ΝΑ ΛΑΜΒΑΝΩ ΤΙΣ ΕΠΟΜΕΝΕΣ ΔΗΜΟΣΙΕΥΣΕΙΣ"
+       data-fa="می‌خواهم مطالب بعدی را دریافت کنم">QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES</a>
     <p id="subscribe-description"
        data-es="Solo necesitamos tu correo electrónico"
        data-en="We only need your email address"
@@ -314,14 +323,17 @@ html[dir="rtl"] .menu::after { left: 50%; }
        data-hi="हमें केवल आपके ईमेल पते की आवश्यकता है"
        data-ru="Нам нужен только ваш адрес электронной почты"
        data-de="Wir benötigen nur Ihre E-Mail-Adresse"
-       data-ja="必要なのはメールアドレスだけです">Solo necesitamos tu correo electrónico</p>
+       data-ja="必要なのはメールアドレスだけです"
+       data-tr="Yalnızca e-posta adresinize ihtiyacımız var"
+       data-el="Χρειαζόμαστε μόνο τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας"
+       data-fa="ما فقط به نشانی ایمیل شما نیاز داریم">Solo necesitamos tu correo electrónico</p>
   </section>
 
   <div class="back">
     <a href="../index.html" id="back-link"
        data-es="Volver a Inicio" data-en="Back to Home" data-zh="返回首页"
        data-fr="Retour à l’accueil" data-it="Torna alla Home" data-pt="Voltar ao início"
-       data-he="חזרה לדף הבית" data-ar="العودة إلى الصفحة الرئيسية" data-hi="मुखपृष्ठ पर लौटें" data-ru="На главную" data-de="Zur Startseite" data-ja="ホームに戻る">Volver a Inicio</a>
+       data-he="חזרה לדף הבית" data-ar="العودة إلى الصفحة الرئيسية" data-hi="मुखपृष्ठ पर लौटें" data-ru="На главную" data-de="Zur Startseite" data-ja="ホームに戻る" data-tr="Ana Sayfaya Dön" data-el="Επιστροφή στην αρχική" data-fa="بازگشت به صفحهٔ اصلی">Volver a Inicio</a>
   </div>
 </div>
 
@@ -388,13 +400,29 @@ html[dir="rtl"] .menu::after { left: 50%; }
       documentTitle: "見て、成長し、分かち合う — La Palabra en Cápsulas",
       menuLabel: "メインメニュー"
     }
+,
+    tr: {
+      title: "Bak, Geliş ve Paylaş",
+      documentTitle: "Bak, Geliş ve Paylaş — La Palabra en Cápsulas",
+      menuLabel: "Ana Menü"
+    },
+    el: {
+      title: "Δες, Μεγάλωσε και Μοιράσου",
+      documentTitle: "Δες, Μεγάλωσε και Μοιράσου — La Palabra en Cápsulas",
+      menuLabel: "Κύριο μενού"
+    },
+    fa: {
+      title: "ببین، رشد کن و به اشتراک بگذار",
+      documentTitle: "ببین، رشد کن و به اشتراک بگذار — کلام در کپسول‌ها",
+      menuLabel: "منوی اصلی"
+    }
   };
 
   function changeLanguage(lang) {
     if (!translations[lang]) lang = "es";
 
     document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
-    document.documentElement.dir = ["he", "ar"].includes(lang) ? "rtl" : "ltr";
+    document.documentElement.dir = ["he", "ar", "fa"].includes(lang) ? "rtl" : "ltr";
     document.title = translations[lang].documentTitle;
     document.getElementById("page-title").textContent = translations[lang].title;
     document.getElementById("main-menu").setAttribute("aria-label", translations[lang].menuLabel);
