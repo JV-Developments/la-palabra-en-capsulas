@@ -132,7 +132,6 @@ h1 {
 
 .item a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
-
 /* INVITACIÓN A RECIBIR NUEVAS PUBLICACIONES */
 .subscribe-panel {
   width: min(700px, 100%);
@@ -145,29 +144,47 @@ h1 {
   text-align: center;
   box-shadow: none;
 }
+
 .subscribe-panel p {
   margin: 13px 0 0;
   color: rgba(255,255,255,.92);
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* Botón dorado: visible, elegante y sin competir con el título */
 .subscribe-button {
   display: inline-block;
-  padding: 11px 20px;
-  background: var(--blue);
-  color: var(--gold);
+  padding: 12px 21px;
+  background: var(--gold);
+  color: #17365D;
   border: 1px solid var(--gold);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.5;
   text-decoration: none;
-  transition: background .2s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,.16);
+  transition:
+    background .2s ease,
+    box-shadow .2s ease,
+    transform .2s ease;
 }
-.subscribe-button:hover { background: rgba(255,255,255,.08); }
+
+.subscribe-button:hover {
+  background: #f0d987;
+  box-shadow: 0 6px 15px rgba(0,0,0,.22);
+  transform: translateY(-2px);
+}
+
+.subscribe-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+}
+
 .subscribe-button:focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid #fff;
   outline-offset: 4px;
 }
 
@@ -200,7 +217,11 @@ h1 {
   .item a { font-size: 21px; line-height: 1.5; padding: 3px 0; }
   .subscribe-panel { margin-top: 30px; padding: 20px 17px 22px; }
   .subscribe-panel p { font-size: 15px; }
-  .subscribe-button { font-size: 13px; padding: 11px 15px; }
+  .subscribe-button {
+    max-width: 100%;
+    padding: 11px 15px;
+    font-size: 13px;
+  }
   .back { width: 100%; margin-top: 32px; text-align: center; }
   .back a { font-size: 17px; }
 }
@@ -266,11 +287,10 @@ html[dir="rtl"] .menu::after { left: 50%; }
     </div>
   </nav>
 
-
   <section class="subscribe-panel" id="subscribe-panel" aria-label="Suscripción a publicaciones">
     <a class="subscribe-button" id="subscribe-button"
        href="https://forms.gle/dfmQRiDqYqT8Fwt26" target="_blank" rel="noopener noreferrer"
-       data-es="QUIERO RECIBIR LAS PROXIMAS PUBLICACIONES"
+       data-es="QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES"
        data-en="I WANT TO RECEIVE THE NEXT PUBLICATIONS"
        data-zh="我想接收下一期文章"
        data-fr="JE VEUX RECEVOIR LES PROCHAINES PUBLICATIONS"
@@ -281,7 +301,7 @@ html[dir="rtl"] .menu::after { left: 50%; }
        data-hi="मैं अगले प्रकाशन प्राप्त करना चाहता/चाहती हूँ"
        data-ru="ХОЧУ ПОЛУЧАТЬ СЛЕДУЮЩИЕ ПУБЛИКАЦИИ"
        data-de="ICH MÖCHTE DIE NÄCHSTEN VERÖFFENTLICHUNGEN ERHALTEN"
-       data-ja="次回の投稿を受け取りたいです">QUIERO RECIBIR LAS PROXIMAS PUBLICACIONES</a>
+       data-ja="次回の投稿を受け取りたいです">QUIERO RECIBIR LAS PRÓXIMAS PUBLICACIONES</a>
     <p id="subscribe-description"
        data-es="Solo necesitamos tu correo electrónico"
        data-en="We only need your email address"
