@@ -325,6 +325,9 @@ body {
     <button aria-pressed="false" class="language-button" data-lang="ru" type="button">Русский</button>
     <button aria-pressed="false" class="language-button" data-lang="de" type="button">Deutsch</button>
     <button aria-pressed="false" class="language-button" data-lang="ja" type="button">日本語</button>
+    <button aria-pressed="false" class="language-button" data-lang="tr" type="button">Türkçe</button>
+    <button aria-pressed="false" class="language-button" data-lang="el" type="button">Ελληνικά</button>
+    <button aria-pressed="false" class="language-button" data-lang="fa" type="button">فارسی</button>
   </nav>
 
   <!-- MOTOR DE ORDENAMIENTO EN VIVO -->
@@ -332,8 +335,8 @@ body {
   (function () {
     "use strict";
     const estadisticasHablantes = {
-      "en": 1493, "zh": 1183, "hi": 611, "es": 561, "ar": 335,
-      "fr": 334, "pt": 269, "ru": 210, "de": 133, "ja": 126, "it": 68
+      "en": 1493, "zh": 1183, "hi": 611, "es": 561, "ar": 335, "tr": 85,
+      "fr": 334, "pt": 269, "ru": 210, "de": 133, "ja": 126, "it": 68, "fa": 74, "el": 13.4
     };
     const contenedorNav = document.querySelector(".language-bar");
     if (contenedorNav) {
@@ -559,6 +562,48 @@ body {
         "神と共に"
       ],
       explore: "探索する"
+    },
+    tr: {
+      lang: "tr",
+      dir: "ltr",
+      image: spanishImage,
+      title: "La Palabra en Cápsulas — Resmî Ana Sayfa",
+      welcome: [
+        "Bu alana hoş geldiniz",
+        "Pratik, derin ve anlaşılır fikirleri",
+        "paylaşmaya adanmış bir yer",
+        "Tanrı ile güven içinde",
+        "yürümek için"
+      ],
+      explore: "Keşfet"
+    },
+    el: {
+      lang: "el",
+      dir: "ltr",
+      image: spanishImage,
+      title: "La Palabra en Cápsulas — Επίσημη Αρχική Σελίδα",
+      welcome: [
+        "Καλώς ήρθατε σε αυτόν τον χώρο",
+        "Ένα μέρος αφιερωμένο στο να μοιράζεται",
+        "πρακτικές, βαθιές και προσιτές ιδέες",
+        "για μια ασφαλή πορεία",
+        "με τον Θεό"
+      ],
+      explore: "Εξερεύνηση"
+    },
+    fa: {
+      lang: "fa",
+      dir: "rtl",
+      image: spanishImage,
+      title: "کلام در کپسول‌ها — صفحه اصلی رسمی",
+      welcome: [
+        "به این فضا خوش آمدید",
+        "مکانی برای به اشتراک گذاشتن",
+        "ایده‌های کاربردی، عمیق و قابل فهم",
+        "برای پیمودن راهی امن",
+        "با خدا"
+      ],
+      explore: "کاوش"
     }
   };
 
