@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es" dir="ltr">
 <head>
@@ -23,12 +24,9 @@
   --gold:#b89b63;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html,
-body{
+html,body{
   margin:0;
   padding:0;
 }
@@ -52,9 +50,7 @@ body{
   box-shadow:0 5px 24px rgba(0,0,0,.06);
 }
 
-header{
-  text-align:center;
-}
+header{text-align:center}
 
 .brand{
   font-size:13px;
@@ -96,9 +92,7 @@ h1{
   transition:background .2s ease,color .2s ease;
 }
 
-.language-selector button:hover{
-  background:#eae5dc;
-}
+.language-selector button:hover{background:#eae5dc}
 
 .language-selector button[aria-pressed="true"]{
   background:var(--accent);
@@ -161,9 +155,7 @@ h1{
   text-underline-offset:4px;
 }
 
-.resource-link:hover{
-  text-decoration:underline;
-}
+.resource-link:hover{text-decoration:underline}
 
 .back-wrap{
   text-align:center;
@@ -177,33 +169,26 @@ h1{
   text-underline-offset:4px;
 }
 
-.back-link:hover{
-  text-decoration-thickness:2px;
-}
+.back-link:hover{text-decoration-thickness:2px}
 
-/* Hebrew and Arabic: right-to-left layout */
-html[lang="he"],
-html[lang="ar"]{
+/* Hebrew, Arabic and Persian: right-to-left layout */
+html[dir="rtl"]{
   direction:rtl;
 }
 
-html[lang="he"] body,
-html[lang="ar"] body{
+html[dir="rtl"] body{
   direction:rtl;
 }
 
-html[lang="he"] .resource-card,
-html[lang="ar"] .resource-card{
+html[dir="rtl"] .resource-card{
   text-align:right;
 }
 
-html[lang="he"] .resource-link,
-html[lang="ar"] .resource-link{
+html[dir="rtl"] .resource-link{
   direction:rtl;
 }
 
-html[lang="he"] .brand,
-html[lang="ar"] .brand{
+html[dir="rtl"] .brand{
   letter-spacing:0;
 }
 
@@ -219,13 +204,9 @@ html[lang="ar"] .brand{
     min-height:100vh;
   }
 
-  h1{
-    font-size:30px;
-  }
+  h1{font-size:30px}
 
-  .brand{
-    font-size:12px;
-  }
+  .brand{font-size:12px}
 
   .language-selector{
     gap:8px;
@@ -247,13 +228,9 @@ html[lang="ar"] .brand{
     min-height:0;
   }
 
-  .resource-card h2{
-    font-size:21px;
-  }
+  .resource-card h2{font-size:21px}
 
-  .resource-card p{
-    font-size:14px;
-  }
+  .resource-card p{font-size:14px}
 }
 </style>
 </head>
@@ -279,7 +256,11 @@ html[lang="ar"] .brand{
   <button type="button" data-lang="ru" aria-pressed="false">Русский</button>
   <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
   <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+  <button type="button" data-lang="el" aria-pressed="false">Ελληνικά</button>
+  <button type="button" data-lang="fa" aria-pressed="false">فارسی</button>
 </nav>
+
 <div class="rule"></div>
 
 <p class="intro" id="intro">
@@ -305,146 +286,183 @@ html[lang="ar"] .brand{
 <script>
 const translations = {
   es: {
-    brand: 'LA PALABRA EN CÁPSULAS',
-    title: 'Descargas',
-    intro: 'Recursos de LPC para quienes desean conocer más de la fe cristiana y crecer en su caminar con Dios.',
-    resourceTitle: 'Guía para Nuevos Creyentes',
-    description: 'Instrucciones simples para comenzar el camino de la fe, cómo leer la Biblia y desarrollar una saludable vida espiritual.',
-    access: 'Acceder ya →',
-    back: 'Volver al Menú',
-    docTitle: 'Descargas — La Palabra en Cápsulas',
-    navLabel: 'Selector de idioma'
+    brand:'LA PALABRA EN CÁPSULAS',
+    title:'Descargas',
+    intro:'Recursos de LPC para quienes desean conocer más de la fe cristiana y crecer en su caminar con Dios.',
+    resourceTitle:'Guía para Nuevos Creyentes',
+    description:'Instrucciones simples para comenzar el camino de la fe, cómo leer la Biblia y desarrollar una saludable vida espiritual.',
+    access:'Acceder ya →',
+    back:'Volver al Menú',
+    docTitle:'Descargas — La Palabra en Cápsulas',
+    navLabel:'Selector de idioma'
   },
 
   en: {
-    brand: 'THE WORD IN CAPSULES',
-    title: 'Downloads',
-    intro: 'LPC resources for those who want to learn more about the Christian faith and grow in their walk with God.',
-    resourceTitle: 'A Guide for New Believers',
-    description: 'Simple instructions for beginning your journey of faith, learning how to read the Bible, and developing a healthy spiritual life.',
-    access: 'Access now →',
-    back: 'Back to Menu',
-    docTitle: 'Downloads — The Word in Capsules',
-    navLabel: 'Language selector'
+    brand:'THE WORD IN CAPSULES',
+    title:'Downloads',
+    intro:'LPC resources for those who want to learn more about the Christian faith and grow in their walk with God.',
+    resourceTitle:'A Guide for New Believers',
+    description:'Simple instructions for beginning your journey of faith, learning how to read the Bible, and developing a healthy spiritual life.',
+    access:'Access now →',
+    back:'Back to Menu',
+    docTitle:'Downloads — The Word in Capsules',
+    navLabel:'Language selector'
   },
 
   zh: {
-    brand: '胶囊中的圣言',
-    title: '下载资源',
-    intro: 'LPC 为希望进一步认识基督信仰、在与上帝同行的道路上不断成长的人提供的资源。',
-    resourceTitle: '初信者指南',
-    description: '帮助你开始信仰之旅、学习阅读圣经并建立健康属灵生活的简单指引。',
-    access: '立即阅读 →',
-    back: '返回菜单',
-    docTitle: '下载资源 — 胶囊中的圣言',
-    navLabel: '语言选择'
+    brand:'胶囊中的圣言',
+    title:'下载资源',
+    intro:'LPC 为希望进一步认识基督信仰、在与上帝同行的道路上不断成长的人提供的资源。',
+    resourceTitle:'初信者指南',
+    description:'帮助你开始信仰之旅、学习阅读圣经并建立健康属灵生活的简单指引。',
+    access:'立即阅读 →',
+    back:'返回菜单',
+    docTitle:'下载资源 — 胶囊中的圣言',
+    navLabel:'语言选择'
   },
 
   fr: {
-    brand: 'LA PAROLE EN CAPSULES',
-    title: 'Téléchargements',
-    intro: 'Des ressources de LPC pour découvrir davantage la foi chrétienne et grandir dans sa marche avec Dieu.',
-    resourceTitle: 'Guide pour les nouveaux croyants',
-    description: 'Des conseils simples pour commencer le chemin de la foi, apprendre à lire la Bible et développer une vie spirituelle saine.',
-    access: 'Accéder maintenant →',
-    back: 'Retour au menu',
-    docTitle: 'Téléchargements — La Parole en Capsules',
-    navLabel: 'Sélecteur de langue'
+    brand:'LA PAROLE EN CAPSULES',
+    title:'Téléchargements',
+    intro:'Des ressources de LPC pour découvrir davantage la foi chrétienne et grandir dans sa marche avec Dieu.',
+    resourceTitle:'Guide pour les nouveaux croyants',
+    description:'Des conseils simples pour commencer le chemin de la foi, apprendre à lire la Bible et développer une vie spirituelle saine.',
+    access:'Accéder maintenant →',
+    back:'Retour au menu',
+    docTitle:'Téléchargements — La Parole en Capsules',
+    navLabel:'Sélecteur de langue'
   },
 
   it: {
-    brand: 'LA PAROLA IN CAPSULE',
-    title: 'Download',
-    intro: 'Risorse di LPC per chi desidera conoscere meglio la fede cristiana e crescere nel proprio cammino con Dio.',
-    resourceTitle: 'Guida per i nuovi credenti',
-    description: 'Semplici indicazioni per iniziare il cammino della fede, imparare a leggere la Bibbia e sviluppare una sana vita spirituale.',
-    access: 'Accedi ora →',
-    back: 'Torna al menu',
-    docTitle: 'Download — La Parola in Capsule',
-    navLabel: 'Selezione della lingua'
+    brand:'LA PAROLA IN CAPSULE',
+    title:'Download',
+    intro:'Risorse di LPC per chi desidera conoscere meglio la fede cristiana e crescere nel proprio cammino con Dio.',
+    resourceTitle:'Guida per i nuovi credenti',
+    description:'Semplici indicazioni per iniziare il cammino della fede, imparare a leggere la Bibbia e sviluppare una sana vita spirituale.',
+    access:'Accedi ora →',
+    back:'Torna al menu',
+    docTitle:'Download — La Parola in Capsule',
+    navLabel:'Selezione della lingua'
   },
 
   pt: {
-    brand: 'A PALAVRA EM CÁPSULAS',
-    title: 'Downloads',
-    intro: 'Recursos da LPC para quem deseja conhecer melhor a fé cristã e crescer em sua caminhada com Deus.',
-    resourceTitle: 'Guia para Novos Crentes',
-    description: 'Orientações simples para iniciar a caminhada da fé, aprender a ler a Bíblia e desenvolver uma vida espiritual saudável.',
-    access: 'Acesse agora →',
-    back: 'Voltar ao menu',
-    docTitle: 'Downloads — A Palavra em Cápsulas',
-    navLabel: 'Seletor de idioma'
+    brand:'A PALAVRA EM CÁPSULAS',
+    title:'Downloads',
+    intro:'Recursos da LPC para quem deseja conhecer melhor a fé cristã e crescer em sua caminhada com Deus.',
+    resourceTitle:'Guia para Novos Crentes',
+    description:'Orientações simples para iniciar a caminhada da fé, aprender a ler a Bíblia e desenvolver uma vida espiritual saudável.',
+    access:'Acesse agora →',
+    back:'Voltar ao menu',
+    docTitle:'Downloads — A Palavra em Cápsulas',
+    navLabel:'Seletor de idioma'
   },
 
   he: {
-    brand: 'דְּבַר אֱלֹהִים בִּתְרוּמָה',
-    title: 'הורדות',
-    intro: 'משאבים של LPC למי שרוצים להכיר טוב יותר את האמונה המשיחית ולצמוח בהליכתם עם אלוהים.',
-    resourceTitle: 'מדריך למאמינים חדשים',
-    description: 'הנחיות פשוטות לתחילת הדרך באמונה, ללימוד קריאת התנ״ך ולפיתוח חיים רוחניים בריאים.',
-    access: 'למעבר למדריך ←',
-    back: 'חזרה לתפריט',
-    docTitle: 'הורדות — דבר אלוהים בכמוסות',
-    navLabel: 'בחירת שפה'
+    brand:'דְּבַר אֱלֹהִים בִּתְרוּמָה',
+    title:'הורדות',
+    intro:'משאבים של LPC למי שרוצים להכיר טוב יותר את האמונה המשיחית ולצמוח בהליכתם עם אלוהים.',
+    resourceTitle:'מדריך למאמינים חדשים',
+    description:'הנחיות פשוטות לתחילת הדרך באמונה, ללימוד קריאת התנ״ך ולפיתוח חיים רוחניים בריאים.',
+    access:'למעבר למדריך ←',
+    back:'חזרה לתפריט',
+    docTitle:'הורדות — דבר אלוהים בכמוסות',
+    navLabel:'בחירת שפה'
   },
 
   ar: {
-    brand: 'كلمة الله في كبسولات',
-    title: 'التنزيلات',
-    intro: 'موارد من LPC لكل من يرغب في معرفة المزيد عن الإيمان المسيحي والنمو في مسيرته مع الله.',
-    resourceTitle: 'دليل للمؤمنين الجدد',
-    description: 'إرشادات بسيطة لبدء مسيرة الإيمان، وتعلّم قراءة الكتاب المقدس، وتنمية حياة روحية سليمة.',
-    access: 'اطّلع الآن ←',
-    back: 'العودة إلى القائمة',
-    docTitle: 'التنزيلات — كلمة الله في كبسولات',
-    navLabel: 'اختيار اللغة'
+    brand:'كلمة الله في كبسولات',
+    title:'التنزيلات',
+    intro:'موارد من LPC لكل من يرغب في معرفة المزيد عن الإيمان المسيحي والنمو في مسيرته مع الله.',
+    resourceTitle:'دليل للمؤمنين الجدد',
+    description:'إرشادات بسيطة لبدء مسيرة الإيمان، وتعلّم قراءة الكتاب المقدس، وتنمية حياة روحية سليمة.',
+    access:'اطّلع الآن ←',
+    back:'العودة إلى القائمة',
+    docTitle:'التنزيلات — كلمة الله في كبسولات',
+    navLabel:'اختيار اللغة'
   },
-    hi: {
-    brand: 'कैप्सूल में परमेश्वर का वचन',
-    title: 'डाउनलोड',
-    intro: 'ईसाई विश्वास को बेहतर ढंग से जानने और परमेश्वर के साथ अपने जीवन में आगे बढ़ने के इच्छुक लोगों के लिए LPC के संसाधन।',
-    resourceTitle: 'नए विश्वासियों के लिए मार्गदर्शिका',
-    description: 'विश्वास की यात्रा शुरू करने, बाइबल पढ़ना सीखने और स्वस्थ आध्यात्मिक जीवन विकसित करने के लिए सरल निर्देश।',
-    access: 'अभी देखें →',
-    back: 'मेनू पर वापस जाएँ',
-    docTitle: 'डाउनलोड — कैप्सूल में परमेश्वर का वचन',
-    navLabel: 'भाषा चुनें'
+
+  hi: {
+    brand:'कैप्सूल में परमेश्वर का वचन',
+    title:'डाउनलोड',
+    intro:'ईसाई विश्वास को बेहतर ढंग से जानने और परमेश्वर के साथ अपने जीवन में आगे बढ़ने के इच्छुक लोगों के लिए LPC के संसाधन।',
+    resourceTitle:'नए विश्वासियों के लिए मार्गदर्शिका',
+    description:'विश्वास की यात्रा शुरू करने, बाइबल पढ़ना सीखने और स्वस्थ आध्यात्मिक जीवन विकसित करने के लिए सरल निर्देश।',
+    access:'अभी देखें →',
+    back:'मेनू पर वापस जाएँ',
+    docTitle:'डाउनलोड — कैप्सूल में परमेश्वर का वचन',
+    navLabel:'भाषा चुनें'
   },
 
   ru: {
-    brand: 'СЛОВО БОЖЬЕ В КАПСУЛАХ',
-    title: 'Загрузки',
-    intro: 'Материалы LPC для тех, кто хочет лучше узнать христианскую веру и возрастать в хождении с Богом.',
-    resourceTitle: 'Руководство для новообращённых',
-    description: 'Простые рекомендации, которые помогут начать путь веры, научиться читать Библию и развивать здоровую духовную жизнь.',
-    access: 'Открыть сейчас →',
-    back: 'Вернуться в меню',
-    docTitle: 'Загрузки — Слово Божье в капсулах',
-    navLabel: 'Выбор языка'
+    brand:'СЛОВО БОЖЬЕ В КАПСУЛАХ',
+    title:'Загрузки',
+    intro:'Материалы LPC для тех, кто хочет лучше узнать христианскую веру и возрастать в хождении с Богом.',
+    resourceTitle:'Руководство для новообращённых',
+    description:'Простые рекомендации, которые помогут начать путь веры, научиться читать Библию и развивать здоровую духовную жизнь.',
+    access:'Открыть сейчас →',
+    back:'Вернуться в меню',
+    docTitle:'Загрузки — Слово Божье в капсулах',
+    navLabel:'Выбор языка'
   },
 
   de: {
-    brand: 'DAS WORT IN KAPSELN',
-    title: 'Downloads',
-    intro: 'LPC-Ressourcen für alle, die mehr über den christlichen Glauben erfahren und ihren Weg mit Gott vertiefen möchten.',
-    resourceTitle: 'Leitfaden für neue Gläubige',
-    description: 'Einfache Anleitungen für den Beginn des Glaubensweges, zum Bibellesen und zur Entwicklung eines gesunden geistlichen Lebens.',
-    access: 'Jetzt öffnen →',
-    back: 'Zurück zum Menü',
-    docTitle: 'Downloads — Das Wort in Kapseln',
-    navLabel: 'Sprachauswahl'
+    brand:'DAS WORT IN KAPSELN',
+    title:'Downloads',
+    intro:'LPC-Ressourcen für alle, die mehr über den christlichen Glauben erfahren und ihren Weg mit Gott vertiefen möchten.',
+    resourceTitle:'Leitfaden für neue Gläubige',
+    description:'Einfache Anleitungen für den Beginn des Glaubensweges, zum Bibellesen und zur Entwicklung eines gesunden geistlichen Lebens.',
+    access:'Jetzt öffnen →',
+    back:'Zurück zum Menü',
+    docTitle:'Downloads — Das Wort in Kapseln',
+    navLabel:'Sprachauswahl'
   },
 
   ja: {
-    brand: 'カプセルの中の神の言葉',
-    title: 'ダウンロード',
-    intro: 'キリスト教の信仰についてさらに学び、神と共に歩む道を成長させたい方のためのLPCの資料です。',
-    resourceTitle: '新しい信仰者のためのガイド',
-    description: '信仰の歩みを始め、聖書の読み方を学び、健全な霊的生活を築くためのわかりやすい手引きです。',
-    access: '今すぐ開く →',
-    back: 'メニューに戻る',
-    docTitle: 'ダウンロード — カプセルの中の神の言葉',
-    navLabel: '言語を選択'
+    brand:'カプセルの中の神の言葉',
+    title:'ダウンロード',
+    intro:'キリスト教の信仰についてさらに学び、神と共に歩む道を成長させたい方のためのLPCの資料です。',
+    resourceTitle:'新しい信仰者のためのガイド',
+    description:'信仰の歩みを始め、聖書の読み方を学び、健全な霊的生活を築くためのわかりやすい手引きです。',
+    access:'今すぐ開く →',
+    back:'メニューに戻る',
+    docTitle:'ダウンロード — カプセルの中の神の言葉',
+    navLabel:'言語を選択'
+  },
+
+  tr: {
+    brand:'KAPSÜLLERDE TANRI SÖZÜ',
+    title:'İndirmeler',
+    intro:'Hristiyan inancını daha iyi tanımak ve Tanrı ile yürüyüşlerinde gelişmek isteyenler için LPC kaynakları.',
+    resourceTitle:'Yeni İman Edenler İçin Rehber',
+    description:'İman yolculuğuna başlamak, Kutsal Kitap’ı okumayı öğrenmek ve sağlıklı bir ruhsal yaşam geliştirmek için basit yönergeler.',
+    access:'Şimdi incele →',
+    back:'Menüye dön',
+    docTitle:'İndirmeler — Kapsüllerde Tanrı Sözü',
+    navLabel:'Dil seçimi'
+  },
+
+  el: {
+    brand:'Ο ΛΟΓΟΣ ΤΟΥ ΘΕΟΥ ΣΕ ΚΑΨΟΥΛΕΣ',
+    title:'Λήψεις',
+    intro:'Πόροι της LPC για όσους θέλουν να γνωρίσουν καλύτερα τη χριστιανική πίστη και να προοδεύσουν στην πορεία τους με τον Θεό.',
+    resourceTitle:'Οδηγός για νέους πιστούς',
+    description:'Απλές οδηγίες για να ξεκινήσετε το ταξίδι της πίστης, να μάθετε να διαβάζετε τη Βίβλο και να αναπτύξετε μια υγιή πνευματική ζωή.',
+    access:'Δείτε τώρα →',
+    back:'Επιστροφή στο μενού',
+    docTitle:'Λήψεις — Ο Λόγος του Θεού σε Κάψουλες',
+    navLabel:'Επιλογή γλώσσας'
+  },
+
+  fa: {
+    brand:'کلام خدا در کپسول‌ها',
+    title:'دانلودها',
+    intro:'منابع LPC برای کسانی که می‌خواهند درباره ایمان مسیحی بیشتر بدانند و در مسیر همراهی با خدا رشد کنند.',
+    resourceTitle:'راهنمای ایمانداران تازه',
+    description:'راهنمایی‌های ساده برای آغاز مسیر ایمان، یادگیری خواندن کتاب مقدس و پرورش یک زندگی روحانی سالم.',
+    access:'اکنون مطالعه کنید ←',
+    back:'بازگشت به منو',
+    docTitle:'دانلودها — کلام خدا در کپسول‌ها',
+    navLabel:'انتخاب زبان'
   }
 };
 
@@ -454,7 +472,7 @@ function setLanguage(lang) {
   }
 
   const t = translations[lang];
-  const isRTL = lang === 'he' || lang === 'ar';
+  const isRTL = lang === 'he' || lang === 'ar' || lang === 'fa';
 
   document.documentElement.lang = lang;
   document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
