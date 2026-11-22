@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
@@ -147,7 +148,7 @@ a:focus-visible {
   text-decoration: underline;
 }
 
-/* Escritura de derecha a izquierda */
+/* Escritura de derecha a izquierda: hebreo, árabe y persa */
 html[dir="rtl"] body {
   font-family: Tahoma, "Segoe UI", Arial, sans-serif;
 }
@@ -237,6 +238,9 @@ html[dir="rtl"] .article-card p {
     <button type="button" data-lang="ru" aria-pressed="false">Русский</button>
     <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
     <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+    <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+    <button type="button" data-lang="el" aria-pressed="false">Ελληνικά</button>
+    <button type="button" data-lang="fa" aria-pressed="false">فارسی</button>
   </nav>
 
   <article class="article-card">
@@ -405,6 +409,42 @@ const translations = {
     pageTitle: "祈り — カプセルに込められた神の言葉",
     description: "祈りと神に語りかけることの大切さについての考察。",
     dir: "ltr"
+  },
+
+  tr: {
+    title: "Dua",
+    intro: "Tanrı üzerine düşünmek ve O'nunla konuşmak.",
+    cardTitle: "Dua Etmenin Önemi",
+    cardDesc: "Dua, yakarış, şükür, övgü ve vermek üzerine; ayrıca bu uygulamaların imanlının yaşamında sahip olması gereken yer hakkında bir düşünce.",
+    read: "Makaleyi oku →",
+    back: "← Menüye dön",
+    pageTitle: "Dua — Kapsüller İçinde Tanrı'nın Sözü",
+    description: "Dua ve Tanrı ile konuşmanın önemi üzerine düşünceler. Kapsüller İçinde Tanrı'nın Sözü.",
+    dir: "ltr"
+  },
+
+  el: {
+    title: "Προσευχή",
+    intro: "Στοχασμός και επικοινωνία με τον Θεό.",
+    cardTitle: "Η σημασία της προσευχής",
+    cardDesc: "Ένας στοχασμός για την προσευχή, τη δέηση, την ευχαριστία, τη δοξολογία και την προσφορά, καθώς και για τη θέση που πρέπει να έχουν στη ζωή του πιστού.",
+    read: "Διαβάστε το άρθρο →",
+    back: "← Επιστροφή στο Μενού",
+    pageTitle: "Προσευχή — Ο Λόγος του Θεού σε Κάψουλες",
+    description: "Στοχασμοί για την προσευχή και τη σημασία της επικοινωνίας με τον Θεό. Ο Λόγος του Θεού σε Κάψουλες.",
+    dir: "ltr"
+  },
+
+  fa: {
+    title: "دعا",
+    intro: "تفکر درباره خدا و گفتگو با او.",
+    cardTitle: "اهمیت دعا کردن",
+    cardDesc: "نگاهی تأملی به دعا، درخواست و تضرع، شکرگزاری، ستایش و بخشش، و جایگاهی که این اعمال باید در زندگی فرد ایماندار داشته باشند.",
+    read: "خواندن مقاله ←",
+    back: "بازگشت به منو ←",
+    pageTitle: "دعا — کلام خدا در کپسول‌ها",
+    description: "تأملاتی درباره دعا و اهمیت گفتگو با خدا. کلام خدا در کپسول‌ها.",
+    dir: "rtl"
   }
 };
 
@@ -472,4 +512,3 @@ document.querySelectorAll("[data-lang]").forEach(function(button) {
 </script>
 </body>
 </html>
-
