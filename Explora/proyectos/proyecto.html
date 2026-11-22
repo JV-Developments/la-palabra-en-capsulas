@@ -171,21 +171,24 @@ p:last-child {
     outline-offset: 4px;
 }
 
-/* Hebreo y árabe: escritura de derecha a izquierda */
+/* Hebreo, árabe y persa: escritura de derecha a izquierda */
 html[lang="he"] .card,
-html[lang="ar"] .card {
+html[lang="ar"] .card,
+html[lang="fa"] .card {
     border-left: 1px solid #E6F0FA;
     border-right: 5px solid #0F3661;
 }
 
 html[lang="he"] .card,
-html[lang="ar"] .card {
+html[lang="ar"] .card,
+html[lang="fa"] .card {
     direction: rtl;
     font-family: Tahoma, Arial, sans-serif;
 }
 
 html[lang="he"] .card p,
-html[lang="ar"] .card p {
+html[lang="ar"] .card p,
+html[lang="fa"] .card p {
     text-align: right;
     text-justify: auto;
     line-height: 2;
@@ -197,12 +200,16 @@ html[lang="he"] h2,
 html[lang="he"] .tagline,
 html[lang="ar"] h1,
 html[lang="ar"] h2,
-html[lang="ar"] .tagline {
+html[lang="ar"] .tagline,
+html[lang="fa"] h1,
+html[lang="fa"] h2,
+html[lang="fa"] .tagline {
     font-family: Tahoma, Arial, sans-serif;
 }
 
 html[lang="he"] .btn-back,
-html[lang="ar"] .btn-back {
+html[lang="ar"] .btn-back,
+html[lang="fa"] .btn-back {
     font-family: Tahoma, Arial, sans-serif;
     letter-spacing: 0;
 }
@@ -258,11 +265,11 @@ html[lang="ar"] .btn-back {
 
     <nav class="language-bar" aria-label="Language selection">
         <button type="button" class="lang-link active" id="link-es"
-            onclick="changeLanguage('es')" aria-pressed="true">Español</button>
+            onclick="changeLanguage('es')" aria-pressed="true" lang="es">Español</button>
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-en"
-            onclick="changeLanguage('en')" aria-pressed="false">English</button>
+            onclick="changeLanguage('en')" aria-pressed="false" lang="en">English</button>
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-zh"
@@ -270,15 +277,15 @@ html[lang="ar"] .btn-back {
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-fr"
-            onclick="changeLanguage('fr')" aria-pressed="false">Français</button>
+            onclick="changeLanguage('fr')" aria-pressed="false" lang="fr">Français</button>
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-it"
-            onclick="changeLanguage('it')" aria-pressed="false">Italiano</button>
+            onclick="changeLanguage('it')" aria-pressed="false" lang="it">Italiano</button>
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-pt"
-            onclick="changeLanguage('pt')" aria-pressed="false">Português</button>
+            onclick="changeLanguage('pt')" aria-pressed="false" lang="pt">Português</button>
         <span class="lang-divider" aria-hidden="true">|</span>
 
         <button type="button" class="lang-link" id="link-he"
@@ -303,6 +310,18 @@ html[lang="ar"] .btn-back {
 
         <button type="button" class="lang-link" id="link-ja"
             onclick="changeLanguage('ja')" aria-pressed="false" lang="ja">日本語</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+
+        <button type="button" class="lang-link" id="link-tr"
+            onclick="changeLanguage('tr')" aria-pressed="false" lang="tr">Türkçe</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+
+        <button type="button" class="lang-link" id="link-el"
+            onclick="changeLanguage('el')" aria-pressed="false" lang="el">Ελληνικά</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+
+        <button type="button" class="lang-link" id="link-fa"
+            onclick="changeLanguage('fa')" aria-pressed="false" lang="fa">فارسی</button>
     </nav>
 
     <header>
@@ -373,7 +392,7 @@ html[lang="ar"] .btn-back {
             site: 'The Word in Capsules',
             tagline: 'One word, one capsule, a message for the journey',
             h2: [
-                'What is our commission?',
+                'What is the mission?',
                 'Demonstrating the Gospel'
             ],
             p: [
@@ -427,7 +446,7 @@ html[lang="ar"] .btn-back {
             site: 'La Parola in Capsule',
             tagline: 'Una parola, una capsula, un messaggio per il cammino',
             h2: [
-                'Qual è la nostra missione?',
+                'Qual è la missione?',
                 'Dimostrare il Vangelo'
             ],
             p: [
@@ -445,7 +464,7 @@ html[lang="ar"] .btn-back {
             site: 'A Palavra em Cápsulas',
             tagline: 'Uma palavra, uma cápsula, uma mensagem para a caminhada',
             h2: [
-                'Qual é a nossa missão?',
+                'Qual é a missão?',
                 'Demonstrar o Evangelho'
             ],
             p: [
@@ -517,7 +536,7 @@ html[lang="ar"] .btn-back {
             site: 'Слово в капсулах',
             tagline: 'Одно слово, одна капсула, послание для жизненного пути',
             h2: [
-                'В чём состоит наше поручение?',
+                'В чём заключается наша миссия?',
                 'Являть Евангелие'
             ],
             p: [
@@ -535,7 +554,7 @@ html[lang="ar"] .btn-back {
             site: 'Das Wort in Kapseln',
             tagline: 'Ein Wort, eine Kapsel, eine Botschaft für den Lebensweg',
             h2: [
-                'Was ist unser Auftrag?',
+                'Was ist unsere Mission?',
                 'Das Evangelium sichtbar machen'
             ],
             p: [
@@ -553,7 +572,7 @@ html[lang="ar"] .btn-back {
             site: 'カプセルに込められた御言葉',
             tagline: '一つの言葉、一つのカプセル、人生の歩みへのメッセージ',
             h2: [
-                '私たちに託された使命とは？',
+                '私たちの使命とは何でしょうか？',
                 '福音を示す'
             ],
             p: [
@@ -564,6 +583,60 @@ html[lang="ar"] .btn-back {
             ],
             back: 'メニューに戻る',
             dir: 'ltr'
+        },
+
+        tr: {
+            title: 'Yeryüzünde Tanrı’nın İşi',
+            site: 'Kapsüllerde Tanrı Sözü',
+            tagline: 'Bir söz, bir kapsül, yolculuk için bir mesaj',
+            h2: [
+                'Misyonumuz nedir?',
+                'Müjdeyi göstermek'
+            ],
+            p: [
+                'Rab İsa’nın dirilişinden sonra öğrencilerine verdiği görev, bütün kuşaklar için aynı kalmıştır. Başka bir görev yoktur. Geçmişte bugün kullandığımız yöntemlerden farklı yöntemler kullanılmış olabilir; ancak mesaj her zaman aynı olmuştur ve unutmamamız gereken de budur.',
+                'Kutsal Kitap, son zamanlarda birçok kişinin sevgisinin soğuyacağı konusunda bizi uyarıyor. Bu nedenle, bu kuşağın insanları olarak barış meşalesini taşımak ve Tanrı’nın bilgeliğiyle, Mesih’in çarmıhta uğruna öldüğü kalabalıklara ulaşmak bizim sorumluluğumuzdur.',
+                'Şundan emin olmalıyız: Müjdeyi <span class="bold-text">belirtiler ve mucizelerle</span> ortaya koymamız gerekecek; çünkü günümüz dünyası bundan daha azını kabul etmeyecektir.',
+                'Karanlık içinde yaşayan, kötü sözlerin söylendiği, kutsal ile kutsal olmayanın birbirinden ayrılmadığı, iyiye kötü ve kötüye iyi denildiği bir dünyada insanların Hristiyan inancını hemen benimsemelerini bekleyemeyiz. İnanmaları ve cehennem ateşinden kurtulmaları için daha sağlam bir kanıta ihtiyaçları var. Elçi Pavlus’un hizmeti boyunca bildirdiği <span class="bold-text">“Tanrı’nın bütün öğüdü”</span>, bugün bizim de bildirmemiz gereken mesajdır.'
+            ],
+            back: 'Menüye dön',
+            dir: 'ltr'
+        },
+
+        el: {
+            title: 'Το έργο του Θεού στη Γη',
+            site: 'Ο Λόγος του Θεού σε Κάψουλες',
+            tagline: 'Μία λέξη, μία κάψουλα, ένα μήνυμα για την πορεία',
+            h2: [
+                'Ποια είναι η αποστολή μας;',
+                'Η έμπρακτη παρουσίαση του Ευαγγελίου'
+            ],
+            p: [
+                'Η αποστολή που ανέθεσε ο Κύριος Ιησούς στους μαθητές Του μετά την ανάστασή Του παραμένει η ίδια για όλες τις γενιές. Δεν υπάρχει άλλη αποστολή. Ίσως στο παρελθόν να χρησιμοποιούνταν διαφορετικές στρατηγικές από εκείνες που χρησιμοποιούμε σήμερα, αλλά το μήνυμα ήταν πάντοτε το ίδιο, και αυτό δεν πρέπει να το ξεχνάμε.',
+                'Η Αγία Γραφή μάς προειδοποιεί ότι στους έσχατους καιρούς η αγάπη πολλών θα ψυχρανθεί. Επομένως, είναι δική μας ευθύνη, ως άνθρωποι αυτής της γενιάς, να κρατήσουμε ψηλά τη δάδα της ειρήνης και, με τη σοφία του Θεού, να προσεγγίσουμε τα πλήθη για τα οποία πέθανε και ο Χριστός επάνω στον σταυρό.',
+                'Για ένα πράγμα πρέπει να είμαστε βέβαιοι: θα χρειαστεί να παρουσιάσουμε το Ευαγγέλιο με <span class="bold-text">σημεία και θαύματα</span>, διότι ο σημερινός κόσμος δεν θα απαιτήσει τίποτε λιγότερο.',
+                'Σε έναν κόσμο που βρίσκεται στο σκοτάδι, όπου λέγονται κακά λόγια, δεν γίνεται διάκριση ανάμεσα στο άγιο και το βέβηλο, και το καλό αποκαλείται κακό ενώ το κακό καλό, δεν μπορούμε να περιμένουμε ότι οι άνθρωποι θα αποδεχθούν αμέσως τη χριστιανική πίστη. Χρειάζονται ένα ισχυρότερο επιχείρημα για να πιστέψουν και να ξεφύγουν από τις φλόγες της κόλασης. <span class="bold-text">«Όλη τη βουλή του Θεού»</span>, την οποία κήρυξε ο απόστολος Παύλος σε όλη τη διάρκεια της διακονίας του, πρέπει να κηρύξουμε κι εμείς σήμερα.'
+            ],
+            back: 'Επιστροφή στο μενού',
+            dir: 'ltr'
+        },
+
+        fa: {
+            title: 'کار خدا بر روی زمین',
+            site: 'کلام خدا در کپسول‌ها',
+            tagline: 'یک کلام، یک کپسول، پیامی برای مسیر زندگی',
+            h2: [
+                'مأموریت ما چیست؟',
+                'نمایان ساختن انجیل'
+            ],
+            p: [
+                'مأموریتی که خداوند عیسی پس از قیام خود از مردگان به شاگردانش سپرد، برای همه نسل‌ها یکسان باقی مانده است. مأموریت دیگری وجود ندارد. شاید در گذشته از روش‌هایی متفاوت با روش‌های امروزی استفاده می‌شد، اما پیام همیشه یکسان بوده است و این چیزی است که نباید فراموش کنیم.',
+                'کتاب مقدس به ما هشدار می‌دهد که در روزهای آخر محبت بسیاری سرد خواهد شد. بنابراین، وظیفه ما، یعنی نسل امروز، این است که مشعل صلح را به دست بگیریم و با هوشمندی و حکمت خدا به انبوه مردمی برسیم که مسیح نیز برای آنان بر صلیب جان داد.',
+                'از یک چیز باید مطمئن باشیم: باید انجیل را با <span class="bold-text">آیات و معجزات</span> آشکار کنیم، زیرا دنیای امروز کمتر از این را نخواهد پذیرفت.',
+                'در جهانی که در تاریکی به سر می‌برد، سخنان ناپسند در آن رواج دارد، میان مقدس و ناپاک تفاوتی قائل نمی‌شود و خوبی را بدی و بدی را خوبی می‌نامد، نمی‌توانیم انتظار داشته باشیم که مردم فوراً ایمان مسیحی را بپذیرند. آنان برای ایمان آوردن و رهایی از شعله‌های جهنم به دلیلی محکم‌تر نیاز دارند. <span class="bold-text">«تمام مشورت خدا»</span> که پولس رسول در طول خدمت خود اعلام کرد، همان پیامی است که ما نیز باید امروز اعلام کنیم.'
+            ],
+            back: 'بازگشت به منو',
+            dir: 'rtl'
         }
     };
 
