@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="es" dir="ltr">
 <head>
@@ -142,7 +143,7 @@ a:focus-visible{
   border-top:1px solid var(--line);
 }
 
-/* Hebrew and Arabic */
+/* Hebrew, Arabic and Persian */
 html[dir="rtl"] body{
   font-family:Tahoma,"Segoe UI",Arial,sans-serif;
 }
@@ -217,6 +218,9 @@ html[dir="rtl"] .back-home a{
   <button type="button" data-lang="ru" aria-pressed="false">Русский</button>
   <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
   <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+  <button type="button" data-lang="el" aria-pressed="false">Ελληνικά</button>
+  <button type="button" data-lang="fa" aria-pressed="false">فارسی</button>
 </nav>
 
 <section class="intro">
@@ -295,157 +299,4 @@ const T = {
     cardDesc:"Una mattina, mentre bevevo il tè e conversavo sulla Parola di Dio, una semplice situazione legata a una valigetta mi insegnò un’importante lezione: pensare anche agli altri.",
     read:"Leggi la storia →",
     back:"← Torna al menu",
-    documentTitle:"Insegnamenti — La Parola en Cápsulas",
-    dir:"ltr"
-  },
-
-  pt: {
-    brand:"A PALAVRA EM CÁPSULAS",
-    title:"Ensinamentos",
-    intro:"Reflexões que nascem de experiências, conversas e verdades da Palavra de Deus, com o propósito de aplicá-las à vida cotidiana.",
-    cardTitle:"Um chá no Gullivers",
-    cardDesc:"Certa manhã, enquanto tomava chá e conversava sobre a Palavra de Deus, uma situação simples envolvendo uma maleta me ensinou uma importante lição sobre pensar nos outros.",
-    read:"Leia a história →",
-    back:"← Voltar ao menu",
-    documentTitle:"Ensinamentos — A Palavra em Cápsulas",
-    dir:"ltr"
-  },
-
-  he: {
-    brand:"דְּבַר אֱלֹהִים בְּתַמְצִית",
-    title:"לימודים ותובנות",
-    intro:"מחשבות ותובנות שנולדו מתוך חוויות, שיחות ואמיתות מדבר אלוהים, במטרה ליישם אותן בחיי היום־יום.",
-    cardTitle:"תה ב־Gullivers",
-    cardDesc:"בוקר אחד, בזמן ששתיתי תה ושוחחתי על דבר אלוהים, מקרה פשוט הקשור לתיק מסמכים לימד אותי שיעור חשוב על התחשבות באחרים.",
-    read:"לקריאת הסיפור ←",
-    back:"חזרה לתפריט ←",
-    documentTitle:"לימודים ותובנות — דבר אלוהים בתמצית",
-    dir:"rtl"
-  },
-
-  ar: {
-    brand:"كَلِمَةُ اللهِ فِي كَبْسُولَات",
-    title:"تعاليم وتأملات",
-    intro:"تأملات مستمدة من التجارب والحوارات وحقائق كلمة الله، بهدف تطبيقها في حياتنا اليومية.",
-    cardTitle:"شاي في غوليفرز",
-    cardDesc:"في أحد الصباحات، بينما كنت أتناول الشاي وأتحدث عن كلمة الله، علّمني موقف بسيط يتعلق بحقيبة درسًا مهمًا عن مراعاة الآخرين والتفكير في احتياجاتهم.",
-    read:"اقرأ القصة ←",
-    back:"العودة إلى القائمة ←",
-    documentTitle:"تعاليم وتأملات — كلمة الله في كبسولات",
-    dir:"rtl"
-  },
-
-  hi: {
-    brand:"कैप्सूल में परमेश्वर का वचन",
-    title:"शिक्षाएँ",
-    intro:"परमेश्वर के वचन के अनुभवों, बातचीत और सत्यों से जन्मे विचार, जिन्हें दैनिक जीवन में लागू करने के उद्देश्य से साझा किया गया है।",
-    cardTitle:"Gullivers में चाय",
-    cardDesc:"एक सुबह, चाय पीते हुए और परमेश्वर के वचन पर बातचीत करते समय, एक ब्रीफ़केस से जुड़ी साधारण घटना ने मुझे दूसरों के बारे में सोचने का महत्वपूर्ण सबक सिखाया।",
-    read:"कहानी पढ़ें →",
-    back:"← मेनू पर वापस जाएँ",
-    documentTitle:"शिक्षाएँ — कैप्सूल में परमेश्वर का वचन",
-    dir:"ltr"
-  },
-
-  ru: {
-    brand:"СЛОВО В КАПСУЛАХ",
-    title:"Наставления",
-    intro:"Размышления, рождённые жизненным опытом, беседами и истинами Слова Божьего, чтобы применять их в повседневной жизни.",
-    cardTitle:"Чай в Gullivers",
-    cardDesc:"Однажды утром, когда я пил чай и беседовал о Слове Божьем, простой случай с портфелем преподал мне важный урок о том, как думать о других.",
-    read:"Читать историю →",
-    back:"← Вернуться в меню",
-    documentTitle:"Наставления — Слово в капсулах",
-    dir:"ltr"
-  },
-
-  de: {
-    brand:"DAS WORT IN KAPSELN",
-    title:"Lehren",
-    intro:"Gedanken, die aus Erfahrungen, Gesprächen und Wahrheiten aus Gottes Wort entstehen, damit wir sie im Alltag anwenden können.",
-    cardTitle:"Ein Tee bei Gullivers",
-    cardDesc:"Eines Morgens lehrte mich eine einfache Situation mit einer Aktentasche, während ich Tee trank und über Gottes Wort sprach, eine wichtige Lektion darüber, an andere zu denken.",
-    read:"Die Geschichte lesen →",
-    back:"← Zurück zum Menü",
-    documentTitle:"Lehren — Das Wort in Kapseln",
-    dir:"ltr"
-  },
-
-  ja: {
-    brand:"カプセルに込められたみことば",
-    title:"教え",
-    intro:"神の御言葉に基づく経験や会話、真理から生まれた考察を、日々の生活に生かすことを目的として紹介します。",
-    cardTitle:"Gulliversでのお茶",
-    cardDesc:"ある朝、お茶を飲みながら神の御言葉について話していたとき、書類かばんにまつわる何気ない出来事から、他の人のことを考える大切さを学びました。",
-    read:"物語を読む →",
-    back:"← メニューに戻る",
-    documentTitle:"教え — カプセルに込められたみことば",
-    dir:"ltr"
-  }
-};
-
-function setLanguage(language){
-  if(!Object.prototype.hasOwnProperty.call(T,language)){
-    language="es";
-  }
-
-  const selected=T[language];
-
-  document.documentElement.lang =
-    language==="zh" ? "zh-CN" : language;
-
-  document.documentElement.dir=selected.dir;
-
-  document.title=selected.documentTitle;
-
-  document.getElementById("brand").textContent=selected.brand;
-  document.getElementById("title").textContent=selected.title;
-  document.getElementById("intro").textContent=selected.intro;
-  document.getElementById("cardTitle").textContent=selected.cardTitle;
-  document.getElementById("cardDesc").textContent=selected.cardDesc;
-  document.getElementById("read").textContent=selected.read;
-  document.getElementById("back").textContent=selected.back;
-
-  document.querySelectorAll("[data-lang]").forEach(function(button){
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.lang===language)
-    );
-  });
-
-  try{
-    localStorage.setItem("lpc-language",language);
-    localStorage.setItem("user_language",language);
-  }catch(error){
-    // La página sigue funcionando aunque el almacenamiento esté bloqueado.
-  }
-}
-
-document.querySelectorAll("[data-lang]").forEach(function(button){
-  button.addEventListener("click",function(){
-    setLanguage(button.dataset.lang);
-  });
-});
-
-(function initializeLanguage(){
-  let language="es";
-  const params=new URLSearchParams(window.location.search);
-  const requested=params.get("lang");
-  if(requested){
-    const normalized=requested.toLowerCase()==="zh-cn" ? "zh" : requested.toLowerCase();
-    if(Object.prototype.hasOwnProperty.call(T,normalized)) language=normalized;
-  }else{
-    try{
-      const savedLanguage=localStorage.getItem("lpc-language") || localStorage.getItem("user_language");
-      if(savedLanguage && Object.prototype.hasOwnProperty.call(T,savedLanguage)){
-        language=savedLanguage;
-      }
-    }catch(error){
-      // Si no se puede leer el almacenamiento, se utiliza español.
-    }
-  }
-  setLanguage(language);
-})();
-</script>
-</body>
-</html>
+    documentTitle:"Insegnamenti — La Parola en Cá
