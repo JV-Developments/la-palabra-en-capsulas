@@ -109,6 +109,9 @@ h1{
 <button class="lang-link" id="link-ru" onclick="changeLanguage('ru')" type="button">Русский</button>
 <button class="lang-link" id="link-de" onclick="changeLanguage('de')" type="button">Deutsch</button>
 <button class="lang-link" id="link-ja" onclick="changeLanguage('ja')" type="button">日本語</button>
+<button class="lang-link" id="link-tr" onclick="changeLanguage('tr')" type="button">Türkçe</button>
+<button class="lang-link" id="link-el" onclick="changeLanguage('el')" type="button">Ελληνικά</button>
+<button class="lang-link" id="link-fa" onclick="changeLanguage('fa')" type="button">فارسی</button>
 </nav>
 <header>
 <div class="section-label" data-ar="الكلمة في كبسولات" data-de="Das Wort in Kapseln" data-en="The Word in Capsules" data-es="La Palabra en Cápsulas" data-fr="La Parole en Capsules" data-he="הדבר בכמוסות" data-hi="कैप्सूल में परमेश्वर का वचन" data-it="La Parola in Capsule" data-pt="A Palavra em Cápsulas" data-ru="Слово в капсулах" data-zh="胶囊中的话语" data-ja="カプセルに込められた御言葉">La Palabra en Cápsulas</div>
@@ -134,6 +137,87 @@ h1{
 <a data-ar="← العودة إلى الشهادات" data-de="← Zurück zu den Zeugnissen" data-en="← Back to Testimonials" data-es="← Volver a Testimonios" data-fr="← Retour aux témoignages" data-he="← חזרה לעדויות" data-hi="← गवाहियों पर वापस जाएँ" data-it="← Torna alle testimonianze" data-pt="← Voltar aos testemunhos" data-ru="← Вернуться к свидетельствам" data-zh="← 返回见证页面" data-ja="← 証し一覧に戻る" href="./index.html">← Volver a Testimonios</a>
 </div>
 </main>
+
+(function addNewLanguages(){
+  const translations = {
+    tr: [
+      "Kapsüllerde Tanrı Sözü",
+      "Tanıklığım",
+      "J.V. tarafından",
+      "İman, kurtuluş ve dönüşüm öyküsü",
+      "Bir gece, saat akşam sekiz civarında, New York'un Jackson Heights semtindeki Roosevelt Bulvarı'nda yürürken ve bir gazete bayisine bakarken aniden korkunç bir düşünce aklıma geldi. Sonsuzluğa hazır olmadığımı ve ölürsem cennete değil cehenneme gidebileceğimi fark ettim. O an hayatımı değiştirdi.",
+      "Önceki üç yıl boyunca felsefe aracılığıyla Gerçeği arıyordum. Ancak, sonunda iman yolunda rehberim olan kişinin bana hediye ettiği Kutsal Kitap'ı dikkatle okumak bana çok yardımcı oldu. O kişi, sade ama olağanüstü, Tanrı'nın seçkin bir adamı olan Bay G. Villa'ydı; kendisi bugün de Tanrı'nın yollarında sebat etmektedir.",
+      "Onunla 1984 yılının Ekim-Kasım ayları arasında tanıştım ve hemen benimle Müjde'yi paylaştı. 1985'in başlarında İsa'nın Mesih ve Kurtarıcı olduğunu, yeniden doğduğumu başkalarına ilan ediyordum. Evet, O'nu Rabbim ve Kurtarıcım olarak kabul etmiştim.",
+      "Büyük bir esenlik yaşıyordum; çünkü İsa'nın iki bin yılı aşkın süre önce bizim için mümkün kıldığı Tanrı'nın bağışlamasını almıştım. O zamandan itibaren Kutsal Yazılar'ı büyük bir tutkuyla okumaya başladım ve bu mesajı ailemle ve yolumda karşılaştığım herkesle paylaşmaya koyuldum.",
+      "İki yıl sonra, merhum Robert Johansson'un pastörlüğünü yaptığı New York'taki Community Gospel Church'te suyla vaftiz edildim.",
+      "Daha sonra, 13 Nisan 1990'da, Louisiana eyaletinin Baton Rouge kentindeki, Jimmy Swaggart'ın hizmetine bağlı Family Worship Center'da düzenlenen bir hizmet toplantısında konuk müjdeci R. W. Schambach vaaz veriyordu. Eller üzerime konularak uzun zamandır arzuladığım Kutsal Ruh vaftizini aldım ve hayatımda ilk kez başka dillerde konuşmanın gözle görülür belirtisini yaşadım.",
+      "Suyla vaftizden farklı olan bu vaftiz, içimde birçok yeteneği uyandırdı. Bunların en önemlisi, güçle tanıklık etmek ve başkalarının kurtuluşu ile şifası için dua etmekti. Bu olaylardan ileride yine söz edeceğiz.",
+      "Müjdecilik yapmayı, yani Müjde'nin iyi haberini paylaşmayı her zaman sevdim. Daha sonra Rab beni Sözü öğretmeye de yönlendirdi.",
+      "Web sitemin “İndirmeler” bölümünde paylaşacağım diğer deneyimler arasında çok özel bir olay vardı. Woodside'daki “Mesih Yanıttır” kilisesinde, cemaatin önderleri için düzenlenen bir hizmet toplantısında, peygamberlik armağanına sahip bir kadın Rab adına bana rüyalar göreceğimi ve onları yorumlayacağımı söyledi. Gerçekten de yıllar boyunca böyle rüyalar gördüm.",
+      "Bugün hayatımı harika eşim ve hayat arkadaşım Francy ile muhteşem oğlum Matt'le paylaşıyorum.",
+      "Rab'den alabileceğimiz birçok mucize ve armağan vardır. Ancak kurtuluşun kendisi bütün mucizelerin en büyüğüdür. Yeryüzündeki her insan, sonsuzluğu nerede geçirmek istediğine şimdiden karar vermelidir.",
+      "İsa'nın Müjdesi'nin gerçek olduğuna, Tanrı'nın iyi, adil, kutsal ve merhametli olduğuna ve O'nu arayıp O'na iman eden herkesi kurtarabileceğine tanıklık edebilirim. Göklerin ve yerin Yaratıcısı olan tek Kutsal Baba'ya gelin.",
+      "← Tanıklıklara geri dön"
+    ],
+    el: [
+      "Ο Λόγος του Θεού σε Κάψουλες",
+      "Η μαρτυρία μου",
+      "Από τον J.V.",
+      "Μια ιστορία πίστης, σωτηρίας και μεταμόρφωσης",
+      "Ένα βράδυ, γύρω στις οκτώ, καθώς περπατούσα στη λεωφόρο Roosevelt στο Jackson Heights της Νέας Υόρκης και κοιτούσα προς ένα περίπτερο εφημερίδων, μου ήρθε ξαφνικά μια τρομακτική σκέψη. Συνειδητοποίησα ότι δεν ήμουν προετοιμασμένος για την αιωνιότητα και ότι, αν πέθαινα, θα μπορούσα να πάω στην κόλαση και όχι στον ουρανό. Εκείνη η στιγμή άλλαξε τη ζωή μου.",
+      "Τα προηγούμενα τρία χρόνια αναζητούσα την Αλήθεια μέσα από τη φιλοσοφία. Ωστόσο, με βοήθησε πολύ η προσεκτική ανάγνωση της Αγίας Γραφής που μου χάρισε ο άνθρωπος ο οποίος τελικά έγινε ο πνευματικός μου οδηγός: ένας απλός αλλά εξαιρετικός άνθρωπος του Θεού, ο κ. G. Villa, ο οποίος εξακολουθεί να μένει πιστός στους δρόμους του Θεού.",
+      "Τον γνώρισα μεταξύ Οκτωβρίου και Νοεμβρίου του 1984 και αμέσως μοιράστηκε μαζί μου το Ευαγγέλιο. Στις αρχές του 1985 ήδη διακήρυττα στους άλλους ότι ο Ιησούς ήταν ο Μεσσίας και Σωτήρας και ότι είχα αναγεννηθεί. Ναι, Τον είχα δεχτεί ως Κύριό μου και Λυτρωτή μου.",
+      "Ένιωθα μεγάλη ειρήνη, επειδή είχα λάβει τη συγχώρηση του Θεού που ο Ιησούς μάς προσέφερε πριν από περισσότερους από είκοσι αιώνες. Από τότε διάβαζα με πάθος τις Άγιες Γραφές και άρχισα να μοιράζομαι αυτό το μήνυμα με την οικογένειά μου και με όλους όσους συναντούσα στον δρόμο μου.",
+      "Δύο χρόνια αργότερα βαπτίστηκα στο νερό στην Community Gospel Church της Νέας Υόρκης, την οποία ποιμαίνονταν από τον αείμνηστο Robert Johansson.",
+      "Αργότερα, στις 13 Απριλίου 1990, κατά τη διάρκεια μιας συνάθροισης διακονίας στο Family Worship Center, στο Baton Rouge της Λουιζιάνα, που ανήκε στη διακονία του Jimmy Swaggart, κήρυττε ο προσκεκλημένος ευαγγελιστής R. W. Schambach. Με την επίθεση των χεριών έλαβα το πολυπόθητο βάπτισμα στο Άγιο Πνεύμα και, για πρώτη φορά στη ζωή μου, βίωσα την εξωτερική ένδειξη της ομιλίας σε άλλες γλώσσες.",
+      "Αυτό το βάπτισμα, διαφορετικό από το βάπτισμα στο νερό, αφύπνισε μέσα μου πολλές δυνατότητες. Η σημαντικότερη ήταν να δίνω μαρτυρία με δύναμη και να προσεύχομαι για τη σωτηρία και τη θεραπεία των άλλων. Θα μιλήσουμε και αργότερα για αυτές τις περιπτώσεις.",
+      "Πάντα αγαπούσα τον ευαγγελισμό — να μοιράζομαι τα καλά νέα του Ευαγγελίου — και αργότερα ο Κύριος με οδήγησε επίσης στη διδασκαλία του Λόγου.",
+      "Ανάμεσα στις άλλες εμπειρίες που θα μοιραστώ στην ενότητα «Λήψεις» της ιστοσελίδας μου, υπήρξε μία ιδιαίτερα ξεχωριστή. Στην εκκλησία «Ο Χριστός είναι η Απάντηση» στο Woodside, κατά τη διάρκεια μιας συνάθροισης διακονίας για τους ηγέτες της εκκλησίας, μια γυναίκα με προφητικό χάρισμα μού είπε εκ μέρους του Κυρίου ότι θα έβλεπα όνειρα και θα τα ερμήνευα. Και πράγματι, όλα αυτά τα χρόνια είχα τέτοια όνειρα.",
+      "Σήμερα μοιράζομαι τη ζωή μου με την υπέροχη σύζυγό μου και σύντροφο της ζωής μου, τη Francy, και τον θαυμάσιο γιο μου, τον Matt.",
+      "Υπάρχουν πολλά θαύματα και χαρίσματα που μπορούμε να λάβουμε από τον Κύριο. Ωστόσο, η ίδια η σωτηρία είναι το μεγαλύτερο από όλα τα θαύματα, και κάθε άνθρωπος πάνω στη γη πρέπει να αποφασίσει από τώρα πού θέλει να περάσει την αιωνιότητα.",
+      "Μπορώ να μαρτυρήσω ότι το Ευαγγέλιο του Ιησού είναι αληθινό, ότι ο Θεός είναι αγαθός, δίκαιος, άγιος και ελεήμων και ότι μπορεί να σώσει όποιον Τον αναζητά και πιστεύει σε Αυτόν. Ελάτε στον έναν Άγιο Πατέρα, τον Δημιουργό του ουρανού και της γης.",
+      "← Επιστροφή στις μαρτυρίες"
+    ],
+    fa: [
+      "کلام خدا در کپسول‌ها",
+      "شهادت من",
+      "نوشتهٔ J.V.",
+      "داستانی از ایمان، نجات و دگرگونی",
+      "یک شب، حدود ساعت هشت، هنگامی که در خیابان روزولت در جکسون هایتس نیویورک قدم می‌زدم و به سوی دکهٔ روزنامه‌فروشی نگاه می‌کردم، ناگهان فکری هولناک به ذهنم رسید. فهمیدم که برای ابدیت آماده نیستم و اگر بمیرم، ممکن است به جای بهشت به جهنم بروم. آن لحظه زندگی مرا تغییر داد.",
+      "در سه سال پیش از آن، از طریق فلسفه در جست‌وجوی حقیقت بودم. با این حال، خواندن دقیق کتاب مقدسی که مردی به من هدیه داده بود کمک بزرگی به من کرد؛ همان کسی که سرانجام راهنمای من در مسیر ایمان شد: مردی ساده اما فوق‌العاده از خدا، آقای G. Villa، که هنوز هم در راه‌های خدا استوار مانده است.",
+      "من او را بین ماه‌های اکتبر و نوامبر ۱۹۸۴ ملاقات کردم و او بلافاصله انجیل را با من در میان گذاشت. در اوایل سال ۱۹۸۵، به دیگران اعلام می‌کردم که عیسی مسیح و نجات‌دهنده است و من تولدی تازه یافته‌ام. بله، او را به عنوان خداوند و نجات‌دهندهٔ خود پذیرفته بودم.",
+      "آرامش عمیقی داشتم، زیرا بخشش خدا را دریافت کرده بودم؛ بخششی که عیسی بیش از بیست قرن پیش برای ما فراهم کرد. از آن زمان، با اشتیاق فراوان کتاب مقدس را می‌خواندم و این پیام را با خانواده‌ام و هر کسی که در مسیرم ملاقات می‌کردم در میان می‌گذاشتم.",
+      "دو سال بعد، در کلیسای Community Gospel Church در نیویورک، که کشیش فقید رابرت یوهانسون شبانی آن را بر عهده داشت، تعمید آب گرفتم.",
+      "بعدها، در ۱۳ آوریل ۱۹۹۰، هنگام یک جلسهٔ خدمت در Family Worship Center در باتون روژ، لوئیزیانا، که وابسته به خدمت جیمی سوگارت بود، مبشر مهمان R. W. Schambach موعظه می‌کرد. از طریق دست‌گذاری، تعمید در روح‌القدس را که مدت‌ها مشتاق آن بودم دریافت کردم و برای نخستین بار در زندگی‌ام نشانهٔ آشکار سخن گفتن به زبان‌های دیگر را تجربه کردم.",
+      "این تعمید که با تعمید آب متفاوت است، توانایی‌های بسیاری را در من بیدار کرد. مهم‌ترین آن‌ها شهادت دادن با قدرت و دعا برای نجات و شفای دیگران بود. بعدها دربارهٔ آن تجربه‌ها نیز صحبت خواهیم کرد.",
+      "من همیشه بشارت دادن، یعنی رساندن خبر خوش انجیل، را دوست داشته‌ام و بعدها خداوند مرا به تعلیم کلام خود نیز هدایت کرد.",
+      "در میان تجربه‌های دیگری که در بخش «دانلودها» در وب‌سایتم به اشتراک خواهم گذاشت، تجربه‌ای بسیار ویژه وجود داشت. در کلیسای «مسیح پاسخ است» در وودساید، طی جلسه‌ای برای خدمت به رهبران جماعت، زنی که عطیهٔ نبوت داشت از جانب خداوند به من گفت که خواب‌هایی خواهم دید و آن‌ها را تعبیر خواهم کرد. و حقیقتاً در طول سال‌ها چنین خواب‌هایی دیده‌ام.",
+      "امروز زندگی‌ام را با همسر شگفت‌انگیز و همراه زندگی‌ام، فرانسی، و پسر فوق‌العاده‌ام، مت، شریک هستم.",
+      "معجزات و عطایای بسیاری وجود دارند که می‌توانیم از خداوند دریافت کنیم؛ با این حال، خود نجات بزرگ‌ترین معجزه است و هر انسانی بر روی زمین باید همین اکنون تصمیم بگیرد که می‌خواهد ابدیت را کجا سپری کند.",
+      "می‌توانم شهادت دهم که انجیل عیسی حقیقت دارد، خدا نیکو، عادل، قدوس و رحیم است و می‌تواند هر کسی را که او را بجوید و به او ایمان آورد نجات دهد. به سوی پدر یگانه و قدوس، آفرینندهٔ آسمان و زمین، بیایید.",
+      "← بازگشت به شهادت‌ها"
+    ]
+  };
+
+  const elements = document.querySelectorAll('[data-es]');
+  elements.forEach(function(el, index){
+    ['tr','el','fa'].forEach(function(lang){
+      if(translations[lang][index] !== undefined){
+        el.setAttribute('data-' + lang, translations[lang][index]);
+      }
+    });
+  });
+
+  /* Corrección de la traducción japonesa del último párrafo */
+  const finalParagraph = document.querySelector('.testimony > p:last-child');
+  if(finalParagraph){
+    finalParagraph.setAttribute(
+      'data-ja',
+      'イエスの福音が真実であること、神は善良で正しく、聖なる方であり、憐れみ深い方であること、そして神を求め、神を信じるすべての人を救うことがおできになることを証しできます。天と地の創造主である、唯一の聖なる父のもとに来てください。'
+    );
+  }
+})();
+
 <script>
 (function(){
   const titles={
