@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es" dir="ltr">
 <head>
@@ -126,6 +127,20 @@ a:focus-visible{
   display:block;
   margin:0 auto;
 }
+
+/* Hebreo, árabe y persa */
+html[dir="rtl"] body{
+  font-family:Tahoma,"Segoe UI",Arial,sans-serif;
+}
+html[dir="rtl"] .section-label{letter-spacing:0}
+html[dir="rtl"] .article p,
+html[dir="rtl"] .dialogue p{text-align:right}
+html[dir="rtl"] .dialogue{
+  border-left:0;
+  border-right:4px solid var(--accent);
+}
+html[dir="rtl"] .reflection-title{text-align:right}
+
 .article-nav{
   margin-top:48px;
   padding-top:26px;
@@ -140,19 +155,6 @@ a:focus-visible{
   margin:0 12px;
 }
 .article-nav a:hover{color:#315f91}
-
-/* Hebreo y árabe */
-html[dir="rtl"] body{
-  font-family:Tahoma,"Segoe UI",Arial,sans-serif;
-}
-html[dir="rtl"] .section-label{letter-spacing:0}
-html[dir="rtl"] .article p,
-html[dir="rtl"] .dialogue p{text-align:right}
-html[dir="rtl"] .dialogue{
-  border-left:0;
-  border-right:4px solid var(--accent);
-}
-html[dir="rtl"] .reflection-title{text-align:right}
 
 @media(max-width:700px){
   .page{
@@ -204,13 +206,14 @@ html[dir="rtl"] .reflection-title{text-align:right}
   <button type="button" data-lang="ru" aria-pressed="false">Русский</button>
   <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
   <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+  <button type="button" data-lang="el" aria-pressed="false">Ελληνικά</button>
+  <button type="button" data-lang="fa" aria-pressed="false">فارسی</button>
 </nav>
 
 <article class="article">
   <div id="opening"></div>
-
   <div class="dialogue" id="dialogue"></div>
-
   <div id="afterDialogue"></div>
 
   <section class="reflection">
@@ -555,8 +558,8 @@ ar: {
   back2:"العودة إلى القائمة",
   docTitle:"شاي في غوليفرز — كلمة الله في كبسولات",
   dir:"rtl"
-}
-,
+},
+
 hi: {
   brand:"कैप्सूल में परमेश्वर का वचन",
   title:"गुलिवर्स में एक चाय",
@@ -719,8 +722,130 @@ ja: {
   back2:"メニューに戻る",
   docTitle:"Gulliversでのお茶 — カプセルに入った神のことば",
   dir:"ltr"
-}
+},
 
+tr: {
+  brand:"Kapsüllerde Tanrı'nın Sözü",
+  title:"Gullivers'te Bir Çay",
+  author:"J.V. tarafından",
+  opening:[
+    "Size aktarmak istediğim şeyi bana, Müjde'yi benimle paylaşan kişinin ta kendisi öğretti.",
+    "1986-87 yıllarında bir sabah, 82. Cadde'de bulunan ve lezzetli balıklı sandviçler, kahve, çay ve başka yiyecekler sunan “Gullivers” adlı mekândaydık.",
+    "Oraya sık sık çay içmeye ve Tanrı'nın Sözü hakkında konuşmaya giderdik. Tanıklığımda da anlattığım gibi, yeniden doğuşum hayatıma yeni bir coşku getirmişti. Öylesine heyecanlıydım ki sürekli Rab hakkında konuşmak istiyorduk.",
+    "Yeni tanıştığın ve âşık olduğunu düşündüğün bir kızdan en iyi arkadaşına söz etmen gibi, ruhsal konularda da böyle olur. Kurtarıcını, Rab'bi ve seni gözeteni bulmuşsundur; bu nedenle O'nunla konuşur ve O'ndan söz edersin.",
+    "O sabah mekân geniş olmasına rağmen neredeyse boştu ve kullanılabilecek birçok masa vardı. Her zamanki gibi evrak çantam yanımdaydı ve onu yanımdaki sandalyeye koydum. Şöyle düşündüm: <strong>“Burada çok yer var, oraya koyalım.”</strong>",
+    "Tanrı'nın adamı bana şöyle dedi:"
+  ],
+  dialogue:[
+    "“Onu kendi oturduğun sandalyeye koy.”",
+    "“Neyi?” diye sordum.",
+    "“Evrak çantanı.”",
+    "Sonra yumuşak bir ses tonuyla ekledi:",
+    "“Başkalarına karşı bencil davranıyorsun.”",
+    "“Dostum, burada neredeyse hiç kimse yok,” diye neredeyse sinirlenerek karşılık verdim.",
+    "Bana şöyle cevap verdi:",
+    "“Görüyor musun? Kimsenin gelmeyeceğini varsayıyorsun. Oysa biri gelirse, seni rahatsız etmemek için sandalyeyi istemekten vazgeçebilir. Böylece onu fiilen zor durumda bırakmış olursun. Başkalarını düşünmüyorsun!”"
+  ],
+  after:[
+    "İlk zamanlar düzeltmeleri büyük bir isteksizlikle kabul ediyordum; bu doğru değildi. Başkaları haklı, biz haksız olduğumuzda bunu kabul etmeliyiz. Hristiyan yaşam yolculuğumuzda bize eşlik eden ruhsal rehberlerin ve iman kardeşlerinin önemini ne kadar vurgulasam azdır.",
+    "Zamanla, Mesih'in Bedenindeki başka bir üyeye tabi olmayı hiç öğrenmemiş bir kişinin, kendisi yanılıyor olsa bile başka birinin haklı olduğunu kabul etmekte zorlandığını gördüm.",
+    "O gün, bu yolculuğun o kadar kolay olmayacağını ve bundan böyle ruhsal açıdan düzeltmeler alacağımı anladım.",
+    "Sizi temin ederim ki böyle ruhsal bir “azarlama” aldığım tek sefer bu değildi!"
+  ],
+  reflectionTitle:"Başkalarının İyiliğini Gözetmek",
+  reflection:[
+    "Kısacası Hristiyanlık budur: Başkalarını görmesek bile onların kurtulmaları için onların iyiliğini düşünmek ve bu yönde <strong>davranmak</strong>.",
+    "Toplandığımız yerde bir mesaj dinleyip onu zihnimizde saklamak başka şeydir. “Gerçekleri” yüreğimize almak, onlara göre yaşamak ve hayatımız boyunca uygulamak ise bambaşka bir şeydir.",
+    "Bazen bir şey için “Hiçbir çabadan kaçınmayacağız” ya da “son ter damlasına kadar çalışacağız” deriz. Oysa <strong>İSA</strong> ölümüne kadar yaşamını feda etti. Böylece Tanrı bizi karanlığın egemenliğinden kurtarıp sevgili Oğlu'nun krallığına taşıdı.",
+    "O bizi her zaman dikkate aldı ve hâlâ almaya devam ediyor."
+  ],
+  back1:"← Öğretilere geri dön",
+  back2:"Menüye dön",
+  docTitle:"Gullivers'te Bir Çay — Kapsüllerde Tanrı'nın Sözü",
+  dir:"ltr"
+},
+
+el: {
+  brand:"Ο Λόγος του Θεού σε Κάψουλες",
+  title:"Ένα τσάι στο Gullivers",
+  author:"Από τον J.V.",
+  opening:[
+    "Αυτό που θέλω να μεταδώσω μου το δίδαξε ο ίδιος άνθρωπος που μου μίλησε για το Ευαγγέλιο.",
+    "Ένα πρωινό του 1986 ή του 1987 βρισκόμασταν στο «Gullivers», ένα κατάστημα στην 82η Οδό, όπου πουλούσαν ένα νόστιμο σάντουιτς με ψάρι, καφέ, τσάι και άλλες λιχουδιές.",
+    "Πηγαίναμε συχνά εκεί για να πιούμε τσάι και να συζητήσουμε για τον Λόγο του Θεού. Όπως ανέφερα στην προσωπική μου μαρτυρία, η νέα μου γέννηση έφερε στη ζωή μου έναν νέο ενθουσιασμό. Ήμουν τόσο γεμάτος ζήλο, ώστε θέλαμε να μιλάμε για τον Κύριο συνεχώς.",
+    "Όπως μιλάς στον καλύτερό σου φίλο για μια κοπέλα που μόλις γνώρισες και πιστεύεις ότι την έχεις ερωτευτεί, έτσι συμβαίνει και στα πνευματικά ζητήματα. Έχεις βρει τον Σωτήρα σου, τον Κύριό σου και Εκείνον που σε φροντίζει· γι' αυτό μιλάς μαζί Του και γι' Αυτόν.",
+    "Εκείνο το πρωινό, παρόλο που ο χώρος ήταν ευρύχωρος, ήταν σχεδόν άδειος και υπήρχαν πολλά διαθέσιμα τραπέζια. Όπως συνήθως, είχα μαζί μου τον χαρτοφύλακά μου και τον έβαλα στην διπλανή καρέκλα. Σκέφτηκα: <strong>«Υπάρχει πολύς χώρος, ας τον βάλουμε εκεί».</strong>",
+    "Ο άνθρωπος του Θεού μου είπε:"
+  ],
+  dialogue:[
+    "«Βάλ' τον στη δική σου θέση».",
+    "«Τι πράγμα;» τον ρώτησα.",
+    "«Τον χαρτοφύλακά σου».",
+    "Και πρόσθεσε με ήρεμο τόνο:",
+    "«Φέρεσαι εγωιστικά απέναντι στους άλλους».",
+    "«Φίλε μου, εδώ δεν υπάρχει σχεδόν κανείς», απάντησα σχεδόν εκνευρισμένος.",
+    "Και εκείνος μου αποκρίθηκε:",
+    "«Βλέπεις; Θεωρείς δεδομένο ότι δεν θα έρθει κανείς. Δεν σκέφτεσαι ότι, αν έρθει κάποιος, μπορεί να διστάσει να σου ζητήσει την καρέκλα για να μη σε ενοχλήσει. Έτσι, ουσιαστικά θα τον έχεις φέρει σε δύσκολη θέση. Δεν σκέφτεσαι τους άλλους!»"
+  ],
+  after:[
+    "Στα πρώτα μου βήματα δεχόμουν τις διορθώσεις με μεγάλη απροθυμία, και αυτό δεν ήταν σωστό. Πρέπει να αναγνωρίζουμε πότε οι άλλοι έχουν δίκιο και εμείς κάνουμε λάθος. Δεν μπορώ να τονίσω αρκετά τη σημασία των πνευματικών καθοδηγητών και των αδελφών που συμπορεύονται μαζί μας στη χριστιανική μας πορεία.",
+    "Με τον καιρό διαπίστωσα ότι ένας άνθρωπος που δεν έχει μάθει ποτέ να δέχεται την καθοδήγηση ενός άλλου μέλους του Σώματος του Χριστού δυσκολεύεται να αναγνωρίσει ότι κάποιος άλλος έχει δίκιο, ακόμη κι όταν ο ίδιος κάνει λάθος.",
+    "Εκείνη την ίδια ημέρα κατάλαβα ότι τα πράγματα δεν θα ήταν τόσο εύκολα και ότι από τότε και στο εξής θα δεχόμουν πνευματικές διορθώσεις.",
+    "Σας διαβεβαιώνω ότι δεν ήταν η μοναδική φορά που δέχτηκα μια τέτοια πνευματική «επίπληξη»!"
+  ],
+  reflectionTitle:"Το καλό του πλησίον",
+  reflection:[
+    "Με λίγα λόγια, αυτό είναι ο Χριστιανισμός: να <strong>σκεφτόμαστε και να ενεργούμε</strong> για το καλό των άλλων — ακόμη κι όταν δεν τους βλέπουμε — ώστε να σωθούν.",
+    "Το να ακούς ένα μήνυμα στον χώρο της συνάθροισής σου και να το αποθηκεύεις στο μυαλό σου είναι ένα πράγμα. Το να δέχεσαι τις «αλήθειες» στην καρδιά σου, να ζεις σύμφωνα με αυτές και να τις εφαρμόζεις για όλη σου τη ζωή είναι κάτι άλλο.",
+    "Μερικές φορές λέμε: «Δεν θα φειστούμε κόπου» ή «μέχρι την τελευταία σταγόνα ιδρώτα» για το ένα ή το άλλο. Όμως ο <strong>ΙΗΣΟΥΣ</strong> έδωσε τη ζωή Του μέχρι θανάτου. Έτσι ο Θεός μάς ελευθέρωσε από την εξουσία του σκότους και μας μετέφερε στη βασιλεία του αγαπημένου Του Υιού.",
+    "Εκείνος πάντοτε μας είχε υπόψη Του και εξακολουθεί να το κάνει."
+  ],
+  back1:"← Επιστροφή στις διδασκαλίες",
+  back2:"Επιστροφή στο μενού",
+  docTitle:"Ένα τσάι στο Gullivers — Ο Λόγος του Θεού σε Κάψουλες",
+  dir:"ltr"
+},
+
+fa: {
+  brand:"کلام خدا در کپسول‌ها",
+  title:"یک چای در گالیورز",
+  author:"نوشتهٔ J.V.",
+  opening:[
+    "آنچه می‌خواهم به شما منتقل کنم، همان کسی به من آموخت که انجیل را با من در میان گذاشت.",
+    "یک روز صبح در سال‌های ۱۹۸۶ تا ۱۹۸۷، در مکانی به نام «Gullivers» در خیابان ۸۲ بودیم؛ جایی که ساندویچ ماهی خوشمزه، قهوه، چای و خوراکی‌های دیگری می‌فروختند.",
+    "ما اغلب برای نوشیدن چای و صحبت دربارهٔ کلام خدا به آنجا می‌رفتیم. همان‌طور که در شهادت شخصی‌ام گفتم، تولد تازه شور و اشتیاقی نو به زندگی‌ام آورد. آن‌قدر مشتاق بودم که می‌خواستیم همیشه دربارهٔ خداوند صحبت کنیم.",
+    "همان‌طور که دربارهٔ دختری که تازه با او آشنا شده‌اید و گمان می‌کنید عاشقش شده‌اید با بهترین دوستتان صحبت می‌کنید، در امور روحانی نیز چنین اتفاقی می‌افتد. شما نجات‌دهنده، خداوند و نگهدارندهٔ خود را یافته‌اید؛ بنابراین با او و دربارهٔ او صحبت می‌کنید.",
+    "آن صبح، با وجود بزرگی محل، تقریباً کسی آنجا نبود و میزهای خالی زیادی وجود داشت. مثل همیشه کیف دستی‌ام همراهم بود و آن را روی صندلی کناری گذاشتم. با خودم فکر کردم: <strong>«اینجا جای زیادی هست، آن را همان‌جا بگذاریم.»</strong>",
+    "آن مرد خدا به من گفت:"
+  ],
+  dialogue:[
+    "«آن را روی صندلی خودت بگذار.»",
+    "«چی را؟» از او پرسیدم.",
+    "«کیفت را.»",
+    "سپس با لحنی آرام اضافه کرد:",
+    "«نسبت به دیگران خودخواهی می‌کنی.»",
+    "«دوست من، اینجا تقریباً هیچ‌کس نیست»، تقریباً با ناراحتی پاسخ دادم.",
+    "او در جواب گفت:",
+    "«می‌بینی؟ تو فرض کرده‌ای که هیچ‌کس دیگری نخواهد آمد. متوجه نیستی که اگر کسی بیاید، ممکن است برای اینکه مزاحمت نشود از درخواست صندلی صرف‌نظر کند؛ و در واقع تو او را در موقعیت نامناسبی قرار داده‌ای. به دیگران فکر نمی‌کنی!»"
+  ],
+  after:[
+    "در آغاز مسیرم، اصلاح و تذکر دیگران را با اکراه زیادی می‌پذیرفتم و این درست نبود. باید بپذیریم وقتی دیگران حق دارند و ما اشتباه می‌کنیم، آنان درست می‌گویند. هرقدر بر اهمیت راهنمایان روحانی و ایماندارانی که در مسیر مسیحی با ما همراه می‌شوند تأکید کنم، باز هم کم است.",
+    "با گذشت زمان دریافتم کسی که هرگز هدایت عضو دیگری از بدن مسیح را نپذیرفته است، به‌سختی قبول می‌کند که شخص دیگری حق دارد؛ حتی زمانی که خودش اشتباه می‌کند.",
+    "همان روز فهمیدم که این مسیر چندان آسان نخواهد بود و از آن پس باید اصلاح و تربیت روحانی را نیز بپذیرم.",
+    "به شما اطمینان می‌دهم که این تنها باری نبود که چنین «سرزنش» روحانی‌ای دریافت کردم!"
+  ],
+  reflectionTitle:"توجه به خیر و صلاح دیگران",
+  reflection:[
+    "به‌طور خلاصه، مسیحیت همین است: برای خیر دیگران <strong>بیندیشیم و عمل کنیم</strong>؛ حتی اگر آنان را نبینیم، تا نجات یابند.",
+    "شنیدن پیامی در محل گردهمایی و به خاطر سپردن آن در ذهن، یک چیز است. پذیرفتن «حقایق» در قلب، زندگی کردن بر اساس آنها و به‌کار بستنشان در تمام عمر، چیزی دیگر است.",
+    "گاهی می‌گوییم: «از هیچ تلاشی دریغ نخواهیم کرد» یا «تا آخرین قطرهٔ عرق» برای این یا آن کار تلاش می‌کنیم. اما <strong>عیسی</strong> جان خود را تا مرگ فدا کرد؛ و به این ترتیب خدا ما را از سلطهٔ تاریکی رهانید و به پادشاهی پسر محبوب خود منتقل کرد.",
+    "او همیشه ما را در نظر داشته و هنوز هم چنین می‌کند."
+  ],
+  back1:"← بازگشت به آموزه‌ها",
+  back2:"بازگشت به منو",
+  docTitle:"یک چای در گالیورز — کلام خدا در کپسول‌ها",
+  dir:"rtl"
+}
 };
 
 function makeParagraphs(items){
