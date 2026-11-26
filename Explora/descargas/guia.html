@@ -59,7 +59,7 @@ h1{margin:0;color:var(--accent);font-size:38px;line-height:1.2}
  .prayer h2{font-size:23px}
  .back{margin:40px auto 0;font-size:14px}
 }
-.language-panel{width:min(900px,92%);margin:18px auto -20px;padding:14px 18px;background:#fff;border:1px solid #d9d5ce;border-radius:8px;text-align:center;font-family:Arial,sans-serif}
+.language-panel{direction:ltr;width:min(900px,92%);margin:18px auto -20px;padding:14px 18px;background:#fff;border:1px solid #d9d5ce;border-radius:8px;text-align:center;font-family:Arial,sans-serif}
 .language-panel strong{display:block;color:#17365D;margin-bottom:10px;font-size:14px}
 .language-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
 .language-buttons button{border:1px solid #17365D;background:#fff;color:#17365D;border-radius:5px;padding:7px 10px;font-size:12px;cursor:pointer}
@@ -74,19 +74,19 @@ h1{margin:0;color:var(--accent);font-size:38px;line-height:1.2}
 </head>
 
 <body>
-<div class="language-panel" aria-label="Selector de idioma">
-<strong>Selecciona tu idioma / Select your language</strong>
+<div class="language-panel notranslate" translate="no" aria-label="Selector de idioma">
+<strong class="notranslate" translate="no">Selecciona tu idioma / Select your language</strong>
 <div class="language-buttons">
-<button type="button" data-lang="es">Español</button><button type="button" data-lang="en">English</button>
-<button type="button" data-lang="zh-CN">中文</button><button type="button" data-lang="fr">Français</button>
-<button type="button" data-lang="it">Italiano</button><button type="button" data-lang="pt">Português</button>
-<button type="button" data-lang="he">עברית</button><button type="button" data-lang="ar">العربية</button>
-<button type="button" data-lang="hi">हिन्दी</button><button type="button" data-lang="ru">Русский</button>
-<button type="button" data-lang="de">Deutsch</button><button type="button" data-lang="ja">日本語</button>
-<button type="button" data-lang="tr">Türkçe</button><button type="button" data-lang="el">Ελληνικά</button>
-<button type="button" data-lang="fa">فارسی</button><button type="button" data-lang="sv">Svenska</button>
-<button type="button" data-lang="ko">한국어</button><button type="button" data-lang="pl">Polski</button>
-<button type="button" data-lang="bn">বাংলা</button>
+<button class="notranslate" translate="no" type="button" data-lang="es">Español</button><button class="notranslate" translate="no" type="button" data-lang="en">English</button>
+<button class="notranslate" translate="no" type="button" data-lang="zh-CN">中文</button><button class="notranslate" translate="no" type="button" data-lang="fr">Français</button>
+<button class="notranslate" translate="no" type="button" data-lang="it">Italiano</button><button class="notranslate" translate="no" type="button" data-lang="pt">Português</button>
+<button class="notranslate" translate="no" type="button" data-lang="he">עברית</button><button class="notranslate" translate="no" type="button" data-lang="ar">العربية</button>
+<button class="notranslate" translate="no" type="button" data-lang="hi">हिन्दी</button><button class="notranslate" translate="no" type="button" data-lang="ru">Русский</button>
+<button class="notranslate" translate="no" type="button" data-lang="de">Deutsch</button><button class="notranslate" translate="no" type="button" data-lang="ja">日本語</button>
+<button class="notranslate" translate="no" type="button" data-lang="tr">Türkçe</button><button class="notranslate" translate="no" type="button" data-lang="el">Ελληνικά</button>
+<button class="notranslate" translate="no" type="button" data-lang="fa">فارسی</button><button class="notranslate" translate="no" type="button" data-lang="sv">Svenska</button>
+<button class="notranslate" translate="no" type="button" data-lang="ko">한국어</button><button class="notranslate" translate="no" type="button" data-lang="pl">Polski</button>
+<button class="notranslate" translate="no" type="button" data-lang="bn">বাংলা</button>
 </div></div><div id="google_translate_element" aria-hidden="true"></div>
 
 <div class="page">
@@ -175,7 +175,14 @@ var psalmImages={
  "hi":"salmo-32-8-hi.png",
  "ru":"salmo-32-8-ru.png",
  "de":"salmo-32-8-de.png",
- "ja":"salmo-32-8-ja.png"
+ "ja":"salmo-32-8-ja.png",
+  "tr":"salmo-32-8-tr.png",
+  "el":"salmo-32-8-el.png",
+  "fa":"salmo-32-8-fa.png",
+  "sv":"salmo-32-8-sv.png",
+  "ko":"salmo-32-8-ko.png",
+  "pl":"salmo-32-8-pl.png",
+  "bn":"salmo-32-8-bn.png"
 };
 
 function updatePsalmImage(lang){
@@ -196,6 +203,7 @@ function applyLanguage(lang){
  try{localStorage.setItem("lpc-language",lang);}catch(e){}
  updatePsalmImage(lang);
  document.documentElement.dir=(lang==="he"||lang==="ar"||lang==="fa")?"rtl":"ltr";
+  document.documentElement.lang=lang;
 
  if(lang==="es"){
   document.cookie="googtrans=/es/es;path=/";
