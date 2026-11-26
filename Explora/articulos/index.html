@@ -840,6 +840,8 @@ function changeLanguage(lang) {
  document.getElementById("thanks-link").textContent = thanks.link;
 
  document.getElementById("thanks-image").src = "gratitud-" + lang + ".png";
+ console.log("Idioma:", lang);
+ console.log("Imagen:", document.getElementById("thanks-image").src);
  document.getElementById("thanks-image").alt = thanks.title;
 
  /* ARTÍCULO SOBRE LAS TINIEBLAS */
