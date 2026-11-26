@@ -8,309 +8,72 @@
 <title>Guía para Nuevos Creyentes — La Palabra en Cápsulas</title>
 
 <style>
-
 :root{
-    --text:#252525;
-    --muted:#666;
-    --accent:#17365D;
-    --paper:#eeeae2;
-    --bg:#f2f0ec;
-    --chapter-bg:#eeeae2;
-    --quote:#e8e3da;
-    --line:#d9d5ce;
-    --gold:#b89b63;
+    --text:#252525; --muted:#666; --accent:#17365D; --paper:#eeeae2;
+    --bg:#f2f0ec; --chapter-bg:#eeeae2; --quote:#e8e3da;
+    --line:#d9d5ce; --gold:#b89b63;
 }
-
-*{
-    box-sizing:border-box;
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.72}
+.page{width:min(900px,92%);margin:38px auto;background:var(--paper);padding:48px 58px 60px;border:1px solid #ddd8cf;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.header{text-align:center;margin-bottom:34px}
+.eyebrow{color:var(--accent);font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+h1{margin:0;color:var(--accent);font-size:38px;line-height:1.2}
+.author{margin-top:12px;color:var(--muted);font-size:16px}
+.author-image{display:block;width:345px;max-width:100%;height:auto;margin:26px auto 30px;border-radius:8px}
+.intro{margin:0 auto 36px;max-width:760px;font-size:17px;text-align:justify}
+.toc{margin:30px 0 42px;padding:24px 28px;background:var(--chapter-bg);border:1px solid var(--line);border-radius:8px}
+.toc-title{font-size:20px;font-weight:bold;color:var(--accent);margin-bottom:14px}
+.toc a{display:block;color:var(--accent);text-decoration:none;margin:8px 0}
+.toc a:hover{text-decoration:underline}
+.chapters{margin-top:10px}
+.chapter{margin-bottom:46px;padding:30px 32px;background:var(--chapter-bg);border:1px solid var(--line);border-radius:9px}
+.chapter h2{margin:0 0 22px;color:var(--accent);font-size:27px;line-height:1.3}
+.chapter p{margin:0 0 18px;text-align:justify;color:var(--text)}
+.chapter p:last-child{margin-bottom:0}
+.scripture{margin:24px 0;padding:18px 22px;background:var(--quote);border-left:4px solid var(--gold);border-radius:6px;font-style:italic}
+.scripture strong{display:block;color:var(--accent);font-style:normal;margin-bottom:6px}
+.resource{margin:10px 0 22px;padding:18px 22px;background:var(--quote);border:1px solid var(--line);border-radius:7px}
+.resource a{color:var(--accent);font-weight:bold;text-decoration:none}
+.resource a:hover{text-decoration:underline}
+.prayer{margin:45px 0 28px;padding:22px 24px;background:#e8e3da;border:1px solid var(--line);border-radius:9px}
+.prayer h2{margin:0 0 14px;color:var(--accent);font-size:27px;line-height:1.3}
+.prayer p{color:var(--text);text-align:justify}
+.back{display:block;width:max-content;margin:50px auto 0;padding:11px 20px;color:#fff;background:var(--accent);border-radius:6px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px;text-align:center}
+.back:hover{opacity:.9}
+@media(max-width:700px){
+ body{line-height:1.68}
+ .page{width:94%;margin:18px auto;padding:28px 20px 38px}
+ h1{font-size:30px}
+ .eyebrow{font-size:12px;letter-spacing:1.6px}
+ .author{font-size:15px}
+ .author-image{width:345px;max-width:100%;height:auto;display:block;margin:20px auto 22px}
+ .intro{font-size:16px;text-align:justify;margin-bottom:28px}
+ .toc{padding:20px;margin:24px 0 32px}
+ .chapter{padding:23px 19px;margin-bottom:32px}
+ .chapter h2{font-size:23px;margin-bottom:18px}
+ .chapter p{text-align:justify;margin-bottom:17px}
+ .scripture{margin:20px 0;padding:16px 17px}
+ .resource{margin:10px 0 22px;padding:16px 17px}
+ .prayer{padding:19px 18px;margin-top:35px}
+ .prayer h2{font-size:23px}
+ .back{margin:40px auto 0;font-size:14px}
 }
-
-body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia, "Times New Roman", serif;
-    line-height:1.72;
-}
-
-.page{
-    width:min(900px, 92%);
-    margin:38px auto;
-    background:var(--paper);
-    padding:48px 58px 60px;
-    border:1px solid #ddd8cf;
-    box-shadow:0 4px 18px rgba(0,0,0,.05);
-}
-
-.header{
-    text-align:center;
-    margin-bottom:34px;
-}
-
-.eyebrow{
-    color:var(--accent);
-    font-size:14px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:12px;
-}
-
-h1{
-    margin:0;
-    color:var(--accent);
-    font-size:38px;
-    line-height:1.2;
-}
-
-.author{
-    margin-top:12px;
-    color:var(--muted);
-    font-size:16px;
-}
-
-.author-image{
-    display:block;
-    width:345px;
-    max-width:100%;
-    height:auto;
-    display:block;
-    margin:26px auto 30px;
-    border-radius:8px;
-}
-
-.intro{
-    margin:0 auto 36px;
-    max-width:760px;
-    font-size:17px;
-    text-align:justify;
-}
-
-.toc{
-    margin:30px 0 42px;
-    padding:24px 28px;
-    background:var(--chapter-bg);
-    border:1px solid var(--line);
-    border-radius:8px;
-}
-
-.toc-title{
-    font-size:20px;
-    font-weight:bold;
-    color:var(--accent);
-    margin-bottom:14px;
-}
-
-.toc a{
-    display:block;
-    color:var(--accent);
-    text-decoration:none;
-    margin:8px 0;
-}
-
-.toc a:hover{
-    text-decoration:underline;
-}
-
-.chapters{
-    margin-top:10px;
-}
-
-.chapter {
-    margin-bottom:46px;
-    padding:30px 32px;
-    background:var(--chapter-bg);
-    border:1px solid var(--line);
-    border-radius:9px;
-}
-
-.chapter h2{
-    margin:0 0 22px;
-    color:var(--accent);
-    font-size:27px;
-    line-height:1.3;
-}
-
-.chapter p{
-    margin:0 0 18px;
-    text-align:justify;
-    color: var(--text);
-}
-
-.chapter p:last-child{
-    margin-bottom:0;
-}
-
-.scripture{
-    margin:24px 0;
-    padding:18px 22px;
-    background:var(--quote);
-    border-left:4px solid var(--gold);
-    border-radius:6px;
-    font-style:italic;
-}
-
-.scripture strong{
-    display:block;
-    color:var(--accent);
-    font-style:normal;
-    margin-bottom:6px;
-}
-
-.resource{
-    margin:10px 0 22px; 
-    padding:18px 22px;
-    background:var(--quote);
-    border:1px solid var(--line);
-    border-radius:7px;
-}
-
-.resource a{
-    color:var(--accent);
-    font-weight:bold;
-    text-decoration:none; 
-}
-
-.resource a:hover{
-    text-decoration:underline;
-}
-
-.prayer{
-    margin:45px 0 28px;
-    padding:22px 24px;
-    background:#e8e3da;
-    border:1px solid var(--line);
-    border-radius:9px;
-}
-
-.prayer h2 {
-    margin: 0 0 14px;
-    color: var(--accent);
-    font-size:27px;
-    line-height:1.3;
-}
-
-.prayer p {
-    color: var(--text);
-    text-align: justify;
-}
-
-.back{
-    display:block;
-    width:max-content;
-    margin:50px auto 0; 
-    padding:11px 20px;
-    color:#fff;
-    background:var(--accent);
-    border-radius:6px;
-    text-decoration:none;
-    font-family:Arial, sans-serif;
-    font-size:14px;
-    text-align:center;
-}
-
-.back:hover{
-    opacity:.9;
-}
-
-@media (max-width:700px){
-
-    body{
-        line-height:1.68;
-    }
-
-    .page{
-        width:94%;
-        margin:18px auto;
-        padding:28px 20px 38px;
-    }
-
-    h1{
-        font-size:30px;
-    }
-
-    .eyebrow{
-        font-size:12px;
-        letter-spacing:1.6px;
-    }
-
-    .author{
-        font-size:15px;
-    }
-
-    .author-image{
-        width:345px;
-        max-width:100%;
-        height:auto;
-        display:block;
-        margin:20px auto 22px;
-    }
-
-    .intro{
-        font-size:16px;
-        text-align:justify;
-        margin-bottom:28px;
-    }
-
-    .toc{
-        padding:20px;
-        margin:24px 0 32px;
-    }
-
-    .chapter{
-        padding:23px 19px;
-        margin-bottom:32px;
-    }
-
-    .chapter h2{
-        font-size:23px;
-        margin-bottom:18px;
-    }
-
-    .chapter p{
-        text-align:justify;
-        margin-bottom:17px;
-    }
-
-    .scripture{
-        margin:20px 0;
-        padding:16px 17px;
-    }
-
-    .resource{
-        margin:10px 0 22px;
-        padding:16px 17px;
-    }
-
-    .prayer{
-        padding:19px 18px;
-        margin-top:35px;
-    }
-    
-    .prayer h2{
-        font-size:23px;
-    }
-
-    .back{
-        margin:40px auto 0;
-        font-size:14px;
-    }
-
-}
-
-
 .language-panel{width:min(900px,92%);margin:18px auto -20px;padding:14px 18px;background:#fff;border:1px solid #d9d5ce;border-radius:8px;text-align:center;font-family:Arial,sans-serif}
 .language-panel strong{display:block;color:#17365D;margin-bottom:10px;font-size:14px}
 .language-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
 .language-buttons button{border:1px solid #17365D;background:#fff;color:#17365D;border-radius:5px;padding:7px 10px;font-size:12px;cursor:pointer}
 .language-buttons button:hover,.language-buttons button:focus{background:#17365D;color:#fff}
 #google_translate_element{position:absolute;left:-9999px;top:-9999px}
-@media(max-width:700px){.language-panel{width:94%;margin:12px auto -8px;padding:12px 10px}.language-buttons{gap:6px}.language-buttons button{padding:7px 8px;font-size:11px}}
-
+@media(max-width:700px){
+ .language-panel{width:94%;margin:12px auto -8px;padding:12px 10px}
+ .language-buttons{gap:6px}
+ .language-buttons button{padding:7px 8px;font-size:11px}
+}
 </style>
 </head>
 
 <body>
-
 <div class="language-panel" aria-label="Selector de idioma">
 <strong>Selecciona tu idioma / Select your language</strong>
 <div class="language-buttons">
@@ -326,183 +89,149 @@ h1{
 <button type="button" data-lang="bn">বাংলা</button>
 </div></div><div id="google_translate_element" aria-hidden="true"></div>
 
-
 <div class="page">
+<header class="header">
+ <div class="eyebrow">La Palabra en Cápsulas</div>
+ <h1>Guía para Nuevos Creyentes</h1>
+ <div class="author">Por J.V.</div>
+ <img class="author-image" id="salmo-image" src="salmo-32-8.png" alt="Salmo 32:8">
+</header>
 
-    <header class="header">
-        <div class="eyebrow">
-            La Palabra en Cápsulas
-        </div>
-        <h1>
-            Guía para Nuevos Creyentes
-        </h1>
-        <div class="author">
-            Por J.V.
-        </div>
-        <img
-            class="author-image"
-            src="salmo-32-8.png"
-            alt="Salmo 32:8"
-        >
-    </header>
+<p class="intro">
+Comenzar una nueva vida con Dios es una experiencia maravillosa. Esta guía ha sido preparada para ayudarte a dar algunos de tus primeros pasos en la fe cristiana, conocer mejor a Dios y crecer en tu relación con Él.
+</p>
 
-    <p class="intro">
-        Comenzar una nueva vida con Dios es una experiencia maravillosa. Esta guía ha sido preparada para ayudarte a dar algunos de tus primeros pasos en la fe cristiana, conocer mejor a Dios y crecer en tu relación con Él.
-    </p>
+<div class="chapters">
+<section class="chapter" id="capitulo-1">
+<h2>Capítulo 1 — Debes nacer de nuevo</h2>
+<p>Jesús enseñó que para entrar en el reino de Dios necesitamos experimentar un nuevo nacimiento. No se trata simplemente de mejorar nuestra conducta, sino de recibir una nueva vida que proviene de Dios. Al oir de Jesús, de su vida y lo que hizo por nosotros, nos damos cuenta que necesitamos un renacimiento espiritual, que nos dará acceso a la vida eterna en el cielo.</p>
+<div class="scripture"><strong>Juan 3:3</strong>«De cierto, de cierto te digo, que el que no naciere de nuevo, no puede ver el reino de Dios.»</div>
+<p>Cuando recibimos a Jesucristo como Señor y Salvador, comenzamos una nueva vida. Dios nos transforma desde nuestro interior y nos llama a caminar diariamente con Él. El "viejo" hombre murió y esa es la razón por la cual ya el ayer no importa.</p>
+<div class="scripture"><strong>2 Corintios 5:17</strong>«De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.»</div>
+</section>
 
-    <div class="chapters">
+<section class="chapter" id="capitulo-2">
+<h2>Capítulo 2 — Lo que significa arrepentirse</h2>
+<p>Arrepentirse significa reconocer nuestro pecado, apartarnos de él y volver nuestro corazón hacia Dios. El arrepentimiento no es simplemente sentir tristeza por haber hecho algo malo; es decidir cambiar de dirección y comenzar a caminar conforme a su voluntad.</p>
+<div class="scripture"><strong>Marcos 1:15</strong>«Arrepentíos, y creed en el evangelio.»</div>
+<p>Dios no desea que permanezcamos atrapados en nuestros errores del pasado, ya que el arrepentimiento vence al remordimiento. Cuando confesamos nuestros pecados sinceramente, podemos confiar en que Él nos ha perdonado y hechos limpios por su Palabra misma. Y si El nos perdonó, no debemos, bajo ningún punto de vista, condenarnos a nosotros mismos pues todo queda bajo su Sangre, la cual es poderosa.</p>
+<div class="scripture"><strong>1 Juan 1:9</strong>«Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados, y limpiarnos de toda maldad.»</div>
+</section>
 
-        <section class="chapter" id="capitulo-1">
-            <h2>
-                Capítulo 1 — Debes nacer de nuevo
-            </h2>
-            <p>
-                Jesús enseñó que para entrar en el reino de Dios necesitamos experimentar un nuevo nacimiento. No se trata simplemente de mejorar nuestra conducta, sino de recibir una nueva vida que proviene de Dios. Al oir de Jesús, de su vida y lo que hizo por nosotros, nos damos cuenta que necesitamos un renacimiento espiritual, que nos dará acceso a la vida eterna en el cielo.
-            </p>
-            <div class="scripture">
-                <strong>Juan 3:3</strong>
-                «De cierto, de cierto te digo, que el que no naciere de nuevo, no puede ver el reino de Dios.»
-            </div>
-            <p>
-                Cuando recibimos a Jesucristo como Señor y Salvador, comenzamos una nueva vida. Dios nos transforma desde nuestro interior y nos llama a caminar diariamente con Él. El "viejo" hombre murió y esa es la razón por la cual ya el ayer no importa.
-            </p>
-            <div class="scripture">
-                <strong>2 Corintios 5:17</strong>
-                «De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.»
-            </div>
-        </section>
+<section class="chapter" id="capitulo-3">
+<h2>Capítulo 3 — Empieza a leer la Biblia</h2>
+<p>La Biblia es la Palabra de Dios y es fundamental para nuestro crecimiento espiritual. Así como un bebé necesita alimento para crecer, el creyente necesita alimentarse espiritualmente por medio de la Palabra de Dios. Las Santas Escrituras constan de 66 libros: 39 del Antiguo Testamento y 27 del Nuevo. No leer la Biblia y orar, equivale a no beber y a no tomar alimentos: desnutrición pura.</p>
+<div class="scripture"><strong>1 Pedro 2:2</strong>«Desead, como niños recién nacidos, la leche espiritual no adulterada, para que por ella crezcáis para salvación.»</div>
+<p>Si no tienes el deseo de leer u orar, pídele a Dios que te lo de. No te dejes vencer de Satanás, que con su muerte y postrer resurrección, Jesús lo derrotó en la cruz del Calvario.</p>
+<p>Una buena manera de comenzar es leyendo los evangelios. Allí encontrarás muchos relatos sobre quién es Jesús, sus enseñanzas, milagros y su amor por nosotros. Una vez termines el Nuevo Testamento, si quieres, puedes leer desde Génesis (el inicio del Libro) para que conozcas los orígenes, la creación del universo y por supuesto del hombre mismo. Algunos quieren saber el final de las cosas pero deben primero conocer el principio.</p>
+<p>Por cierto, al terminar la guía, aquí está el evangelio más recomendado para leer:</p>
+<div class="resource"><a href="./juan.html">Leer Juan — RVR1960</a></div>
+<p>Procura establecer un momento diario para leer la Biblia. No se trata de leer grandes cantidades rápidamente, sino de comprender lo que Dios te está enseñando y ponerlo en práctica. Antes de leer, pídele a Dios que te dé entendimiento y revelación en todo. Él te lo dará sin reproche alguno. Alábalo, cántale y dale gracias en todo.</p>
+<p>Y si por alguna razón se te perdieron las gafas o se te cansa la vista, solo escribe en Google: «Evangelio de Juan, capítulo 1», y en cinco o seis minutos lo habrás escuchado.</p>
+</section>
 
-        <section class="chapter" id="capitulo-2">
-            <h2>
-                Capítulo 2 — Lo que significa arrepentirse
-            </h2>
-            <p>
-                Arrepentirse significa reconocer nuestro pecado, apartarnos de él y volver nuestro corazón hacia Dios. El arrepentimiento no es simplemente sentir tristeza por haber hecho algo malo; es decidir cambiar de dirección y comenzar a caminar conforme a su voluntad.
-            </p>
-            <div class="scripture">
-                <strong>Marcos 1:15</strong>
-                «Arrepentíos, y creed en el evangelio.»
-            </div>
-            <p>
-                Dios no desea que permanezcamos atrapados en nuestros errores del pasado, ya que el arrepentimiento vence al remordimiento. Cuando confesamos nuestros pecados sinceramente, podemos confiar en que Él nos ha perdonado y hechos limpios por su Palabra misma. Y si El nos perdonó, no debemos, bajo ningún punto de vista, condenarnos a nosotros mismos pues todo queda bajo su Sangre, la cual es poderosa.
-            </p>
-            <div class="scripture">
-                <strong>1 Juan 1:9</strong>
-                «Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados, y limpiarnos de toda maldad.»
-            </div>
-        </section>
+<section class="chapter" id="capitulo-4">
+<h2>Capítulo 4 — Sométete, según corresponda</h2>
+<p>La nueva vida en Cristo también implica aprender a vivir bajo la autoridad de Dios. Someterse a Dios significa reconocer que Él tiene el derecho de dirigir nuestra vida y que sus caminos son mejores que los nuestros. Puedes someterte a la persona que te compartió el evangelio, un pastor o ministro del evangelio de buen testimonio.</p>
+<div class="scripture"><strong>Santiago 4:7</strong>«Someteos, pues, a Dios; resistid al diablo, y huirá de vosotros.»</div>
+<p>Esto incluye aprender a obedecer la Palabra de Dios, reconocer aquellas áreas de nuestra vida que necesitan cambiar y permitir que Dios nos enseñe y nos transforme.</p>
+<p>También debemos aprender a someternos correctamente a las autoridades y responsabilidades que Dios ha establecido en nuestras vidas, siempre teniendo presente que nuestra primera obediencia corresponde a Dios.</p>
+</section>
 
-        <section class="chapter" id="capitulo-3">
-            <h2>
-                Capítulo 3 — Empieza a leer la Biblia
-            </h2>
-            <p>
-                La Biblia es la Palabra de Dios y es fundamental para nuestro crecimiento espiritual. Así como un bebé necesita alimento para crecer, el creyente necesita alimentarse espiritualmente por medio de la Palabra de Dios. Las Santas Escrituras constan de 66 libros: 39 del Antiguo Testamento y 27 del Nuevo. No leer la Biblia y orar, equivale a no beber y a no tomar alimentos: desnutrición pura.
-            </p>
-            <div class="scripture">
-                <strong>1 Pedro 2:2</strong>
-                «Desead, como niños recién nacidos, la leche espiritual no adulterada, para que por ella crezcáis para salvación.»
-            </div>
-            <p>
-                Si no tienes el deseo de leer u orar, pídele a Dios que te lo de. No te dejes vencer de Satanás, que con su muerte y postrer resurrección, Jesús lo derrotó en la cruz del Calvario.
-            </p>
-            <p>
-                Una buena manera de comenzar es leyendo los evangelios. Allí encontrarás muchos relatos sobre quién es Jesús, sus enseñanzas, milagros y su amor por nosotros. Una vez termines el Nuevo Testamento, si quieres, puedes leer desde Génesis (el inicio del Libro) para que conozcas los orígenes, la creación del universo y por supuesto del hombre mismo. Algunos quieren saber el final de las cosas pero deben primero conocer el principio.
-            </p>
-            <p>
-                Por cierto, al terminar la guía, aquí está el evangelio más recomendado para leer:
-            </p>
-            <div class="resource">
-                <a href="./juan.html">Leer Juan — RVR1960</a>
-            </div>
-            <p>
-                Procura establecer un momento diario para leer la Biblia. No se trata de leer grandes cantidades rápidamente, sino de comprender lo que Dios te está enseñando y ponerlo en práctica. Antes de leer, pídele a Dios que te dé entendimiento y revelación en todo. Él te lo dará sin reproche alguno. Alábalo, cántale y dale gracias en todo.
-            </p>
-            <p>
-                Y si por alguna razón se te perdieron las gafas o se te cansa la vista, solo escribe en Google: «Evangelio de Juan, capítulo 1», y en cinco o seis minutos lo habrás escuchado.
-            </p>
-        </section>
+<section class="chapter" id="capitulo-5">
+<h2>Capítulo 5 — Siembra e invierte en almas</h2>
+<p>Una vez que comenzamos nuestra relación con Dios, también aprendemos a mirar hacia los demás. Dios desea utilizar nuestras vidas para llevar esperanza, amor y el mensaje del evangelio a otras personas.</p>
+<div class="scripture"><strong>2 Corintios 9:6</strong>«El que siembra escasamente, también segará escasamente; y el que siembra generosamente, generosamente también segará.»</div>
+<p>Invertir en almas significa utilizar nuestro tiempo, nuestros recursos, nuestros dones y nuestras oportunidades para ayudar a que otras personas conozcan a Dios.</p>
+<p>No todos estamos llamados a hacer exactamente lo mismo, pero todos podemos participar de alguna manera. Una conversación, una oración, una palabra de ánimo o compartir nuestro propio testimonio puede convertirse en una semilla que Dios utilice para transformar una vida.</p>
+<p>Solo cuando hablamos, es que alguien oyendo la Palabra de vida, puede ser salvo(a). Y toda la humanidad tendrá la oportunidad de oír el único mensaje salvador: el evangelio de Cristo.</p>
+</section>
 
-        <section class="chapter" id="capitulo-4">
-            <h2>Capítulo 4 — Sométete, según corresponda</h2>
-            <p>
-                La nueva vida en Cristo también implica aprender a vivir bajo la autoridad de Dios. Someterse a Dios significa reconocer que Él tiene el derecho de dirigir nuestra vida y que sus caminos son mejores que los nuestros. Puedes someterte a la persona que te compartió el evangelio, un pastor o ministro del evangelio de buen testimonio.
-            </p>
-            <div class="scripture">
-                <strong>Santiago 4:7</strong>
-                «Someteos, pues, a Dios; resistid al diablo, y huirá de vosotros.»
-            </div>
-            <p>
-                Esto incluye aprender a obedecer la Palabra de Dios, reconocer aquellas áreas de nuestra vida que necesitan cambiar y permitir que Dios nos enseñe y nos transforme.
-            </p>
-            <p>
-                También debemos aprender a someternos correctamente a las autoridades y responsabilidades que Dios ha establecido en nuestras vidas, siempre teniendo presente que nuestra primera obediencia corresponde a Dios.
-            </p>
-        </section>
+<section class="prayer" id="oracion">
+<h2>Oración y compromiso</h2>
+<p>Dios Padre, gracias por haberme dado una nueva vida. Ayúdame a conocerte, obedecerte y crecer cada día. Enséñame a amarte, a servir a otros y a compartir con ellos lo que tú has hecho en mi vida. En el Nombre de Jesús, Amén.</p>
+</section>
 
-        <section class="chapter" id="capitulo-5">
-            <h2>Capítulo 5 — Siembra e invierte en almas</h2>
-            <p>
-                Una vez que comenzamos nuestra relación con Dios, también aprendemos a mirar hacia los demás. Dios desea utilizar nuestras vidas para llevar esperanza, amor y el mensaje del evangelio a otras personas.
-            </p>
-            <div class="scripture">
-                <strong>2 Corintios 9:6</strong>
-                «El que siembra escasamente, también segará escasamente; y el que siembra generosamente, generosamente también segará.»
-            </div>
-            <p>
-                Invertir en almas significa utilizar nuestro tiempo, nuestros recursos, nuestros dones y nuestras oportunidades para ayudar a que otras personas conozcan a Dios.
-            </p>
-            <p>
-                No todos estamos llamados a hacer exactamente lo mismo, pero todos podemos participar de alguna manera. Una conversación, una oración, una palabra de ánimo o compartir nuestro propio testimonio puede convertirse en una semilla que Dios utilice para transformar una vida.
-            </p>
-            <p>
-                Solo cuando hablamos, es que alguien oyendo la Palabra de vida, puede ser salvo(a). Y toda la humanidad tendrá la oportunidad de oír el único mensaje salvador: el evangelio de Cristo.
-            </p>
-        </section>
-
-        <section class="prayer" id="oracion">
-            <h2>Oración y compromiso</h2>
-            <p>
-                Dios Padre, gracias por haberme dado una nueva vida. Ayúdame a conocerte, obedecerte y crecer cada día. Enséñame a amarte, a servir a otros y a compartir con ellos lo que tú has hecho en mi vida. En el Nombre de Jesús, Amén.
-            </p>
-        </section>
-
-        <a class="back" href="https://lpcapsulas.com/Explora/menu.html">← Volver al Menú</a>
-
-    </div>
+<a class="back" href="https://lpcapsulas.com/Explora/menu.html">← Volver al Menú</a>
+</div>
 
 <script>
 (function(){
 "use strict";
+
 var codes=["es","en","zh-CN","fr","it","pt","he","ar","hi","ru","de","ja","tr","el","fa","sv","ko","pl","bn"];
-window.googleTranslateElementInit=function(){
- new google.translate.TranslateElement({pageLanguage:"es",includedLanguages:codes.join(","),autoDisplay:false},"google_translate_element");
+
+/* Imágenes que ya están disponibles en el directorio de esta guía.
+   Los idiomas sin imagen propia utilizan temporalmente la versión española. */
+var psalmImages={
+ "es":"salmo-32-8.png",
+ "en":"salmo-32-8-en.png",
+ "zh-CN":"salmo-32-8-zh.png",
+ "fr":"salmo-32-8-fr.png",
+ "it":"salmo-32-8-it.png",
+ "pt":"salmo-32-8-pt.png",
+ "he":"salmo-32-8-he.png",
+ "ar":"salmo-32-8-ar.png",
+ "hi":"salmo-32-8-hi.png",
+ "ru":"salmo-32-8-ru.png",
+ "de":"salmo-32-8-de.png",
+ "ja":"salmo-32-8-ja.png"
 };
+
+function updatePsalmImage(lang){
+ var img=document.getElementById("salmo-image");
+ if(!img)return;
+ img.src=psalmImages[lang]||psalmImages.es;
+ img.alt="Salmo 32:8";
+}
+
+window.googleTranslateElementInit=function(){
+ new google.translate.TranslateElement(
+  {pageLanguage:"es",includedLanguages:codes.join(","),autoDisplay:false},
+  "google_translate_element"
+ );
+};
+
 function applyLanguage(lang){
  try{localStorage.setItem("lpc-language",lang);}catch(e){}
+ updatePsalmImage(lang);
  document.documentElement.dir=(lang==="he"||lang==="ar"||lang==="fa")?"rtl":"ltr";
+
  if(lang==="es"){
   document.cookie="googtrans=/es/es;path=/";
   document.cookie="googtrans=/es/es;path=/;domain="+location.hostname;
-  location.reload();return;
+  location.reload();
+  return;
  }
+
  var attempts=0;
  var timer=setInterval(function(){
   var combo=document.querySelector(".goog-te-combo");
-  if(combo){clearInterval(timer);combo.value=lang;combo.dispatchEvent(new Event("change"));}
+  if(combo){
+   clearInterval(timer);
+   combo.value=lang;
+   combo.dispatchEvent(new Event("change"));
+  }
   if(++attempts>40)clearInterval(timer);
  },250);
 }
+
 document.querySelectorAll(".language-buttons button").forEach(function(b){
- b.addEventListener("click",function(){applyLanguage(b.getAttribute("data-lang"));});
+ b.addEventListener("click",function(){
+  applyLanguage(b.getAttribute("data-lang"));
+ });
 });
+
 window.addEventListener("load",function(){
- var saved=null;try{saved=localStorage.getItem("lpc-language");}catch(e){}
- if(saved&&saved!=="es")setTimeout(function(){applyLanguage(saved);},1400);
+ var saved=null;
+ try{saved=localStorage.getItem("lpc-language");}catch(e){}
+ if(saved){
+  updatePsalmImage(saved);
+  if(saved!=="es")setTimeout(function(){applyLanguage(saved);},1400);
+ }
 });
 })();
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>
