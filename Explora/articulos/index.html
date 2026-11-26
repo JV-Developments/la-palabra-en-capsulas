@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es" dir="ltr">
 <head>
@@ -55,6 +56,7 @@ html[dir="rtl"] .footer-nav a { letter-spacing: 0; }
 </head>
 <body>
 <main class="page">
+
 <nav class="language-bar" id="language-bar" aria-label="Selección de idioma">
 <button type="button" class="lang-link active" id="link-es" onclick="changeLanguage('es')" aria-pressed="true" lang="es">Español</button><span class="lang-divider" aria-hidden="true">|</span>
 <button type="button" class="lang-link" id="link-en" onclick="changeLanguage('en')" aria-pressed="false" lang="en">English</button><span class="lang-divider" aria-hidden="true">|</span>
@@ -76,88 +78,251 @@ html[dir="rtl"] .footer-nav a { letter-spacing: 0; }
 <button type="button" class="lang-link" id="link-pl" onclick="changeLanguage('pl')" aria-pressed="false" lang="pl">Polski</button><span class="lang-divider" aria-hidden="true">|</span>
 <button type="button" class="lang-link" id="link-bn" onclick="changeLanguage('bn')" aria-pressed="false" lang="bn">বাংলা</button>
 </nav>
+
 <header>
 <h1 id="page-title">Artículos</h1>
 <p class="intro" id="page-intro">Para reflexionar, y tomar acción.</p>
 </header>
+
 <section class="article-list" id="article-list" aria-label="Lista de artículos">
+
 <article class="article-card">
 <h2 id="darkness-title">Cuando el hombre busca respuestas en las tinieblas</h2>
 <p id="darkness-description">Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.</p>
 <a class="read-link" id="darkness-link" href="cuando-el-hombre-busca-respuestas-en-las-tinieblas.html">Leer artículo →</a>
 </article>
+
 <article class="article-card">
 <h2 id="article-title">Él sabe nuestra condición</h2>
 <p id="article-description">Dios conoce nuestras circunstancias, necesidades y aquello que muchas veces enfrentamos en silencio.</p>
 <a class="read-link" id="part-1-link" href="el-esta-al-tanto-parte-1.html">Leer Parte 1 →</a><br>
 <a class="read-link" id="part-2-link" href="el-esta-al-tanto-parte-2.html">Leer Parte 2 →</a>
 </article>
+
+<article class="article-card">
+<h2 id="thanks-title">Dad siempre gracias a Dios</h2>
+<p id="thanks-description">Una invitación bíblica a reconocer la bondad de Dios y darle gracias en toda circunstancia, confiando en su fidelidad.</p>
+<a class="read-link" id="thanks-link" href="Dad-siempre-gracias-a-Dios.html">Leer artículo →</a>
+</article>
+
 </section>
-<nav class="footer-nav" id="footer-nav" aria-label="Navegación inferior"><a href="../menu.html" id="back-link">← Volver al Menú</a></nav>
+
+<nav class="footer-nav" id="footer-nav" aria-label="Navegación inferior">
+<a href="../menu.html" id="back-link">← Volver al Menú</a>
+</nav>
 </main>
+
 <script>
 (function () {
 "use strict";
+
 const translations = {
 es:{documentTitle:"Artículos — La Palabra en Cápsulas",title:"Artículos",intro:"Para reflexionar, y tomar acción.",articleTitle:"Él sabe nuestra condición",description:"Dios conoce nuestras circunstancias, necesidades y aquello que muchas veces enfrentamos en silencio.",part1:"Leer Parte 1 →",part2:"Leer Parte 2 →",darknessTitle:"Cuando el hombre busca respuestas en las tinieblas",darknessDescription:"Una reflexión bíblica sobre las prácticas ocultas, la consulta a los muertos y las decisiones que debemos tomar ante la Palabra de Dios.",darknessLink:"Leer artículo →",back:"← Volver al Menú",articleListLabel:"Lista de artículos",footerLabel:"Navegación inferior",languageLabel:"Selección de idioma"},
+
 en:{documentTitle:"Articles — The Word in Capsules",title:"Articles",intro:"For reflection and action.",articleTitle:"He Knows Our Condition",description:"God knows our circumstances, our needs, and the things we often face in silence.",part1:"Read Part 1 →",part2:"Read Part 2 →",darknessTitle:"When Man Seeks Answers in Darkness",darknessDescription:"A biblical reflection on occult practices, consulting the dead, and the decisions we must make in light of God's Word.",darknessLink:"Read article →",back:"← Back to Menu",articleListLabel:"List of articles",footerLabel:"Footer navigation",languageLabel:"Language selection"},
+
 zh:{documentTitle:"文章 — 胶囊中的话语",title:"文章",intro:"引发思考，并付诸行动。",articleTitle:"祂知道我们的处境",description:"上帝知道我们的处境和需要，也知道那些我们常常默默承受的事情。",part1:"阅读第一部分 →",part2:"阅读第二部分 →",darknessTitle:"当人在人生的黑暗中寻找答案",darknessDescription:"一篇关于 occult 实践、求问死者以及我们应当如何按照上帝话语作出决定的圣经反思。",darknessLink:"阅读文章 →",back:"← 返回菜单",articleListLabel:"文章列表",footerLabel:"页脚导航",languageLabel:"语言选择"},
+
 fr:{documentTitle:"Articles — La Parole en Capsules",title:"Articles",intro:"Pour réfléchir et passer à l’action.",articleTitle:"Il connaît notre condition",description:"Dieu connaît nos circonstances, nos besoins et les épreuves que nous traversons souvent en silence.",part1:"Lire la partie 1 →",part2:"Lire la partie 2 →",darknessTitle:"Quand l’homme cherche des réponses dans les ténèbres",darknessDescription:"Une réflexion biblique sur les pratiques occultes, la consultation des morts et les décisions à prendre à la lumière de la Parole de Dieu.",darknessLink:"Lire l’article →",back:"← Retour au menu",articleListLabel:"Liste des articles",footerLabel:"Navigation de bas de page",languageLabel:"Sélection de la langue"},
+
 it:{documentTitle:"Articoli — La Parola in Capsule",title:"Articoli",intro:"Per riflettere e passare all’azione.",articleTitle:"Egli conosce la nostra condizione",description:"Dio conosce le nostre circostanze, i nostri bisogni e ciò che spesso affrontiamo in silenzio.",part1:"Leggi la Parte 1 →",part2:"Leggi la Parte 2 →",darknessTitle:"Quando l’uomo cerca risposte nelle tenebre",darknessDescription:"Una riflessione biblica sulle pratiche occulte, la consultazione dei morti e le decisioni da prendere alla luce della Parola di Dio.",darknessLink:"Leggi l’articolo →",back:"← Torna al menu",articleListLabel:"Elenco degli articoli",footerLabel:"Navigazione a piè di pagina",languageLabel:"Selezione della lingua"},
+
 pt:{documentTitle:"Artigos — A Palavra em Cápsulas",title:"Artigos",intro:"Para refletir e agir.",articleTitle:"Ele conhece a nossa condição",description:"Deus conhece as nossas circunstâncias, as nossas necessidades e aquilo que muitas vezes enfrentamos em silêncio.",part1:"Ler a Parte 1 →",part2:"Ler a Parte 2 →",darknessTitle:"Quando o homem busca respostas nas trevas",darknessDescription:"Uma reflexão bíblica sobre práticas ocultas, a consulta aos mortos e as decisões que devemos tomar à luz da Palavra de Deus.",darknessLink:"Ler artigo →",back:"← Voltar ao menu",articleListLabel:"Lista de artigos",footerLabel:"Navegação do rodapé",languageLabel:"Seleção de idioma"},
+
 he:{documentTitle:"מאמרים — דבר אלוהים בקפסולות",title:"מאמרים",intro:"להרהר ולפעול.",articleTitle:"הוא יודע מה מצבנו",description:"אלוהים מכיר את נסיבות חיינו ואת צורכינו, ויודע מה אנו נאלצים לעיתים קרובות להתמודד איתו בשקט.",part1:"לקריאת חלק 1 ←",part2:"לקריאת חלק 2 ←",darknessTitle:"כאשר האדם מחפש תשובות בחשכה",darknessDescription:"עיון מקראי במנהגים הנסתרים, בפנייה אל המתים ובהחלטות שעלינו לקבל לאור דבר אלוהים.",darknessLink:"לקריאת המאמר ←",back:"חזרה לתפריט ←",articleListLabel:"רשימת מאמרים",footerLabel:"ניווט תחתון",languageLabel:"בחירת שפה"},
+
 ar:{documentTitle:"مقالات — كلمة الله في كبسولات",title:"مقالات",intro:"للتأمل واتخاذ الخطوات العملية.",articleTitle:"إنه يعرف حالنا",description:"يعرف الله ظروفنا واحتياجاتنا وما نواجهه كثيرًا في صمت.",part1:"اقرأ الجزء الأول ←",part2:"اقرأ الجزء الثاني ←",darknessTitle:"عندما يبحث الإنسان عن إجابات في الظلام",darknessDescription:"تأمل كتابي حول الممارسات الخفية واستشارة الموتى والقرارات التي ينبغي أن نتخذها في ضوء كلمة الله.",darknessLink:"اقرأ المقال ←",back:"العودة إلى القائمة ←",articleListLabel:"قائمة المقالات",footerLabel:"التنقل السفلي",languageLabel:"اختيار اللغة"},
+
 hi:{documentTitle:"लेख — कैप्सूल में परमेश्वर का वचन",title:"लेख",intro:"मनन करने और कदम उठाने के लिए।",articleTitle:"वह हमारी स्थिति जानता है",description:"परमेश्वर हमारी परिस्थितियों, हमारी ज़रूरतों और उन बातों को जानता है जिनका सामना हम अक्सर चुपचाप करते हैं।",part1:"भाग 1 पढ़ें →",part2:"भाग 2 पढ़ें →",darknessTitle:"जब मनुष्य अंधकार में उत्तर खोजता है",darknessDescription:"गुप्त प्रथाओं, मृतकों से परामर्श और परमेश्वर के वचन के प्रकाश में लिए जाने वाले निर्णयों पर बाइबिल आधारित चिंतन।",darknessLink:"लेख पढ़ें →",back:"← मेनू पर वापस जाएँ",articleListLabel:"लेखों की सूची",footerLabel:"निचला नेविगेशन",languageLabel:"भाषा चुनें"},
+
 ru:{documentTitle:"Статьи — Слово в капсулах",title:"Статьи",intro:"Чтобы размышлять и действовать.",articleTitle:"Он знает наше состояние",description:"Бог знает наши обстоятельства, наши нужды и то, с чем нам часто приходится сталкиваться молча.",part1:"Читать часть 1 →",part2:"Читать часть 2 →",darknessTitle:"Когда человек ищет ответы во тьме",darknessDescription:"Библейское размышление об оккультных практиках, обращении к умершим и решениях, которые следует принимать в свете Слова Божьего.",darknessLink:"Читать статью →",back:"← Вернуться в меню",articleListLabel:"Список статей",footerLabel:"Нижняя навигация",languageLabel:"Выбор языка"},
+
 de:{documentTitle:"Artikel — Das Wort in Kapseln",title:"Artikel",intro:"Zum Nachdenken und Handeln.",articleTitle:"Er kennt unsere Lage",description:"Gott kennt unsere Umstände, unsere Bedürfnisse und das, womit wir oft still für uns allein kämpfen.",part1:"Teil 1 lesen →",part2:"Teil 2 lesen →",darknessTitle:"Wenn der Mensch Antworten in der Finsternis sucht",darknessDescription:"Eine biblische Betrachtung über okkulte Praktiken, die Befragung der Toten und Entscheidungen im Licht des Wortes Gottes.",darknessLink:"Artikel lesen →",back:"← Zurück zum Menü",articleListLabel:"Artikelliste",footerLabel:"Fußnavigation",languageLabel:"Sprachauswahl"},
+
 ja:{documentTitle:"記事 — カプセルに込められたみことば",title:"記事",intro:"考え、行動するために。",articleTitle:"神は私たちの状況をご存じです",description:"神は私たちの置かれた状況や必要、そして私たちがしばしば人知れず直面していることをご存じです。",part1:"第1部を読む →",part2:"第2部を読む →",darknessTitle:"人が闇の中に答えを求めるとき",darknessDescription:"オカルト的な慣習、死者への問いかけ、そして神の御言葉に照らして下すべき決断についての聖書的考察。",darknessLink:"記事を読む →",back:"← メニューに戻る",articleListLabel:"記事一覧",footerLabel:"フッターナビゲーション",languageLabel:"言語の選択"},
+
 tr:{documentTitle:"Makaleler — Kapsüllerdeki Söz",title:"Makaleler",intro:"Düşünmek ve harekete geçmek için.",articleTitle:"O, Durumumuzu Biliyor",description:"Tanrı koşullarımızı, ihtiyaçlarımızı ve çoğu zaman sessizce göğüslediğimiz şeyleri bilir.",part1:"1. Bölümü Oku →",part2:"2. Bölümü Oku →",darknessTitle:"İnsan Karanlıkta Yanıtlar Aradığında",darknessDescription:"Gizli uygulamalar, ölülere danışma ve Tanrı'nın Sözü'nün ışığında vermemiz gereken kararlar üzerine Kutsal Kitap'a dayalı bir düşünce.",darknessLink:"Makaleyi Oku →",back:"← Menüye Dön",articleListLabel:"Makale listesi",footerLabel:"Alt gezinme",languageLabel:"Dil seçimi"},
+
 el:{documentTitle:"Άρθρα — Ο Λόγος σε Κάψουλες",title:"Άρθρα",intro:"Για σκέψη και δράση.",articleTitle:"Εκείνος γνωρίζει την κατάστασή μας",description:"Ο Θεός γνωρίζει τις περιστάσεις μας, τις ανάγκες μας και όσα συχνά αντιμετωπίζουμε σιωπηλά.",part1:"Διαβάστε το Μέρος 1 →",part2:"Διαβάστε το Μέρος 2 →",darknessTitle:"Όταν ο άνθρωπος αναζητά απαντήσεις στο σκοτάδι",darknessDescription:"Ένας βιβλικός στοχασμός για τις απόκρυφες πρακτικές, την επικοινωνία με τους νεκρούς και τις αποφάσεις που πρέπει να πάρουμε υπό το φως του Λόγου του Θεού.",darknessLink:"Διαβάστε το άρθρο →",back:"← Επιστροφή στο μενού",articleListLabel:"Κατάλογος άρθρων",footerLabel:"Πλοήγηση υποσέλιδου",languageLabel:"Επιλογή γλώσσας"},
+
 fa:{documentTitle:"مقالات — کلام در کپسول‌ها",title:"مقالات",intro:"برای تأمل و اقدام.",articleTitle:"او از وضعیت ما آگاه است",description:"خدا شرایط و نیازهای ما و چیزهایی را که اغلب در سکوت با آن‌ها روبه‌رو می‌شویم، می‌داند.",part1:"خواندن بخش اول ←",part2:"خواندن بخش دوم ←",darknessTitle:"وقتی انسان در تاریکی به دنبال پاسخ می‌گردد",darknessDescription:"تأملی کتاب‌مقدسی درباره اعمال پنهانی و خرافی، مشورت با مردگان و تصمیم‌هایی که باید در پرتو کلام خدا بگیریم.",darknessLink:"خواندن مقاله ←",back:"بازگشت به فهرست ←",articleListLabel:"فهرست مقالات",footerLabel:"ناوبری پایین صفحه",languageLabel:"انتخاب زبان"},
+
 sv:{documentTitle:"Artiklar — Ordet i kapslar",title:"Artiklar",intro:"För eftertanke och handling.",articleTitle:"Han känner till vår situation",description:"Gud känner till våra omständigheter, våra behov och det som vi ofta går igenom i tysthet.",part1:"Läs del 1 →",part2:"Läs del 2 →",darknessTitle:"När människan söker svar i mörkret",darknessDescription:"En biblisk reflektion över ockulta praktiker, att rådfråga de döda och de beslut vi behöver fatta i ljuset av Guds ord.",darknessLink:"Läs artikeln →",back:"← Tillbaka till menyn",articleListLabel:"Artikellista",footerLabel:"Sidfotsnavigering",languageLabel:"Språkval"},
+
 ko:{documentTitle:"글 — 캡슐 속의 하나님 말씀",title:"글",intro:"묵상하고 실천하기 위해.",articleTitle:"그분은 우리의 형편을 아십니다",description:"하나님은 우리의 상황과 필요, 그리고 우리가 종종 말없이 겪는 일들을 알고 계십니다.",part1:"1부 읽기 →",part2:"2부 읽기 →",darknessTitle:"사람이 어둠 속에서 답을 찾을 때",darknessDescription:"주술적 관행, 죽은 자에게 묻는 행위, 그리고 하나님의 말씀에 비추어 내려야 할 결정에 관한 성경적 묵상입니다.",darknessLink:"글 읽기 →",back:"← 메뉴로 돌아가기",articleListLabel:"글 목록",footerLabel:"하단 탐색",languageLabel:"언어 선택"},
+
 pl:{documentTitle:"Artykuły — Słowo w Kapsułkach",title:"Artykuły",intro:"Ku refleksji i działaniu.",articleTitle:"On zna naszą sytuację",description:"Bóg zna nasze okoliczności, potrzeby i to, z czym często zmagamy się w milczeniu.",part1:"Czytaj część 1 →",part2:"Czytaj część 2 →",darknessTitle:"Gdy człowiek szuka odpowiedzi w ciemności",darknessDescription:"Biblijna refleksja nad praktykami okultystycznymi, radzeniem się zmarłych oraz decyzjami, które powinniśmy podejmować w świetle Słowa Bożego.",darknessLink:"Czytaj artykuł →",back:"← Powrót do menu",articleListLabel:"Lista artykułów",footerLabel:"Nawigacja w stopce",languageLabel:"Wybór języka"},
+
 bn:{documentTitle:"প্রবন্ধ — ক্যাপসুলে ঈশ্বরের বাক্য",title:"প্রবন্ধ",intro:"চিন্তা ও কাজে অনুপ্রাণিত হওয়ার জন্য।",articleTitle:"তিনি আমাদের অবস্থা জানেন",description:"ঈশ্বর আমাদের পরিস্থিতি, প্রয়োজন এবং যেসব বিষয় আমরা প্রায়ই নীরবে মোকাবিলা করি, সেসব জানেন।",part1:"প্রথম পর্ব পড়ুন →",part2:"দ্বিতীয় পর্ব পড়ুন →",darknessTitle:"মানুষ যখন অন্ধকারে উত্তর খোঁজে",darknessDescription:"গুপ্তচর্চা, মৃতদের সঙ্গে পরামর্শ এবং ঈশ্বরের বাক্যের আলোকে আমাদের যে সিদ্ধান্তগুলো নেওয়া উচিত—এসব বিষয়ে একটি বাইবেলভিত্তিক চিন্তাভাবনা।",darknessLink:"প্রবন্ধটি পড়ুন →",back:"← মেনুতে ফিরে যান",articleListLabel:"প্রবন্ধের তালিকা",footerLabel:"নিচের নেভিগেশন",languageLabel:"ভাষা নির্বাচন"}
 };
+
+/* Traducciones del tercer artículo: 19 idiomas */
+const thanksTranslations = {
+es:{
+title:"Dad siempre gracias a Dios",
+description:"Una invitación bíblica a reconocer la bondad de Dios y darle gracias en toda circunstancia, confiando en su fidelidad.",
+link:"Leer artículo →"
+},
+en:{
+title:"Always Give Thanks to God",
+description:"A biblical invitation to recognize God's goodness and give thanks in every circumstance, trusting in His faithfulness.",
+link:"Read article →"
+},
+zh:{
+title:"要常常感谢上帝",
+description:"这是一篇圣经信息，邀请我们认识上帝的良善，在任何境况中都感谢祂，并信靠祂的信实。",
+link:"阅读文章 →"
+},
+fr:{
+title:"Rendez toujours grâce à Dieu",
+description:"Une invitation biblique à reconnaître la bonté de Dieu et à lui rendre grâce en toute circonstance, en ayant confiance en sa fidélité.",
+link:"Lire l’article →"
+},
+it:{
+title:"Rendete sempre grazie a Dio",
+description:"Un invito biblico a riconoscere la bontà di Dio e a ringraziarlo in ogni circostanza, confidando nella sua fedeltà.",
+link:"Leggi l’articolo →"
+},
+pt:{
+title:"Deem sempre graças a Deus",
+description:"Um convite bíblico a reconhecer a bondade de Deus e agradecer-lhe em todas as circunstâncias, confiando em sua fidelidade.",
+link:"Ler artigo →"
+},
+he:{
+title:"הודו תמיד לאלוהים",
+description:"הזמנה מקראית להכיר בטובו של אלוהים ולהודות לו בכל מצב, תוך ביטחון בנאמנותו.",
+link:"לקריאת המאמר ←"
+},
+ar:{
+title:"اشكروا الله دائمًا",
+description:"دعوة كتابية للاعتراف بصلاح الله وشكره في كل الظروف، مع الثقة بأمانته.",
+link:"اقرأ المقال ←"
+},
+hi:{
+title:"हमेशा परमेश्वर का धन्यवाद करें",
+description:"परमेश्वर की भलाई को पहचानने और हर परिस्थिति में उसकी विश्वासयोग्यता पर भरोसा रखते हुए उसका धन्यवाद करने का बाइबिल आधारित निमंत्रण।",
+link:"लेख पढ़ें →"
+},
+ru:{
+title:"Всегда благодарите Бога",
+description:"Библейский призыв признавать благость Бога и благодарить Его при любых обстоятельствах, уповая на Его верность.",
+link:"Читать статью →"
+},
+de:{
+title:"Dankt Gott allezeit",
+description:"Eine biblische Einladung, Gottes Güte anzuerkennen und ihm in allen Lebenslagen zu danken und auf seine Treue zu vertrauen.",
+link:"Artikel lesen →"
+},
+ja:{
+title:"いつも神に感謝しなさい",
+description:"神の善良さを認め、どのような状況にあっても神の真実に信頼して感謝するよう招く、聖書に基づくメッセージです。",
+link:"記事を読む →"
+},
+tr:{
+title:"Tanrı'ya Her Zaman Şükredin",
+description:"Tanrı'nın iyiliğini tanımaya ve O'nun sadakatine güvenerek her durumda O'na şükretmeye çağıran Kutsal Kitap'a dayalı bir davet.",
+link:"Makaleyi Oku →"
+},
+el:{
+title:"Να ευχαριστείτε πάντα τον Θεό",
+description:"Μια βιβλική πρόσκληση να αναγνωρίζουμε την καλοσύνη του Θεού και να Τον ευχαριστούμε σε κάθε περίσταση, εμπιστευόμενοι την πιστότητά Του.",
+link:"Διαβάστε το άρθρο →"
+},
+fa:{
+title:"همیشه خدا را شکر کنید",
+description:"دعوتی بر پایه کتاب مقدس برای شناخت نیکویی خدا و شکرگزاری از او در هر شرایطی، با اعتماد به وفاداری او.",
+link:"خواندن مقاله ←"
+},
+sv:{
+title:"Tacka alltid Gud",
+description:"En biblisk inbjudan att erkänna Guds godhet och tacka honom under alla omständigheter, med förtröstan på hans trofasthet.",
+link:"Läs artikeln →"
+},
+ko:{
+title:"항상 하나님께 감사하십시오",
+description:"하나님의 선하심을 인정하고 어떤 상황에서도 그분의 신실하심을 신뢰하며 감사하라는 성경에 근거한 초대입니다.",
+link:"글 읽기 →"
+},
+pl:{
+title:"Zawsze dziękujcie Bogu",
+description:"Biblijne zaproszenie, by uznawać dobroć Boga i dziękować Mu w każdej sytuacji, ufając Jego wierności.",
+link:"Czytaj artykuł →"
+},
+bn:{
+title:"সর্বদা ঈশ্বরকে ধন্যবাদ দিন",
+description:"ঈশ্বরের মঙ্গলময়তা স্বীকার করা এবং তাঁর বিশ্বস্ততার ওপর আস্থা রেখে প্রতিটি পরিস্থিতিতে তাঁকে ধন্যবাদ জানানোর একটি বাইবেলভিত্তিক আহ্বান।",
+link:"প্রবন্ধটি পড়ুন →"
+}
+};
+
 function changeLanguage(lang) {
  if (!Object.prototype.hasOwnProperty.call(translations, lang)) lang = "es";
+
  const t = translations[lang];
+ const thanks = thanksTranslations[lang];
+
  document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
  document.documentElement.dir = ["he", "ar", "fa"].includes(lang) ? "rtl" : "ltr";
+
  document.title = t.documentTitle;
  document.getElementById("page-title").textContent = t.title;
  document.getElementById("page-intro").textContent = t.intro;
+
  document.getElementById("article-title").textContent = t.articleTitle;
  document.getElementById("article-description").textContent = t.description;
  document.getElementById("part-1-link").textContent = t.part1;
  document.getElementById("part-2-link").textContent = t.part2;
+
  document.getElementById("darkness-title").textContent = t.darknessTitle;
  document.getElementById("darkness-description").textContent = t.darknessDescription;
  document.getElementById("darkness-link").textContent = t.darknessLink;
+
+ /* Actualizar el tercer artículo */
+ document.getElementById("thanks-title").textContent = thanks.title;
+ document.getElementById("thanks-description").textContent = thanks.description;
+ document.getElementById("thanks-link").textContent = thanks.link;
+
  document.getElementById("back-link").textContent = t.back;
  document.getElementById("article-list").setAttribute("aria-label", t.articleListLabel);
  document.getElementById("footer-nav").setAttribute("aria-label", t.footerLabel);
  document.getElementById("language-bar").setAttribute("aria-label", t.languageLabel);
+
  document.querySelectorAll(".lang-link").forEach(function(button) {
   const selected = button.id === "link-" + lang;
   button.classList.toggle("active", selected);
   button.setAttribute("aria-pressed", String(selected));
  });
- try { localStorage.setItem("lpc-language", lang); localStorage.setItem("user_language", lang); }
- catch (error) { /* La página sigue funcionando si el almacenamiento está desactivado. */ }
+
+ try {
+  localStorage.setItem("lpc-language", lang);
+  localStorage.setItem("user_language", lang);
+ } catch (error) {
+  /* La página sigue funcionando si el almacenamiento está desactivado. */
+ }
 }
+
 window.changeLanguage = changeLanguage;
+
 const params = new URLSearchParams(window.location.search);
 const requestedLanguage = params.get("lang");
 let initialLanguage = "es";
+
 try {
  const savedLanguage = localStorage.getItem("lpc-language") || localStorage.getItem("user_language");
- if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) initialLanguage = requestedLanguage;
- else if (savedLanguage && Object.prototype.hasOwnProperty.call(translations, savedLanguage)) initialLanguage = savedLanguage;
+
+ if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) {
+  initialLanguage = requestedLanguage;
+ } else if (savedLanguage && Object.prototype.hasOwnProperty.call(translations, savedLanguage)) {
+  initialLanguage = savedLanguage;
+ }
 } catch (error) {
- if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) initialLanguage = requestedLanguage;
+ if (requestedLanguage && Object.prototype.hasOwnProperty.call(translations, requestedLanguage)) {
+  initialLanguage = requestedLanguage;
+ }
 }
+
 changeLanguage(initialLanguage);
+
 })();
 </script>
 </body>
