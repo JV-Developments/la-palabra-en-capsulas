@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Dad siempre gracias a Dios — La Palabra en Cápsulas">
+<meta name="google" content="notranslate">
 <title>Dad siempre gracias a Dios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +58,9 @@ html[dir="rtl"] .btn-back{font-family:Tahoma,Arial,sans-serif;letter-spacing:0}
  <div class="subtitle-top" id="site-name">La Palabra en Cápsulas</div>
  <h1 id="page-title">Dad siempre gracias a Dios</h1>
 </header>
-<img class="article-image" src="gratitud.jpg" alt="Imagen del artículo: Dad siempre gracias a Dios">
+
+<img class="article-image" id="thanks-image" src="gratitud-es.png" alt="Dad siempre gracias a Dios">
+
 <main>
  <section class="card">
   <h2 id="heading-1">¿Qué produce la acción de gracias al Creador por sus múltiples beneficios?</h2>
@@ -73,135 +77,198 @@ html[dir="rtl"] .btn-back{font-family:Tahoma,Arial,sans-serif;letter-spacing:0}
 </main>
 <div class="footer-nav"><a href="https://lpcapsulas.com/Explora/menu.html" class="btn-back" id="back-link">Volver al Menú</a></div>
 </div>
+
 <script>
 (function(){
 const languages=[
  ['es','Español'],['en','English'],['zh','简体中文'],['fr','Français'],['it','Italiano'],['pt','Português'],['he','עברית'],['ar','العربية'],['hi','हिन्दी'],['ru','Русский'],['de','Deutsch'],['ja','日本語'],['tr','Türkçe'],['el','Ελληνικά'],['fa','فارسی'],['sv','Svenska'],['ko','한국어'],['pl','Polski'],['bn','বাংলা']
 ];
+
 const translations={
 es:{title:'Dad siempre gracias a Dios',site:'La Palabra en Cápsulas',tag:'Una palabra, una cápsula, un mensaje para el camino',h:'¿Qué produce la acción de gracias al Creador por sus múltiples beneficios?',p:[
 'Algunos no lo saben, pero esta genera mayor bendición espiritual, mientras que la ingratitud empobrece el alma del ingrato. Es por ello que la Biblia exhorta a dar gracias a Dios en todo tiempo. Primero dáselas por estar salvo(a), sano y libre. Y a partir de allí, en todo momento acepta sus designios y el plan que tiene para tu vida, pues el que se haga su voluntad en ti es más importante que cualquier otra cosa que tú pienses hacer.',
 'En Norteamérica desde 1621 se celebraba con regularidad y aunque en 1941 fue oficializado por el Congreso de los Estados Unidos (el cuarto jueves de noviembre), ya varios países lo están haciendo ahora, como un modo de agradecimiento a Dios por sus múltiples beneficios.',
 'Y aunque comer agradecido(a) es una forma de alabar su Nombre, no hay mayor gratitud que el hombre pueda expresar hacia Dios sino cuando consagra su vida para su servicio.'
 ],v:['“Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros en Cristo Jesús”','(1 Tesalonicenses 5:18)','“Así que, recibiendo nosotros un reino inconmovible, tengamos gratitud, y mediante ella sirvamos a Dios agradándole con temor y reverencia”','(Hebreos 12:28)'],back:'Volver al Menú',dir:'ltr'},
+
 en:{title:'Always Give Thanks to God',site:'The Word in Capsules',tag:'One word, one capsule, a message for the journey',h:'What does giving thanks to the Creator for His many blessings produce?',p:[
 'Some may not know it, but thanksgiving brings greater spiritual blessing, while ingratitude impoverishes the soul of the ungrateful. That is why the Bible urges us to give thanks to God in everything. First, thank Him for being saved, healthy, and free. From then on, at all times accept His purposes and the plan He has for your life, for having His will fulfilled in you is more important than anything else you may plan to do.',
 'In North America, it had been regularly celebrated since 1621, and although it was officially established by the United States Congress in 1941 (the fourth Thursday of November), several countries are now observing it as a way of thanking God for His many blessings.',
 'And although eating with gratitude is one way to praise His Name, there is no greater gratitude a person can express to God than consecrating their life to His service.'
 ],v:['“Give thanks in everything, for this is God’s will for you in Christ Jesus.”','(1 Thessalonians 5:18)','“Therefore, since we are receiving a kingdom that cannot be shaken, let us be thankful, and so worship God acceptably with reverence and awe.”','(Hebrews 12:28)'],back:'Back to Menu',dir:'ltr'},
+
 fr:{title:'Rendez toujours grâce à Dieu',site:'La Parole en Capsules',tag:'Un mot, une capsule, un message pour le chemin',h:'Que produit l’action de grâce envers le Créateur pour ses nombreux bienfaits ?',p:[
 'Certains ne le savent pas, mais l’action de grâce apporte une plus grande bénédiction spirituelle, tandis que l’ingratitude appauvrit l’âme de celui qui en est coupable. C’est pourquoi la Bible nous exhorte à rendre grâce à Dieu en toute chose. Remerciez-Le d’abord d’être sauvé(e), en bonne santé et libre. Ensuite, acceptez en tout temps ses desseins et le plan qu’Il a pour votre vie, car l’accomplissement de sa volonté en vous est plus important que toute autre chose que vous pourriez envisager.',
 'En Amérique du Nord, cette célébration était régulièrement observée depuis 1621. Bien qu’elle ait été officialisée par le Congrès des États-Unis en 1941 (le quatrième jeudi de novembre), plusieurs pays la célèbrent désormais comme une manière de remercier Dieu pour ses nombreux bienfaits.',
 'Et même si manger avec reconnaissance est une façon de louer son Nom, la plus grande gratitude qu’une personne puisse exprimer à Dieu consiste à consacrer sa vie à son service.'
 ],v:['« Rendez grâce en toute chose, car telle est la volonté de Dieu pour vous en Jésus-Christ. »','(1 Thessaloniciens 5:18)','« Puisque nous recevons un royaume inébranlable, montrons notre reconnaissance et rendons à Dieu un culte qui lui soit agréable, avec piété et avec crainte. »','(Hébreux 12:28)'],back:'Retour au menu',dir:'ltr'},
+
 it:{title:'Rendete sempre grazie a Dio',site:'La Parola in Capsule',tag:'Una parola, una capsula, un messaggio per il cammino',h:'Che cosa produce il ringraziamento al Creatore per i suoi molteplici benefici?',p:[
 'Non tutti lo sanno, ma il ringraziamento genera una maggiore benedizione spirituale, mentre l’ingratitudine impoverisce l’anima di chi è ingrato. Per questo la Bibbia ci esorta a rendere grazie a Dio in ogni cosa. Ringrazialo prima di tutto perché sei salvato(a), sano(a) e libero(a). Da quel momento, accetta sempre i suoi disegni e il piano che ha per la tua vita, perché il compimento della sua volontà in te è più importante di qualsiasi altra cosa tu possa pensare di fare.',
 'In Nord America veniva celebrato regolarmente dal 1621 e, sebbene sia stato ufficializzato dal Congresso degli Stati Uniti nel 1941 (il quarto giovedì di novembre), oggi lo celebrano anche diversi altri Paesi, come modo per ringraziare Dio dei suoi numerosi benefici.',
 'E sebbene mangiare con gratitudine sia un modo per lodare il suo Nome, non c’è gratitudine più grande che una persona possa esprimere a Dio se non consacrando la propria vita al suo servizio.'
 ],v:['«Rendete grazie in ogni cosa, perché questa è la volontà di Dio in Cristo Gesù verso di voi.»','(1 Tessalonicesi 5:18)','«Perciò, ricevendo un regno che non può essere scosso, siamo riconoscenti e offriamo a Dio un culto gradito, con riverenza e timore.»','(Ebrei 12:28)'],back:'Torna al menu',dir:'ltr'},
+
 pt:{title:'Dai sempre graças a Deus',site:'A Palavra em Cápsulas',tag:'Uma palavra, uma cápsula, uma mensagem para a caminhada',h:'O que produz a ação de graças ao Criador por seus muitos benefícios?',p:[
 'Alguns não sabem, mas a gratidão gera uma bênção espiritual maior, enquanto a ingratidão empobrece a alma do ingrato. Por isso, a Bíblia nos exorta a dar graças a Deus em tudo. Primeiro, agradeça por estar salvo(a), saudável e livre. A partir daí, aceite sempre os desígnios e o plano que Ele tem para sua vida, pois que a vontade dele se cumpra em você é mais importante do que qualquer outra coisa que você pense em fazer.',
 'Na América do Norte, essa celebração era realizada regularmente desde 1621 e, embora tenha sido oficializada pelo Congresso dos Estados Unidos em 1941 (na quarta quinta-feira de novembro), vários países também a celebram hoje como forma de agradecer a Deus por seus muitos benefícios.',
 'E embora comer com gratidão seja uma maneira de louvar o seu Nome, não há gratidão maior que alguém possa expressar a Deus do que consagrar sua vida ao serviço dele.'
 ],v:['“Em tudo dai graças, porque esta é a vontade de Deus em Cristo Jesus para convosco.”','(1 Tessalonicenses 5:18)','“Por isso, recebendo nós um reino inabalável, retenhamos a graça, pela qual sirvamos a Deus agradavelmente, com reverência e santo temor.”','(Hebreus 12:28)'],back:'Voltar ao menu',dir:'ltr'},
+
 zh:{title:'要常常感谢上帝',site:'胶囊中的圣言',tag:'一句话，一个胶囊，一条人生旅途的信息',h:'为创造主的诸多恩典献上感谢，会带来什么？',p:[
 '有些人可能不知道，感恩会带来更大的属灵祝福，而忘恩负义则使忘恩者的心灵贫乏。因此，圣经劝勉我们凡事都要感谢上帝。首先，要为自己得救、健康和自由而感谢祂。从此以后，无论何时都要接受祂的旨意和祂为你生命所定的计划，因为祂的旨意成就在你身上，比你所打算做的任何事都重要。',
 '在北美，这一节日自1621年起定期庆祝；虽然直到1941年才由美国国会正式确立（定于11月的第四个星期四），如今也有多个国家庆祝，以此感谢上帝赐下的诸多恩典。',
 '虽然怀着感恩的心享用食物也是赞美祂圣名的一种方式，但人向上帝表达的最大感恩，莫过于将自己的生命献上，为祂而活。'
 ],v:['“凡事谢恩；因为这是上帝在基督耶稣里向你们所定的旨意。”','（帖撒罗尼迦前书 5:18）','“所以我们既得了不能震动的国，就当感恩，照上帝所喜悦的，用虔诚、敬畏的心事奉上帝。”','（希伯来书 12:28）'],back:'返回菜单',dir:'ltr'},
+
 he:{title:'תמיד הודו לאלוהים',site:'דבר אלוהים בקפסולות',tag:'מילה אחת, קפסולה אחת, מסר לדרך',h:'מה מחוללת הודיה לבורא על כל טובותיו הרבות?',p:[
 'יש שאינם יודעים זאת, אך הודיה מביאה ברכה רוחנית גדולה יותר, ואילו כפיות טובה מרוששת את נפשו של כפוי הטובה. משום כך התנ״ך מעודד אותנו להודות לאלוהים בכל דבר. תחילה הודו לו על שנושעתם, שאתם בריאים וחופשיים. ומכאן ואילך קבלו בכל עת את רצונו ואת התוכנית שיש לו לחייכם, שכן התגשמות רצונו בכם חשובה יותר מכל דבר אחר שאתם מתכננים לעשות.',
 'בצפון אמריקה צוין החג בקביעות מאז 1621, ואף שהוכרז רשמית על ידי הקונגרס של ארצות הברית בשנת 1941 (ביום חמישי הרביעי של נובמבר), מדינות רבות נוספות מציינות אותו כיום כדרך להודות לאלוהים על טובו הרב.',
 'אף שאכילה מתוך הודיה היא דרך להלל את שמו, אין הכרת תודה גדולה יותר שאדם יכול להביע כלפי אלוהים מאשר להקדיש את חייו לשירותו.'
 ],v:['״הודו על כל דבר, כי זהו רצון אלוהים עבורכם במשיח ישוע.״','(הראשונה אל התסלוניקים 5:18)','״לכן, מאחר שאנו מקבלים מלכות אשר לא תימוט, נהיה אסירי תודה ונעבוד את אלוהים כרצוי לו, ביראה ובכבוד.״','(אל העברים 12:28)'],back:'חזרה לתפריט',dir:'rtl'},
+
 ar:{title:'اشكروا الله دائمًا',site:'كلمة الله في كبسولات',tag:'كلمة واحدة، كبسولة واحدة، ورسالة للطريق',h:'ماذا يصنع الشكر للخالق على نعمه الكثيرة؟',p:[
 'قد لا يعرف البعض ذلك، لكن الشكر يجلب بركة روحية أعظم، بينما يُفقِر الجحود نفس الجاحد. لذلك يحثنا الكتاب المقدس على أن نشكر الله في كل شيء. اشكره أولًا لأنك نلت الخلاص، وأنك بصحة جيدة وحر. ومنذ ذلك الحين، اقبل دائمًا مقاصده والخطة التي أعدها لحياتك، لأن تتميم مشيئته فيك أهم من أي أمر آخر تفكر في القيام به.',
 'في أمريكا الشمالية كان الاحتفال يُقام بانتظام منذ عام 1621، ورغم أن كونغرس الولايات المتحدة أقرّه رسميًا عام 1941 (في الخميس الرابع من شهر نوفمبر)، فإن دولًا عديدة تحتفل به الآن أيضًا تعبيرًا عن الشكر لله على نعمه الكثيرة.',
 'ومع أن تناول الطعام بقلب شاكر هو إحدى طرق تسبيح اسمه، فلا توجد شكرى أعظم يستطيع الإنسان أن يقدمها لله من أن يكرّس حياته لخدمته.'
 ],v:['«اشكروا في كل شيء، لأن هذه هي مشيئة الله لكم في المسيح يسوع».','(تسالونيكي الأولى 5:18)','«لذلك، إذ نحن قابلون ملكوتًا لا يتزعزع، لنكن شاكرين، وبذلك نخدم الله خدمة مرضية بخشوع وتقوى».','(العبرانيين 12:28)'],back:'العودة إلى القائمة',dir:'rtl'},
+
 hi:{title:'सदा परमेश्वर का धन्यवाद करो',site:'कैप्सूल में परमेश्वर का वचन',tag:'एक वचन, एक कैप्सूल, जीवन-यात्रा के लिए एक संदेश',h:'सृष्टिकर्ता के अनेक उपकारों के लिए धन्यवाद देने से क्या उत्पन्न होता है?',p:[
 'कुछ लोग यह नहीं जानते, लेकिन धन्यवाद देने से अधिक आत्मिक आशीष मिलती है, जबकि कृतघ्नता कृतघ्न व्यक्ति की आत्मा को दरिद्र बना देती है। इसी कारण बाइबल हमें हर बात में परमेश्वर का धन्यवाद करने के लिए प्रोत्साहित करती है। सबसे पहले इस बात के लिए धन्यवाद दो कि तुम उद्धार पाए हुए, स्वस्थ और स्वतंत्र हो। इसके बाद हर समय उसकी योजनाओं और तुम्हारे जीवन के लिए उसकी इच्छा को स्वीकार करो, क्योंकि तुम्हारे भीतर उसकी इच्छा पूरी होना तुम्हारे किसी भी अन्य विचार से अधिक महत्वपूर्ण है।',
 'उत्तरी अमेरिका में यह उत्सव 1621 से नियमित रूप से मनाया जाता था। यद्यपि 1941 में संयुक्त राज्य कांग्रेस ने इसे आधिकारिक रूप दिया (नवंबर के चौथे गुरुवार को), अब कई अन्य देश भी परमेश्वर के अनेक उपकारों के लिए धन्यवाद देने के रूप में इसे मनाते हैं।',
 'यद्यपि कृतज्ञता के साथ भोजन करना उसके नाम की स्तुति करने का एक तरीका है, पर परमेश्वर के प्रति मनुष्य इससे बड़ी कृतज्ञता तब व्यक्त करता है जब वह अपना जीवन उसकी सेवा के लिए समर्पित करता है।'
 ],v:['“हर बात में धन्यवाद करो, क्योंकि तुम्हारे लिए मसीह यीशु में परमेश्वर की यही इच्छा है।”','(1 थिस्सलुनीकियों 5:18)','“इसलिये जब हम एक ऐसा राज्य पा रहे हैं जो टलने का नहीं, तो हम अनुग्रह रखें, जिसके द्वारा भक्ति और भय सहित परमेश्वर की ऐसी आराधना करें जिससे वह प्रसन्न होता है।”','(इब्रानियों 12:28)'],back:'मेनू पर वापस जाएँ',dir:'ltr'},
+
 ru:{title:'Всегда благодарите Бога',site:'Слово в капсулах',tag:'Одно слово, одна капсула, послание для жизненного пути',h:'Что приносит благодарность Творцу за Его многочисленные благодеяния?',p:[
 'Некоторые этого не знают, но благодарность приносит больше духовных благословений, тогда как неблагодарность обедняет душу неблагодарного человека. Поэтому Библия призывает нас благодарить Бога во всём. Прежде всего поблагодарите Его за то, что вы спасены, здоровы и свободны. И с этого момента всегда принимайте Его замыслы и план для вашей жизни, потому что исполнение Его воли в вас важнее всего остального, что вы могли бы задумать.',
 'В Северной Америке этот праздник регулярно отмечался с 1621 года. Хотя в 1941 году Конгресс США официально утвердил его (четвёртый четверг ноября), сегодня его отмечают и многие другие страны как способ поблагодарить Бога за Его многочисленные благодеяния.',
 'И хотя благодарная трапеза — один из способов прославить Его имя, величайшая благодарность, которую человек может выразить Богу, заключается в посвящении своей жизни служению Ему.'
 ],v:['«За всё благодарите, ибо такова о вас воля Божия во Христе Иисусе».','(1 Фессалоникийцам 5:18)','«Итак, получая царство непоколебимое, будем хранить благодать, которою будем служить благоугодно Богу, с благоговением и страхом».','(Евреям 12:28)'],back:'Вернуться в меню',dir:'ltr'},
+
 de:{title:'Danket Gott allezeit',site:'Das Wort in Kapseln',tag:'Ein Wort, eine Kapsel, eine Botschaft für den Lebensweg',h:'Was bewirkt Dank gegenüber dem Schöpfer für seine vielen Wohltaten?',p:[
 'Manche wissen es vielleicht nicht, aber Dankbarkeit bringt größeren geistlichen Segen, während Undankbarkeit die Seele des Undankbaren verarmen lässt. Deshalb ermahnt uns die Bibel, Gott in allem zu danken. Danke ihm zuerst dafür, dass du gerettet, gesund und frei bist. Nimm von da an jederzeit seine Absichten und den Plan an, den er für dein Leben hat; denn dass sein Wille in dir geschieht, ist wichtiger als alles andere, was du dir vornehmen könntest.',
 'In Nordamerika wurde dieses Fest seit 1621 regelmäßig gefeiert. Obwohl es 1941 vom Kongress der Vereinigten Staaten offiziell eingeführt wurde (am vierten Donnerstag im November), feiern es inzwischen auch mehrere andere Länder, um Gott für seine vielen Wohltaten zu danken.',
 'Und obwohl dankbares Essen eine Möglichkeit ist, seinen Namen zu loben, gibt es keinen größeren Dank, den ein Mensch Gott ausdrücken kann, als sein Leben seinem Dienst zu weihen.'
 ],v:['„Seid in allem dankbar; denn das ist der Wille Gottes in Christus Jesus für euch.“','(1. Thessalonicher 5,18)','„Darum, weil wir ein unerschütterliches Reich empfangen, lasst uns dankbar sein und so Gott wohlgefällig dienen mit Scheu und Ehrfurcht.“','(Hebräer 12,28)'],back:'Zurück zum Menü',dir:'ltr'},
+
 ja:{title:'いつも神に感謝しなさい',site:'カプセルに込められた御言葉',tag:'一つの言葉、一つのカプセル、人生の歩みへのメッセージ',h:'創造主の数々の恵みに感謝することは、何をもたらすでしょうか？',p:[
 'このことを知らない人もいますが、感謝はより大きな霊的祝福をもたらし、感謝を忘れることは忘恩の人の魂を貧しくします。そのため聖書は、あらゆることについて神に感謝するよう勧めています。まず、救われ、健康で、自由であることを感謝しましょう。そして常に、神の御計画とあなたの人生に対する御心を受け入れてください。あなたのうちに神の御心が成ることは、あなたがしようと考えるどんなことよりも重要だからです。',
 '北米では1621年から定期的に祝われていました。1941年に米国議会によって正式に定められましたが（11月の第4木曜日）、現在では多くの国々も、神の数々の恵みに感謝する方法としてこの日を祝っています。',
 '感謝して食事をすることも御名を賛美する一つの方法ですが、人が神に表すことのできる最大の感謝は、自分の人生を神への奉仕のために献げることです。'
 ],v:['「すべてのことについて感謝しなさい。これがキリスト・イエスにあって、あなたがたに対する神の御心です。」','（テサロニケ人への第一の手紙 5:18）','「ですから、私たちは揺り動かされない御国を受けているのですから、感謝しようではありませんか。そして、慎みと恐れをもって、神に喜ばれる礼拝をささげましょう。」','（ヘブル人への手紙 12:28）'],back:'メニューに戻る',dir:'ltr'},
+
 tr:{title:'Tanrı’ya Her Zaman Şükredin',site:'Kapsüllerde Tanrı Sözü',tag:'Bir söz, bir kapsül, yolculuk için bir mesaj',h:'Yaradan’a sayısız iyiliği için şükretmek ne sağlar?',p:[
 'Bazıları bunu bilmez, ancak şükretmek daha büyük ruhsal bereket getirir; nankörlük ise nankör kişinin ruhunu yoksullaştırır. Bu nedenle Kutsal Kitap bizi her durumda Tanrı’ya şükretmeye teşvik eder. Öncelikle kurtulmuş, sağlıklı ve özgür olduğun için O’na şükret. Bundan sonra her zaman O’nun amaçlarını ve yaşamın için hazırladığı planı kabul et; çünkü O’nun isteğinin sende gerçekleşmesi, yapmayı düşündüğün her şeyden daha önemlidir.',
 'Kuzey Amerika’da bu kutlama 1621’den beri düzenli olarak yapılıyordu. 1941’de Amerika Birleşik Devletleri Kongresi tarafından resmileştirilmiş olsa da (Kasım ayının dördüncü perşembesi), bugün birçok ülke de Tanrı’nın sayısız iyiliği için şükretmenin bir yolu olarak bu günü kutlamaktadır.',
 'Şükrederek yemek yemek O’nun Adını yüceltmenin bir yolu olsa da insanın Tanrı’ya gösterebileceği en büyük minnettarlık, yaşamını O’nun hizmetine adamasıdır.'
 ],v:['“Her durumda şükredin. Çünkü Tanrı’nın Mesih İsa’da sizin için isteği budur.”','(1. Selanikliler 5:18)','“Bu nedenle, sarsılmaz bir krallığa kavuştuğumuz için minnettar olalım. Böylece Tanrı’yı hoşnut edecek biçimde, saygı ve korkuyla tapınalım.”','(İbraniler 12:28)'],back:'Menüye dön',dir:'ltr'},
+
 el:{title:'Να ευχαριστείτε πάντα τον Θεό',site:'Ο Λόγος του Θεού σε Κάψουλες',tag:'Μία λέξη, μία κάψουλα, ένα μήνυμα για την πορεία',h:'Τι προσφέρει η ευχαριστία προς τον Δημιουργό για τις πολλές ευεργεσίες Του;',p:[
 'Μερικοί δεν το γνωρίζουν, αλλά η ευχαριστία φέρνει μεγαλύτερη πνευματική ευλογία, ενώ η αχαριστία φτωχαίνει την ψυχή του αχάριστου. Γι’ αυτό η Αγία Γραφή μάς προτρέπει να ευχαριστούμε τον Θεό για τα πάντα. Πρώτα ευχαρίστησέ Τον επειδή είσαι σωσμένος/η, υγιής και ελεύθερος/η. Από εκεί και πέρα, να αποδέχεσαι πάντοτε τα σχέδιά Του και το σχέδιο που έχει για τη ζωή σου, γιατί το να γίνεται το θέλημά Του μέσα σου είναι σημαντικότερο από οτιδήποτε άλλο σκέφτεσαι να κάνεις.',
 'Στη Βόρεια Αμερική η γιορτή αυτή εορταζόταν τακτικά από το 1621. Αν και θεσμοθετήθηκε επίσημα από το Κογκρέσο των Ηνωμένων Πολιτειών το 1941 (την τέταρτη Πέμπτη του Νοεμβρίου), σήμερα την τιμούν και πολλές άλλες χώρες ως τρόπο ευχαριστίας προς τον Θεό για τις πολλές ευεργεσίες Του.',
 'Και παρόλο που το να τρώμε με ευγνωμοσύνη είναι ένας τρόπος να δοξάζουμε το Όνομά Του, μεγαλύτερη ευγνωμοσύνη προς τον Θεό δεν μπορεί να εκφράσει ο άνθρωπος από το να αφιερώσει τη ζωή του στην υπηρεσία Του.'
 ],v:['«Να ευχαριστείτε για καθετί, επειδή αυτό είναι το θέλημα του Θεού για σας εν Χριστώ Ιησού».','(Α΄ Θεσσαλονικείς 5:18)','«Ας κρατάμε, λοιπόν, ευγνωμοσύνη, επειδή παραλαμβάνουμε μια βασιλεία ασάλευτη, και έτσι ας λατρεύουμε ευάρεστα τον Θεό με ευλάβεια και δέος».','(Εβραίους 12:28)'],back:'Επιστροφή στο μενού',dir:'ltr'},
+
 fa:{title:'همیشه خدا را شکر کنید',site:'کلام خدا در کپسول‌ها',tag:'یک کلام، یک کپسول، پیامی برای مسیر زندگی',h:'سپاسگزاری از آفریدگار برای نعمت‌های بی‌شمارش چه ثمره‌ای دارد؟',p:[
 'برخی این را نمی‌دانند، اما سپاسگزاری برکت روحانی بیشتری به همراه می‌آورد، در حالی که ناسپاسی روح شخص ناسپاس را تهی می‌کند. به همین دلیل کتاب مقدس ما را تشویق می‌کند که در هر چیز خدا را شکر کنیم. نخست برای این شکرگزار باشید که نجات یافته، سالم و آزاد هستید. از آن پس همواره اراده و نقشه‌ای را که خدا برای زندگی شما دارد بپذیرید، زیرا تحقق اراده او در شما از هر کار دیگری که در نظر دارید انجام دهید مهم‌تر است.',
 'در آمریکای شمالی این جشن از سال ۱۶۲۱ به‌طور منظم برگزار می‌شد. اگرچه در سال ۱۹۴۱ به‌وسیله کنگره ایالات متحده رسمیت یافت (چهارمین پنجشنبه ماه نوامبر)، اکنون کشورهای دیگری نیز آن را به‌عنوان راهی برای سپاسگزاری از خدا به‌خاطر نعمت‌های فراوانش برگزار می‌کنند.',
 'هرچند غذا خوردن با قلبی سپاسگزار راهی برای ستایش نام اوست، بزرگ‌ترین سپاسی که انسان می‌تواند به خدا ابراز کند، وقف کردن زندگی خود به خدمت اوست.'
 ],v:['«در هر وضعی شکرگزاری کنید، زیرا این است اراده خدا برای شما در مسیح عیسی.»','(اول تسالونیکیان ۵:۱۸)','«پس چون پادشاهی‌ای تزلزل‌ناپذیر دریافت می‌کنیم، شکرگزار باشیم و خدا را با敬 reverence و ترس، به شیوه‌ای پسندیده خدمت کنیم.»','(عبرانیان ۱۲:۲۸)'],back:'بازگشت به منو',dir:'rtl'},
+
 sv:{title:'Tacka alltid Gud',site:'Ordet i kapslar',tag:'Ett ord, en kapsel, ett budskap för vandringen',h:'Vad leder tacksamhet till Skaparen för hans många välsignelser till?',p:[
 'Alla känner kanske inte till det, men tacksamhet ger större andlig välsignelse, medan otacksamhet gör den otacksammes själ fattig. Därför uppmanar Bibeln oss att tacka Gud i allt. Tacka honom först för att du är frälst, frisk och fri. Acceptera därefter alltid hans avsikter och den plan han har för ditt liv, för att hans vilja ska ske i dig är viktigare än allt annat du kan tänka dig att göra.',
 'I Nordamerika firades högtiden regelbundet sedan 1621. Även om den officiellt fastställdes av USA:s kongress 1941 (den fjärde torsdagen i november), firas den numera också i flera andra länder som ett sätt att tacka Gud för hans många välsignelser.',
 'Och även om det är ett sätt att prisa hans namn att äta med tacksamhet, finns det ingen större tacksamhet en människa kan visa Gud än att överlåta sitt liv till hans tjänst.'
 ],v:['”Tacka Gud i allt, för detta är Guds vilja med er i Kristus Jesus.”','(1 Thessalonikerbrevet 5:18)','”När vi nu får ett rike som inte kan skakas, ska vi vara tacksamma och tjäna Gud på ett sätt som behagar honom, med vördnad och fruktan.”','(Hebreerbrevet 12:28)'],back:'Tillbaka till menyn',dir:'ltr'},
+
 ko:{title:'항상 하나님께 감사하십시오',site:'캡슐에 담긴 말씀',tag:'한 말씀, 하나의 캡슐, 인생길을 위한 메시지',h:'창조주께서 베푸신 많은 은혜에 감사하면 무엇이 생길까요?',p:[
 '어떤 사람들은 이것을 알지 못하지만, 감사는 더 큰 영적 축복을 가져오며 감사하지 않는 마음은 그 사람의 영혼을 가난하게 만듭니다. 그래서 성경은 모든 일에 하나님께 감사하라고 권면합니다. 먼저 구원받고 건강하며 자유롭게 된 것을 감사하십시오. 그리고 언제나 하나님의 뜻과 여러분의 삶을 위한 그분의 계획을 받아들이십시오. 여러분 안에서 그분의 뜻이 이루어지는 것이 여러분이 하려는 어떤 일보다 중요하기 때문입니다.',
 '북아메리카에서는 1621년부터 이 기념일을 정기적으로 지켜 왔습니다. 1941년 미국 의회가 공식적으로 제정했지만(11월 넷째 목요일), 이제 여러 나라에서도 하나님의 많은 은혜에 감사하는 뜻으로 이 날을 기념합니다.',
 '감사하는 마음으로 식사하는 것도 하나님의 이름을 찬양하는 한 방법이지만, 사람이 하나님께 드릴 수 있는 가장 큰 감사는 자신의 삶을 그분을 섬기는 일에 바치는 것입니다.'
 ],v:['“모든 일에 감사하십시오. 이것이 그리스도 예수 안에서 여러분을 향한 하나님의 뜻입니다.”','(데살로니가전서 5:18)','“그러므로 우리는 흔들리지 않는 나라를 받았으니 은혜를 간직하고 경건함과 두려움으로 하나님을 기쁘시게 섬깁시다.”','(히브리서 12:28)'],back:'메뉴로 돌아가기',dir:'ltr'},
+
 pl:{title:'Zawsze dziękujcie Bogu',site:'Słowo w Kapsułkach',tag:'Jedno słowo, jedna kapsułka, przesłanie na drogę',h:'Co przynosi dziękowanie Stwórcy za Jego liczne dobrodziejstwa?',p:[
 'Niektórzy mogą o tym nie wiedzieć, ale wdzięczność przynosi większe duchowe błogosławieństwo, podczas gdy niewdzięczność zubaża duszę niewdzięcznika. Dlatego Biblia zachęca nas, aby we wszystkim dziękować Bogu. Najpierw podziękuj Mu za to, że jesteś zbawiony(a), zdrowy(a) i wolny(a). Odtąd zawsze przyjmuj Jego zamiary i plan, jaki ma dla twojego życia, ponieważ wypełnianie się Jego woli w tobie jest ważniejsze niż cokolwiek innego, co zamierzasz zrobić.',
 'W Ameryce Północnej święto to obchodzono regularnie od 1621 roku. Chociaż Kongres Stanów Zjednoczonych oficjalnie ustanowił je w 1941 roku (czwarty czwartek listopada), obecnie obchodzą je także inne kraje jako sposób dziękowania Bogu za Jego liczne dobrodziejstwa.',
 'Choć spożywanie posiłku z wdzięcznością jest sposobem oddawania chwały Jego imieniu, człowiek nie może okazać Bogu większej wdzięczności niż przez poświęcenie swojego życia Jego służbie.'
 ],v:['„W każdym położeniu dziękujcie, taka jest bowiem wola Boża w Chrystusie Jezusie względem was.”','(1 Tesaloniczan 5:18)','„Skoro więc otrzymujemy królestwo niewzruszone, trwajmy w łasce i służmy Bogu z czcią i bojaźnią, tak jak Mu się podoba.”','(Hebrajczyków 12:28)'],back:'Powrót do menu',dir:'ltr'},
+
 bn:{title:'সর্বদা ঈশ্বরকে ধন্যবাদ দাও',site:'ক্যাপসুলে ঈশ্বরের বাক্য',tag:'একটি বাক্য, একটি ক্যাপসুল, জীবনের পথের জন্য একটি বার্তা',h:'সৃষ্টিকর্তার অসংখ্য অনুগ্রহের জন্য কৃতজ্ঞতা প্রকাশ করলে কী ঘটে?',p:[
 'কেউ কেউ হয়তো জানেন না, কিন্তু কৃতজ্ঞতা আরও বড় আত্মিক আশীর্বাদ নিয়ে আসে, আর অকৃতজ্ঞতা অকৃতজ্ঞ মানুষের আত্মাকে দরিদ্র করে। তাই বাইবেল আমাদের সব বিষয়ে ঈশ্বরকে ধন্যবাদ দিতে উৎসাহিত করে। প্রথমে ধন্যবাদ দাও যে তুমি পরিত্রাণ পেয়েছ, সুস্থ ও স্বাধীন আছ। এরপর সর্বদা তাঁর উদ্দেশ্য এবং তোমার জীবনের জন্য তাঁর পরিকল্পনা গ্রহণ করো, কারণ তোমার মধ্যে তাঁর ইচ্ছা পূর্ণ হওয়া তোমার নিজের পরিকল্পনার অন্য যেকোনো কাজের চেয়ে গুরুত্বপূর্ণ।',
 'উত্তর আমেরিকায় ১৬২১ সাল থেকে নিয়মিত এই উৎসব পালিত হয়ে আসছে। ১৯৪১ সালে যুক্তরাষ্ট্রের কংগ্রেস এটি আনুষ্ঠানিকভাবে স্বীকৃতি দিলেও (নভেম্বরের চতুর্থ বৃহস্পতিবার), এখন আরও অনেক দেশ ঈশ্বরের অসংখ্য অনুগ্রহের জন্য কৃতজ্ঞতা প্রকাশের উপায় হিসেবে দিনটি পালন করে।',
 'কৃতজ্ঞচিত্তে আহার করা তাঁর নামের প্রশংসা করার একটি উপায় হলেও, মানুষ ঈশ্বরের প্রতি এর চেয়ে বড় কৃতজ্ঞতা প্রকাশ করতে পারে না—যতটা পারে তাঁর সেবার জন্য নিজের জীবন উৎসর্গ করার মাধ্যমে।'
 ],v:['“সব বিষয়ে ধন্যবাদ দাও, কারণ খ্রীষ্ট যীশুতে তোমাদের জন্য এটাই ঈশ্বরের ইচ্ছা।”','(১ থিষলনীকীয় ৫:১৮)','“অতএব, আমরা যখন এক অটল রাজ্য পাচ্ছি, তখন কৃতজ্ঞ হই এবং ভক্তি ও ভয়ের সঙ্গে ঈশ্বরের সন্তোষজনক সেবা করি।”','(ইব্রীয় ১২:২৮)'],back:'মেনুতে ফিরে যান',dir:'ltr'}
 };
+
 function buildLanguageBar(){
  const bar=document.getElementById('language-bar');
  languages.forEach((item,i)=>{
-  if(i) {const sep=document.createElement('span');sep.className='lang-divider';sep.textContent='|';sep.setAttribute('aria-hidden','true');bar.appendChild(sep);}
-  const b=document.createElement('button');b.type='button';b.className='lang-link';b.id='link-'+item[0];b.textContent=item[1];b.lang=item[0]==='zh'?'zh-CN':item[0];b.addEventListener('click',()=>changeLanguage(item[0]));bar.appendChild(b);
+  if(i) {
+   const sep=document.createElement('span');
+   sep.className='lang-divider';
+   sep.textContent='|';
+   sep.setAttribute('aria-hidden','true');
+   bar.appendChild(sep);
+  }
+  const b=document.createElement('button');
+  b.type='button';
+  b.className='lang-link';
+  b.id='link-'+item[0];
+  b.textContent=item[1];
+  b.lang=item[0]==='zh'?'zh-CN':item[0];
+  b.addEventListener('click',()=>changeLanguage(item[0]));
+  bar.appendChild(b);
  });
 }
+
 window.changeLanguage=function(lang){
  const t=translations[lang]||translations.es;
+
  document.documentElement.lang=lang==='zh'?'zh-CN':lang;
- document.documentElement.dir=t.dir;document.title=t.title;
+ document.documentElement.dir=t.dir;
+ document.title=t.title;
+
  document.getElementById('site-name').textContent=t.site;
  document.getElementById('page-title').textContent=t.title;
+
+ /* IMAGEN DEL ARTÍCULO: CAMBIA SEGÚN EL IDIOMA */
+ document.getElementById('thanks-image').src='gratitud-'+lang+'.png';
+ document.getElementById('thanks-image').alt=t.title;
+
  document.getElementById('heading-1').textContent=t.h;
  document.getElementById('paragraph-1').textContent=t.p[0];
  document.getElementById('paragraph-2').textContent=t.p[1];
  document.getElementById('paragraph-3').textContent=t.p[2];
+
  document.getElementById('verse-1').innerHTML=t.v[0]+'<cite>'+t.v[1]+'</cite>';
  document.getElementById('verse-2').innerHTML=t.v[2]+'<cite>'+t.v[3]+'</cite>';
+
  document.getElementById('back-link').textContent=t.back;
- document.querySelectorAll('.lang-link').forEach(b=>{const active=b.id==='link-'+lang;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
- try{localStorage.setItem('lpc-language',lang);}catch(e){}
+
+ document.querySelectorAll('.lang-link').forEach(b=>{
+  const active=b.id==='link-'+lang;
+  b.classList.toggle('active',active);
+  b.setAttribute('aria-pressed',String(active));
+ });
+
+ try{
+  localStorage.setItem('lpc-language',lang);
+  localStorage.setItem('user_language',lang);
+ }catch(e){}
 };
+
 buildLanguageBar();
+
 let initial='es';
-try{const saved=localStorage.getItem('lpc-language');if(saved&&translations[saved])initial=saved;}catch(e){}
-const params=new URLSearchParams(location.search);const requested=params.get('lang');if(requested&&translations[requested])initial=requested;
+try{
+ const saved=localStorage.getItem('lpc-language')||localStorage.getItem('user_language');
+ if(saved&&translations[saved])initial=saved;
+}catch(e){}
+
+const params=new URLSearchParams(location.search);
+const requested=params.get('lang');
+if(requested&&translations[requested])initial=requested;
+
 window.changeLanguage(initial);
 })();
 </script>
