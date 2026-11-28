@@ -46,7 +46,7 @@ main{width:min(900px,calc(100% - 28px));margin:14px auto 30px;padding:26px 24px 
 <button type="button" data-language="bn" lang="bn" aria-pressed="false">বাংলা</button>
 </nav>
 <main>
-<img id="support-image" class="hero-image" src="apoya.png" alt="Apoya a La Palabra en Cápsulas">
+<img id="support-image" class="hero-image" src="support-es.png" alt="Apoya a La Palabra en Cápsulas">
 <p id="support-message" class="message">Cualquier aportación que hagas a LPC nos permite dedicar más tiempo a preparar contenido, para seguir ofreciendo material que contribuya positivamente a la forma de pensar, las convicciones y la fe de nuestros lectores.</p>
 <a id="support-button" class="square-button" href="https://square.link/u/Et13J8m1" target="_blank" rel="noopener noreferrer">Sí, quiero apoyar a LPC</a>
 <br>
@@ -99,26 +99,26 @@ bn:{title:'সহায়তা করুন — ক্যাপসুলে �
 };
 
 const imageByLanguage={
-es:'apoya.png',
-en:'support.png',
-zh:'apoya-zh.png',
-fr:'soutenez.png',
-it:'sostieni.png',
-pt:'apoie.png',
+es:'support-es.png',
+en:'support-en.png',
+zh:'support-zh.png',
+fr:'support-fr.png',
+it:'support-it.png',
+pt:'support-pt.png',
 he:'support-he.png',
 ar:'support-ar.png',
-hi:'apoya-hi.png',
-ru:'apoya-ru.png',
-de:'apoya-de.png',
-ja:'apoya-ja.png',
+hi:'support-hi.png',
+ru:'support-ru.png',
+de:'support-de.png',
+ja:'support-ja.png',
 tr:'support-tr.png',
 el:'support-el.png',
 fa:'support-fa.png',
-sv:'apoya-sueco.png',
-ko:'apoya-coreano.png',
-pl:'apoya-polaco.png',
-bn:'apoya-bengali.png'
- };
+sv:'support-sv.png',
+ko:'support-ko.png',
+pl:'support-pl.png',
+bn:'support-bn.png'
+};
 
 const paymentLinkByLanguage={
 es:'https://square.link/u/Et13J8m1',
@@ -156,7 +156,7 @@ function setLanguage(lang){
  document.documentElement.dir=(lang==='he'||lang==='ar'||lang==='fa')?'rtl':'ltr';
 
  document.title=t.title;
- image.src=imageByLanguage[lang]||'apoya.png';
+ image.src=imageByLanguage[lang]||'support-en.png';
  image.alt=t.alt;
  message.textContent=t.message;
  button.textContent=t.button;
